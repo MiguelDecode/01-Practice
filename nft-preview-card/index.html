@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>NFT preview card component</title>
+</head>
+<body>
+  <div class="card">
+    <header class="card__header">
+      <img src="images/image-equilibrium.jpg" alt="nft image" class="card__nft">
+      <div class="card__nft--hover">
+        <img class="card__nft--eye" src="images/icon-view.svg" alt="eye">
+      </div>
+    </header>
+    <main class="card__main">
+      <a href="#">
+        <h2 class="card__title">Equilibrium #3429</h2>
+      </a>
+      <p class="card__text">Our Equilibrium collection promotes balance and calm.</p>
+      <ul class="card__container">
+        <li class="card__left">
+          <img src="images/icon-ethereum.svg" alt="icon__ethereum">
+          <span class="icon__text icon__text--ethereum">0.041 ETH</span>
+        </li>
+        <li class="card__right">
+          <img src="images/icon-clock.svg" alt="icon clock">
+          <span class="icon__text icon__text--clock" >3 days left</span>
+        </li>
+      </ul>
+    </main>
+    <footer class="card__footer">
+      <img class="card__avatar" src="images/image-avatar.png" alt="avatar">
+      <p class="card__author"><span class="card__author-special">Creation of</span> <a class="card__author--link" href="#">Jules Wyvern</a></p>
+    </footer>
+  </div>
+</body>
+</html>
