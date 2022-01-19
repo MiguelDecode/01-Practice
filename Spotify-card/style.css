@@ -1,0 +1,91 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.card {
+    width: 375px;
+    background-color: var(--very-pale-blue);
+    overflow: hidden;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+/* Header */
+.card__img {
+    width: 100%;
+}
+
+/* Article */
+
+.card__article {
+    padding:  0 1.5rem;
+}
+
+.card__title {
+    font-weight: 900;
+}
+
+.card__text,
+.card__price--cost {
+    color: var(--desaturated-blue)
+}
+
+.card__section {
+    padding: .5rem;
+    background-color: var(--pale-blue);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__plan {
+    display: flex;
+}
+
+.card__price p{
+    margin: 0;
+}
+
+.card__link {
+    padding-right: 1rem;
+}
+
+/* Footer */
+.card__footer {
+    padding:  0 1.5rem;
+}
+
+.card__final {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: var(--desaturated-blue)
+}
+
+.card__final:hover {
+    background-color: var(--bright-blue);
+    color: var(--pale-blue);
+}
