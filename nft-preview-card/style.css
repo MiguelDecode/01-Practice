@@ -28,6 +28,7 @@ a {
     padding: 1.5rem;
     overflow: hidden;
     border-radius: 1rem;
+    box-shadow: 0px 0px 30px 5px whitesmoke;
 }
 
 .card__nft {
@@ -76,7 +77,6 @@ a {
 .card__container {
     padding: 2rem 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid var(--line);
     list-style: none;
