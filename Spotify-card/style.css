@@ -22,7 +22,7 @@ body,html {
 }
 
 .card {
-    width: 375px;
+    width: 350px;
     background-color: var(--very-pale-blue);
     overflow: hidden;
     text-align: center;
@@ -51,7 +51,7 @@ body,html {
 
 .card__section {
     padding: .5rem;
-    background-color: var(--pale-blue);
+    background-color: hsl(225, 17%, 95%);
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -64,6 +64,11 @@ body,html {
 
 .card__price p{
     margin: 0;
+    margin-left: 1rem;
+}
+
+.card__price--type {
+    font-weight: 700;
 }
 
 .card__link {
