@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="card">
     <article class="card__main">
-      <section class="card__left">
-        <h2 class="card__title">Get <span>insights</span> that help your business grow.</h2>
-      
+      <picture class="card__picture">
+         <img src="/images/image-header-mobile.jpg" alt="People working" class="card__image">
+      </picture>
+      <section class="card__body">
+        <h1 class="card__title">Get <span class="card__title--purple" >insights</span> that help your business grow.</h1>
         <p class="card__text">
           Discover the benefits of data analytics and make better decisions regarding revenue, customer
           experience, and overall efficiency.
         </p>
-        <div class="card__stats">
-          <div>10k+ companies</div>
-          <div>314 templates</div>
-          <div>12m+ queries</div>
-        </div>
-      </section>
-      <section class="card__right">
-        <img src="images/image-header-desktop.jpg" alt="Foto gente trabajando en la oficina">
+        <ul class="card__list">
+          <li class="card__stats" >
+            <p class="card__number">10k+</p>
+            <p class="card__type">companies</p>
+          </li>
+          <li class="card__stats" >
+            <p class="card__number">314</p>
+            <p class="card__type">templates</p>
+          </li>
+          <li class="card__stats" >
+            <p class="card__number">12m+</p>
+            <p class="card__type">queries</p>
+          </li>
+        </ul>
       </section>
     </article>
   </main>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Miguel Decode</a>.
-  </div>
 </body>
 </html>
