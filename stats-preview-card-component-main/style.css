@@ -30,8 +30,24 @@ body {
     text-align: center;
 }
     
-.card__image {
+.card__picture {
+    background-image: url(/images/image-header-mobile.jpg);
+    height: 500px;
     width: 100%;
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.card__picture:before {
+    content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: hsl(277, 64%, 61%, .4);
 }
 
 .card__body {
@@ -56,6 +72,10 @@ body {
     list-style-type: none;
 }
 
+.card__stats {
+    margin: 4rem;
+}
+
 .card__number {
     font-size: 3rem;
 }
@@ -63,6 +83,7 @@ body {
 .card__type {
     color: var(--main-paragraph);
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
 

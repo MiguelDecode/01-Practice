@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #151e33;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #f089a0;
+}
+
+/* Create */
+.create {
+    width: 100%;
+    max-width: 785px;
+    min-width: 320px;
+    border-radius: 15px;
+    background-color: #1b263e;
+    padding: 3rem;
+}
+
+/* Login */
+.login {
+    text-align: right;
+}
+
+/* Content */
+.content {
+    text-align: center;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.content h1 {
+    font-size: 2rem;
+}
+
+/* Form */
+.form {
+    width: 70%;
+    margin: 2rem auto;
+}
+
+.form label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+.form input {
+    display: block;
+    border: none;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
+    background-color: transparent;
+    border: 1px solid #495e8d;
+    border-radius: 5px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: white;
+
+}
+
+.form input:last-child {
+    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: #f089a0;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* Legal */
+.legal {
+    border-radius: 10px;
+    background-color: #202e4e;
+    padding: 2rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    color: #8f9ab2;
+    line-height: 24px;
+    font-size: 14px;
+}
