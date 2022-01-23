@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F4FA;
+    font-family: sans-serif;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 24px;
+    min-width: 320px;
+    max-width: 500px;
+    padding: 4rem;
+    text-align: center;
+    color: #1C2852;
+}
+
+/* Card Header */
+.card__header {
+    margin: 0 auto;
+}
+
+.card__avatar {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 15px solid #F8EFF4;
+}
+
+.card__image {
+    width: auto;
+    height: 100%;
+    margin-left: -45px;
+}
+
+.card__title {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.card__text--box {
+    background-color: #F8f4fA;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Card Body */
+.card__form label,
+.card__form input {
+    display: block;
+    text-align: left;
+}
+
+.card__username {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-top: .5rem;
+    color: #1C2852;
+    border: 2px solid #F8EFF4;
+    border-radius: 8px;
+}
+
+.card__username::placeholder {
+    color: #1C2852;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+.submit {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #A30062;
+    color: #fff;
+    border: none;
+    margin: 2rem 0 5rem 0;
+    cursor: pointer;
+
+}
+
+
+
