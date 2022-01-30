@@ -29,9 +29,9 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr;
     max-width: 900px;
+    min-width: 400px;
     border-radius: 1rem;
     box-shadow: 3px 3px 50px lightgray;
-    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +40,13 @@ body {
        grid-template-rows: 1fr 1fr;
        max-width: 70%;
    }
+   /* Reparar los bordes de las imagenes en modo movil */
+   .card__image {
+       border-radius: 1rem 1rem 0 0;
+   }
+   .card__description {
+       border-radius: 0 0 1rem 1rem;
+   }
 }
 
 /* Imagen */
@@ -47,12 +54,14 @@ body {
     background-image: url(/images/drawers.jpg);
     background-position: center;
     background-size: cover;
+    border-radius: 1rem 0 0 1rem;
 }
 
 /* Contenido */
 .card__description {
     padding: 2.5rem;
     background-color: white;
+    border-radius: 0 1rem 1rem 0;
 }
 
 .card__title {
@@ -73,6 +82,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .card__avatar {
@@ -100,7 +110,47 @@ body {
 .card__share {
     background-color: var(--light-grayish-blue);
     border-radius: 50%;
-    padding: .3rem;
-    transform: scale(2);
+    padding: .5rem;
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
+.tooltip {
+    background-color: var(--very-dark-grayish-blue);
+    position: absolute;
+    right: -70px;
+    top: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    color: var(--desaturated-dark-blue);
+    border-radius: .5rem;
+    box-shadow: 4px 4px 30px gray;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s ease-in;
+}
+
+.tooltip.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip::before {
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    position: absolute;
+    background-color: inherit;
+    right: 70px;
+    top: 45px;
+    transform: rotate(45deg);
+
+}
+
+.tooltip__text {
+    font-size: 1rem;
+    letter-spacing: .3rem;
+}

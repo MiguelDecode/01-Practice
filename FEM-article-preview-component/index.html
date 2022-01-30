@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Frontend Mentor | Article preview component</title>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <!-- Card -->
@@ -30,13 +31,34 @@
         </p>
         <div class="card__profile">
           <div class="card__personal">
-            <img src="/images/avatar-michelle.jpg" alt="Avatar Michelle" class="card__avatar">
+            <img
+              src="/images/avatar-michelle.jpg"
+              alt="Avatar Michelle"
+              class="card__avatar"
+            />
             <div class="card__data">
               <p class="card__name">Michelle Appleton</p>
               <p class="card__date">28 Jun 2020</p>
             </div>
           </div>
-          <img src="/images/icon-share.svg" alt="Icon Share" class="card__share">
+          <!-- Tooltip -->
+          <nav class="tooltip">
+            <span class="tooltip__text">SHARE</span>
+            <a href="#" class="tooltip__link"
+              ><img src="/images/icon-facebook.svg" alt="Facebook"
+            /></a>
+            <a href="#" class="tooltip__link"
+              ><img src="/images/icon-twitter.svg" alt="Twitter"
+            /></a>
+            <a href="#" class="tooltip__link"
+              ><img src="/images/icon-pinterest.svg" alt="Pinterest"
+            /></a>
+          </nav>
+          <img
+            src="/images/icon-share.svg"
+            alt="Icon Share"
+            class="card__share"
+          />
         </div>
       </section>
     </article>
