@@ -1,0 +1,112 @@
+:root {
+    /* Background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    /* Text */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    /* Another text */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Line divider */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+/* Card */
+.card {
+    display: flex;
+    align-items: center;
+    max-width: 950px;
+    min-width: 320px;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 1px 8px 25px darkslategray;
+}
+
+/* Image */
+.card__image {
+    display: flex;
+    align-items: center;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: 115%;
+    background-position-y: 70%;
+    padding: 5rem 0;
+    flex-basis: 50%;
+    position: relative;
+}
+.card__woman {
+    position: relative;
+    right: 4.5rem;
+    width: 100%;
+}
+
+.card__container {
+    overflow: hidden;
+}
+
+.card__box {
+    position: absolute;
+    transform: translate(-95px, 40px);
+}
+
+/* Contenido */
+.faq {
+    padding: 3rem;
+    flex-basis: 50%;
+}
+
+.faq__title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.faq__dropdown {
+    padding: .5rem 0;
+    color: var(--very-dark-grayish-blue);
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    cursor: pointer;
+}
+
+.faq__question.active {
+    font-weight: bold;
+}
+
+.faq__arrow.active {
+    transform: rotate(180deg);
+}
+
+.faq__answer {
+    display: none;
+}
+
+.faq__answer.active {
+    display: initial;
+}
