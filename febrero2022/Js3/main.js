@@ -38,6 +38,11 @@ switch (figura) {
     console.log(`El area del circulo es ${3.14 * r ** 2}`);
     break;
   }
+  case "rombo": {
+    let D = prompt{"Introduce el tamano del lado mas largo del rombo"}
+    let d = prompt{"Introduce el tamano del lado mas corto del rombo"}
+    console.log(`El area del rombo es ${D * d / 2}`)
+  }
   default:
     console.log("La figura geometrica no es valida");
 }
