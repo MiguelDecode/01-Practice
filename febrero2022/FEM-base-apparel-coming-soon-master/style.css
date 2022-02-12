@@ -1,0 +1,81 @@
+:root {
+    --background: white;
+    --primary1: hsl(0, 36%, 70%);
+    --primary2: hsl(0, 93%, 68%);
+    --Neutral: hsl(0, 6%, 24%);
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    background-color: var(--background);
+}
+.image__logo {
+    display: block;
+    padding: 30px;
+}
+
+/* Contenido */
+.content {
+    text-align: center;
+    padding: 1.4rem;
+}
+.content__title {
+    text-transform: uppercase;
+    color: var(--primary1);
+    font-weight: 300;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    line-height: 3rem;
+}
+.content__title--bold {
+    color: var(--Neutral);
+    font-weight: 600;
+}
+.content__text {
+    color: var(--primary1);
+    line-height: 1.5rem;
+}
+.subscribe {
+    position: relative;
+}
+.subscribe > input {
+    width: 90%;
+    height: 2.8rem;
+    border-radius: 30px;
+}
+.subscribe__button {
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) );
+    padding: 1rem 1.8rem;
+    border-radius: 30px;
+    position: absolute;
+    right: 12px;
+    top: 0px;
+}
+
+
+
+
