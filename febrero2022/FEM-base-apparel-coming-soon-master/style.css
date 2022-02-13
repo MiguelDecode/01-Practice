@@ -2,7 +2,7 @@
     --background: white;
     --primary1: hsl(0, 36%, 70%);
     --primary2: hsl(0, 93%, 68%);
-    --Neutral: hsl(0, 6%, 24%);
+    --neutral: hsl(0, 6%, 24%);
 }
 
 *::before,
@@ -15,8 +15,8 @@
 body {
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
+    height: 100vh;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     background-image: url(/images/bg-pattern-desktop.svg);
@@ -30,12 +30,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 375px;
-    background-color: var(--background);
+    min-width: 375px;
+    max-width: 500px;
+    width: 100%;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
-.image__logo {
+.picture {
+    width: 100%;
+}
+.picture__woman {
+    width: 100%;
+}
+.logo {
     display: block;
     padding: 30px;
+    transform: scale(.8);
+}
+.image__background {
+    width: 100%;
 }
 
 /* Contenido */
@@ -47,35 +59,77 @@ body {
     text-transform: uppercase;
     color: var(--primary1);
     font-weight: 300;
-    font-size: 2.5rem;
-    letter-spacing: 1rem;
+    font-size: 2.7rem;
+    letter-spacing: .8rem;
     line-height: 3rem;
 }
 .content__title--bold {
-    color: var(--Neutral);
+    color: var(--neutral);
     font-weight: 600;
 }
 .content__text {
     color: var(--primary1);
     line-height: 1.5rem;
+    margin-bottom: 3rem;
 }
 .subscribe {
     position: relative;
+    margin-bottom: 3rem;
 }
-.subscribe > input {
-    width: 90%;
+.subscribe__input {
+    width: 80%;
+    padding-left: 2rem;
+    color: var(--primary1);
     height: 2.8rem;
     border-radius: 30px;
+    border: 1px solid var(--primary1);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input:focus {
+    border: 1px solid var(--primary2);
+    outline: none;
+}
+::placeholder {
+    color: var(--primary1);
 }
 .subscribe__button {
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) );
-    padding: 1rem 1.8rem;
+    padding: .9rem 1.8rem;
     border-radius: 30px;
     position: absolute;
-    right: 12px;
-    top: 0px;
+    right: 25px;
+    cursor: pointer;
 }
 
+@media (min-width: 800px) {
+    .card {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 4fr;
+        min-width: 1000px;
+    }
+    .picture {
+        grid-column: 2 / 3;
+        grid-row: 1 / 5;
+        height: 100%;
+    }
+    .picture__container {
+        height: 100%;
+    }
+    .picture__woman {
+        height: 100%;
+    }
+    .logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .content {
+        padding: 1.5rem 5rem;
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+    }
+}
 
 
 

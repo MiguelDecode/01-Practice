@@ -14,17 +14,18 @@
   </head>
   <body>
     <main class="card">
-      <article class="image">
+      <article class="logo">
         <img
           class="image__logo"
           src="/images/logo.svg"
           alt="Logo de la compañia"
         />
-        <img
-          class="image__background"
-          src="/images/hero-mobile.jpg"
-          alt="Mujer de frente"
-        />
+      </article>
+      <article class="picture">
+        <picture class="picture__container">
+          <source srcset="/images/hero-desktop.jpg" media="(min-width: 800px)">
+          <img class="picture__woman" src="/images/hero-mobile.jpg" alt="Mujer de frente">
+        </picture>
       </article>
       <article class="content">
         <h1 class="content__title">
@@ -38,9 +39,19 @@
           launch deals.
         </p>
         <form action="#" class="subscribe">
-          <label for="email"></label>
-          <input type="email" id="email" placeholder="Email Address" />
-          <img class="subscribe__button" src="/images/icon-arrow.svg" alt="Boton de envio">
+          <label class="subscribe__label" for="email"></label>
+          <input
+            class="subscribe__input"
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+          />
+          <img
+            class="subscribe__button"
+            src="/images/icon-arrow.svg"
+            alt="Boton de envio"
+          />
         </form>
       </article>
     </main>
