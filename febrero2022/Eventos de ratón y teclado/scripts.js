@@ -51,15 +51,15 @@ const box = document.getElementById('box')
 //     console.log('ESTAS MOVIENDO EL RATON EN LA CAJA');
 // })
 
-input.addEventListener('keydown', () => {
-    console.log('HAS PULSADO UNA TECLA');
-})
+// input.addEventListener('keydown', () => {
+//     console.log('HAS PULSADO UNA TECLA');
+// })
 
-input.addEventListener('keyup', () => {
-  console.log('HAS SOLTADO UNA TECLA')
-})
+// input.addEventListener('keyup', () => {
+//   console.log('HAS SOLTADO UNA TECLA')
+// })
 
-input.addEventListener('keypress', () => {
-  console.log('ESTÁS PULSANDO UNA TECLA')
-})
+// input.addEventListener('keypress', () => {
+//   console.log('ESTÁS PULSANDO UNA TECLA')
+// })
 
