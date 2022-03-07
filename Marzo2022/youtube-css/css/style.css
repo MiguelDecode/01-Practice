@@ -1,0 +1,11 @@
+/* Regla de CSS consta de dos partes: Selector y bloque de declaración: Atributo y valor. */
+
+/* Selector {
+    atributo: valor;
+} */
+
+h1 {
+    color: orangered;
+    background-color: skyblue;
+}
+
