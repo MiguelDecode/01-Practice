@@ -14,21 +14,21 @@
     <title>Gradie</title>
   </head>
   <body>
-    <main>
+    <main class="container">
       <article class="box-one">
-        <picture class="box-one__background">
-          <section class="box-one__title">
+        <section class="box-one__background">
+          <div class="box-one__title">
             <h1 class="box-one__title--main">Gradie</h1>
             <h2 class="box-one__title--secondary">
               Beautiful gradients in seconds.
             </h2>
-          </section>
+          </div>
           <img
             class="box-one__image"
             src="/assets/iPhone Mockup.png"
             alt="Iphone Mockup"
           />
-        </picture>
+        </section>
       </article>
       <article class="box-two">
         <form action="#" class="form">
@@ -47,11 +47,13 @@
             name="password"
             id="password"
           />
-          <input type="checkbox" name="conditions" id="conditions" />
-          <span class="legal"
-            >By creating an account, you agree to the
-            <a href="#">Terms & Conditions</a>.</
-          >
+          <div class="legal">
+            <input type="checkbox" name="conditions" id="conditions" />
+            <label for="conditions"
+              >By creating an account, you agree to the
+              <a href="#">Terms & Conditions</a>.</label
+            >
+          </div>
           <input type="submit" value="Create an Account"/>
         </form>
       </article>
