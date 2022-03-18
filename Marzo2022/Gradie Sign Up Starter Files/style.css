@@ -7,8 +7,11 @@ body {
 
 /* Box One */
 .box-one {
-  position: relative;
   background-color: rgb(1, 50, 67);
+}
+
+.box-one__background {
+  position: relative;
 }
 
 .box-one__title {
@@ -38,18 +41,14 @@ body {
   padding: 2rem;
 }
 
-.legal > a {
-  font-weight: 700;
-}
-
-.form label[for="email"],
-.form label[for="password"] {
+.legal > a,
+.form label {
   font-weight: bold;
 }
 
 .form input[type="email"],
 .form input[type="password"] {
-  display: block;
+  box-sizing: border-box;
   width: 100%;
   padding: 0.8rem;
   margin-top: 0.3rem;
@@ -74,7 +73,6 @@ body {
 }
 
 .form [type="submit"] {
-  display: block;
   width: 100%;
   margin-top: 1.5rem;
   padding: 1rem;
@@ -115,7 +113,16 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .container {
+    max-width: 720px;
     display: flex;
   }
-}
+
+  .box {
+    flex-basis: 50%;
+  }
+
+  }
+
+  
