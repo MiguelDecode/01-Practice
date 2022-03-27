@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* ? ------------- PSEUDO-CLASES ------------- */
+
+/* Estado del enlace mientras es clicado */
+.enlace:active {
+	background-color: #000;
+}
+
+/* Estado del enlace mientras no hayamos entrado */
+.enlace:link {
+	color: blue;
+}
+
+.enlace:visited {
+	color: #b1b1b1;
+}
+
+.enlace:hover {
+	color: orange;
+}
+
+/* ? --- --- --- --- PARRAFOS --- --- --- --- */
+
+.parrafos p:first-child {
+	background-color: var(--azul);
+	color: #fff;
+}
+
+.parrafos p:last-child {
+	background-color: var(--colorOscuro);
+	color: #fff;
+}
+
+/* ? --- --- --- --- ELEMENTOS --- --- --- --- */
+
+.elementos div:first-of-type {
+	background-color: var(--azul);
+	color: #fff;
+}
+
+.elementos p:last-of-type {
+	background-color: var(--colorOscuro);
+	color: #fff;
+}
+
+/* ? --- --- --- --- LISTA --- --- --- --- */
+
+.lista :nth-child(2) {
+	background-color: var(--azul);
+	color: #fff;
+}
+
+.lista :nth-last-child(3) {
+	background-color: var(--colorOscuro);
+	color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+
+.lista2 p:nth-of-type(2) {
+	background-color: var(--azul);
+	color: #fff;
+}
+
+.lista2 div:nth-last-of-type(2) {
+	background-color: var(--colorOscuro);
+	color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+
+/* Solo se aplica cuando el elemento es el unico elemento hijo */
+.lista3 p:only-child {
+	background-color: var(--azul);
+	color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
+
+.lista4 p:only-of-type {
+	background-color: var(--azul);
+	color: #fff;
+}

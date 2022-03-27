@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azulPrimario: #3860EC;
+	--azulSecundario: #2247ce;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+
+/* ? ------------- Estilos del Formulario ------------- */
+
+.formulario .grupo {
+	margin-bottom: 60px;
+}
+
+.formulario .grupo > input {
+	height: 50px;
+	width: 100%;
+	border-radius: 3px;
+	border: none;
+	padding: 20px;
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+.formulario .grupo > label {
+	display: block;
+	color: var(--colorOscuro);
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.formulario .radio input,
+.formulario .checkbox input {
+	margin-right: 10px;
+}
+
+.formulario .checkbox label {
+	margin-right: 20px;
+}
+
+
+.boton {
+	width: 100%;
+	background: var(--azulPrimario);
+	display: inline-block;
+	padding: 25px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	transition: .3s ease all;
+}
+
+.boton:hover {
+	background: var(--azulSecundario);
+}
+
+
+/* ? ------------- Pseudoclases ------------- */
+
+.formulario .nombre:focus {
+	border: medium solid var(--azulPrimario);
+}
+
+.formulario .id:disabled {
+	background-color: #b1b1b1;
+}
+
+.formulario .correo:invalid {
+	background-color: #b44242;
+	border: none;
+}
+
+.formulario .correo:valid {
+	background-color: rgb(90, 211, 126);
+	border: none;
+}
+
+.formulario .mensaje:required {
+	background-color: rgb(185, 194, 146);
+	border: none;
+}
+
+.formulario .radio input:checked {
+	box-shadow: 0 0 10px 1px var(--azulPrimario);
+}
+
+.formulario .checkbox input:default {
+	box-shadow: 0 0 10px 1px #ff8800;
+}
+
+.formulario .edad:out-of-range {
+	background-color: #b44242;
+	border: none;
+}
+
+.formulario .edad:in-range {
+	background-color: rgb(90, 211, 126);
+	border: none;
+}
