@@ -1,0 +1,98 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  background-color: var(--pale-blue);
+  min-height: 100vh;
+}
+
+/* Cabecera de la carta */
+.card {
+  max-width: 375px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.card__image img {
+  max-width: 100%;
+}
+
+/* Cuerpo de la carta */
+.card__body,
+.card__footer {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.card__body h2 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.card__body p {
+  color: var(--desaturated-blue);
+  line-height: 1.7rem;
+}
+
+.card__container {
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card__plan {
+  text-align: left;
+}
+
+.card__plan h3 {
+  margin-bottom: 0.3rem;
+}
+
+.card__plan p {
+  margin-top: 0.3rem;
+}
+
+/* Card footer */
+.card__footer {
+  margin-top: 2rem;
+}
+
+.card__footer button {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.card__footer button:hover {
+  color: white;
+  background-color: var(--dark-blue);
+}

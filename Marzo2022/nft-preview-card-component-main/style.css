@@ -34,32 +34,32 @@ body {
 }
 
 .fondo {
-    border-radius: 12px;
+  border-radius: 12px;
   max-width: 100%;
   display: block;
 }
 
 .overlay {
-    position: absolute;
-    border-radius: 12px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: hsla(178, 100%, 50%, .5);
-    display: none;
+  position: absolute;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: none;
 }
 
 .card__image:hover .overlay {
-    display: initial;
+  display: initial;
 }
 
 .overlay img {
   position: absolute;
- width: 50px;
- left: 50%;
- top: 50%;
- transform: translate(-50%, -50%);
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card__title {
@@ -79,7 +79,6 @@ body {
 .card__data {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid var(--line);
 }
 
 .card__data--one,
@@ -121,4 +120,10 @@ body {
 
 .card__author span:hover {
   color: var(--cyan);
+}
+
+hr {
+  height: 2px;
+  background-color: var(--line);
+  border: none;
 }
