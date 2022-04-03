@@ -78,6 +78,9 @@ body {
 
 /* MediaQuerries */
 @media (min-width: 768px) {
+  .body {
+    min-height: 100vh;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -89,7 +92,7 @@ body {
     grid-row: 1/2;
   }
   .card-cyan {
-    grid-colum: 1/2;
+    grid-column: 1/2;
     grid-row: 3/5;
   }
   .card-red {
