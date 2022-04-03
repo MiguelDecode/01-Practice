@@ -1,0 +1,97 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --parragraphs: hsla(0, 0%, 100%, 0.75);
+  --main: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(5, 28, 71);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 2rem;
+}
+
+.card--orange {
+  background: var(--bright-orange);
+}
+
+.card--blue {
+  background: var(--dark-cyan);
+}
+
+.card--green {
+  background: var(--very-dark-cyan);
+}
+
+.card img {
+  width: 30%;
+}
+
+.card h2 {
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+.card p {
+  color: var(--parragraphs);
+  margin-bottom: 2rem;
+}
+
+.card button {
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 60%;
+  border: none;
+  font-weight: bold;
+  font-family: "Lexend Deca", sans-serif;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.card--orange button {
+  color: var(--bright-orange);
+  position: relative;
+  bottom: 0;
+}
+
+.card--blue button {
+  color: var(--dark-cyan);
+}
+
+.card--green button {
+  color: var(--very-dark-cyan);
+}
+
+/* Media Querries */
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .card {
+    flex-basis: 300px;
+    flex-grow: 1;
+  }
+}

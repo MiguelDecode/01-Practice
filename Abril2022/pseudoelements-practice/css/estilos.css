@@ -1,0 +1,107 @@
+:root {
+  --fondoPrimario: #323941;
+  --fondoSecundario: #1a1e21;
+  --azulPrimario: #3860ec;
+  --azulSecundario: #2247ce;
+}
+
+body {
+  background: var(--fondoPrimario);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  background: var(--fondoSecundario);
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.logo {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  width: 70%;
+}
+
+.dialogo {
+  background: var(--fondoPrimario);
+  padding: 25px;
+  color: #fff;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 28px;
+
+  position: relative;
+}
+
+/* Pseudoelementos CSS */
+
+.boton {
+  width: 100%;
+  background: var(--azulPrimario);
+  display: inline-block;
+  padding: 25px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: 0.3s ease all;
+}
+
+.boton:hover {
+  background: var(--azulSecundario);
+}
+
+.enlace {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #d4d4d4;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.enlace:hover {
+  text-decoration: underline;
+}
+
+/* Mis prácticas Pseudoelementos*/
+
+.dialogo::selection {
+  background: #d61a1a;
+}
+
+.dialogo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  border-top: 20px solid var(--fondoPrimario);
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  right: calc(50% - 20px);
+}
+
+.dialogo::first-line {
+  color: cornflowerblue;
+}
+
+.dialogo::first-letter {
+  font-size: 3rem;
+  font-weight: bold;
+}

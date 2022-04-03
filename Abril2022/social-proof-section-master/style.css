@@ -1,0 +1,153 @@
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-gravish-magenta: hsl(303, 10%, 53%);
+  --light-gravish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+/* Cabecera */
+.header__title {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__text {
+  color: var(--dark-gravish-magenta);
+}
+
+/* Stars */
+.reviews {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.review {
+  display: block;
+  background-color: var(--light-gravish-magenta);
+  border-radius: 10px;
+  padding: 1rem 1rem 0.3rem 1rem;
+  margin: 1rem;
+}
+
+.review p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+}
+
+/* Testimonios */
+.testimonials {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.testimonial {
+  background-color: var(--very-dark-magenta);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1.5rem;
+  color: var(--white);
+  font-weight: 500;
+  text-align: left;
+}
+
+.testimonial__data {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.testimonial__data img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 2rem;
+}
+
+.testimonial__data h2,
+.testimonial__data p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.testimonial__name p {
+  color: var(--soft-pink);
+}
+
+/* Background */
+.bg-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* MediaQuerries */
+@media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header {
+    padding: 2rem;
+    max-width: 40%;
+  }
+  .review {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .review p {
+    margin-left: 2rem;
+  }
+  .review__two {
+    position: relative;
+    left: 50px;
+  }
+  .review__three {
+    position: relative;
+    left: 100px;
+  }
+  .testimonials {
+    display: flex;
+  }
+  .testimonial__one {
+    position: relative;
+    bottom: 50px;
+  }
+  .testimonial__three {
+    position: relative;
+    top: 50px;
+  }
+}
