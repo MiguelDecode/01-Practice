@@ -1,0 +1,107 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main text */
+.main {
+  text-align: center;
+  width: 400px;
+}
+
+.main h2 {
+  font-weight: 200;
+  margin-bottom: 0rem;
+}
+
+.main h1 {
+  font-weight: 600;
+  margin-top: 0rem;
+}
+
+.main p {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+/* Cards */
+.card {
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px hsl(229, 6%, 66%);
+}
+
+.card p {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+/* Estilos de cartas */
+.card-cyan {
+  border-top: 4px solid var(--cyan);
+}
+
+.card-red {
+  border-top: 4px solid var(--red);
+}
+
+.card-orange {
+  border-top: 4px solid var(--orange);
+}
+
+.card-blue {
+  border-top: 4px solid var(--blue);
+}
+
+/* MediaQuerries */
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px repeat(4, 150px);
+    gap: 1rem;
+  }
+  .main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .card-cyan {
+    grid-colum: 1/2;
+    grid-row: 3/5;
+  }
+  .card-red {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .card-orange {
+    grid-column: 2/3;
+    grid-row: 4/6;
+  }
+  .card-blue {
+    grid-column: 3/4;
+    grid-row: 3/5;
+  }
+}
