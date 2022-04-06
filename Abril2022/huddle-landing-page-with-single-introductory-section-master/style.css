@@ -1,0 +1,113 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(/images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header area */
+.header {
+  padding: 2rem;
+  text-align: left;
+}
+
+.header__logo {
+  position: absolute;
+  width: 150px;
+  top: 2rem;
+  left: 2rem;
+}
+
+.header__mockup {
+  display: block;
+  padding: 1rem;
+  margin-top: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Main area */
+.main {
+  color: white;
+}
+
+.main h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.main__title {
+  margin-bottom: 0;
+}
+
+.main__subtitle {
+  margin-top: 0;
+}
+
+.main__btn {
+  width: 200px;
+  margin-top: 2rem;
+  padding: 0.9rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: var(--violet);
+}
+
+/* Social Icons */
+.social {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0.3rem;
+  padding: 0.5rem;
+  /* Need to search svg-icons with color white */
+}
+
+/* MediaQuerries */
+@media (min-width: 768px) {
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+  }
+
+  .header {
+    flex-grow: 1;
+    max-width: 1100px;
+  }
+
+  .main {
+    padding: 2rem;
+    text-align: left;
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+
+  .social {
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+  }
+}
