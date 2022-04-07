@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+<body>
+  <main class="container">
+    <article class="card card--files">
+      <img src="/images/logo.svg" alt="logo" class="card__logo">
+      <section>
+        <ul class="card__list">
+          <li class="card__icon card__icon--file"><img src="/images/icon-document.svg" alt="Document"></li>
+          <li class="card__icon card__icon--carpet"><img src="/images/icon-folder.svg" alt="Folder"></li>
+          <li class="card__icon card__icon--cloud"><img src="/images/icon-upload.svg" alt="cloud"></li>
+        </ul>
+      </section>
+    </article>
+    <article class="card card--stats">
+      <p class="card__title">You’ve used <span class="card__title--bold">815 GB</span> of your storage</p>
+      <input class="card__range" type="range">
+      <section class="card__storage">
+        <span>0 GB</span>
+        <span>1000 GB</span>
+      </section>
+      <section class="card__free-space"><div class="card__total"><span class="card__total--number">185</span>GB LEFT</div></section>
+    </article>
+  </main>
+</body>
+</html>
