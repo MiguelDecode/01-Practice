@@ -122,8 +122,17 @@ img {
   padding-left: 0;
 }
 
-.footer__social img {
-  padding: 2rem;
+.footer__social svg {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.footer__social svg:hover {
+  cursor: pointer;
+}
+
+.footer__social svg:hover path {
+  fill: var(--strong-cyan);
 }
 
 .footer__list a {
