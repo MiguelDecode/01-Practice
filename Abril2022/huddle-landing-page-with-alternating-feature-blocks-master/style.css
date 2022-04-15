@@ -259,25 +259,42 @@ body {
   .footer {
     padding: 8rem 3rem 3rem 3rem;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-rows: 30px 1fr;
     gap: 1rem;
+    padding-bottom: 0;
   }
 
-  .footer__logo,
-  .footer__contact {
+  .footer__logo {
     grid-row: 1/2;
+    grid-column: 1/4;
+  }
+
+  .footer__contact {
+    grid-row: 2/3;
     grid-column: 1/2;
   }
 
   .footer__nav {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 1rem;
+    grid-row: 2/3;
+    grid-columnn: 2/3;
+    margin-top: 0;
   }
 
-  .footer__social,
-  .footer__copyright {
+  .footer__links {
+    display: grid;
+    grid-template-row: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__social {
+    grid-row: 2/3;
     grid-column: 3/4;
-    grid-row: 1/2;
+  }
+
+  .footer__copyright {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    align-self: flex-end;
   }
 }
