@@ -30,7 +30,7 @@ article {
 
 @keyframes animate {
     0% {
-        filter: hue-rotate(0deg)
+        filter: hue-rotate(0deg);
         transform: rotate(0deg)
     }
     25% {
@@ -54,7 +54,7 @@ article {
 
 @keyframes animate-special {
     0% {
-        filter: hue-rotate(180deg)
+        filter: hue-rotate(180deg);
         transform: rotate(0deg)
     }
     25% {

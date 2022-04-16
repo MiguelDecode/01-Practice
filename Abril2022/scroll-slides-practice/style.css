@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+[id] {
+    scroll-margin-top: 12ex;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: .25rem;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.header__nav a {
+    margin: 0 1rem;
+    color: #00c4d6;
+}
+
+.header__nav a:hover {
+    color: #e94bb4;
+}
+
+.slide {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    color: #d9e8f0;
+    background-color: #1e2345;
+}
+
+.slide:nth-child(even) {
+    background-color: #108eb4;
+}
+
