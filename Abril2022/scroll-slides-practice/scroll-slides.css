@@ -7,6 +7,7 @@ body {
     font-family: sans-serif;
 }
 
+/* SLIDES VERTICALES */
 .slides {
     width: 100%;
     height: 100vh;
@@ -35,6 +36,47 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
+    font-size: 5vw;
     color: #d9e8f0;
+}
+
+/* SLIDE HORIZONTAL */
+.carousel {
+    border: 5px solid #d938f0;
+    display: flex;
+    width:100%;
+    height:60vh;
+    overflow-x: hidden;
+}
+
+.carousel__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow: scroll hidden;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #108eb4;
+    scroll-snap-align: center;
+}
+
+.carousel__slide:nth-child(even) {
+    background-color: #1e2345;
+}
+
+/* TEXTOS DEGRADADOS */
+.gradient-text {
+    background-image: linear-gradient(45deg, magenta, yellow);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
