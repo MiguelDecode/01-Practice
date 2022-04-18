@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movimiento en CSS</title>
+  </head>
+  <body>
+    <h1>Movimiento en CSS</h1>
+    <hr />
+    <section class="transitions">
+      <h2>Transiciones</h2>
+      <div class="box"></div>
+      <article class="card">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+    </section>
+    <hr />
+    <section class="transform">
+      <h2>Transformaciones</h2>
+      <h3>Transformaciones en 2d</h3>
+      <article class="card transform-2d">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+      <h3>Transformaciones en 3D</h3>
+      <article class="card transform-3d">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+      <h3>Origen de la transformación</h3>
+      <article class="card transform-origin">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+      <h3>Flip Cards</h3>
+      <article class="flip-card-1">
+        <section class="flip-face flip-face-front">
+          <img
+            src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+            alt="Small Town streets view"
+            class="card__image"
+          />
+        </section>
+        <section class="flip-face flip-face-back">
+          <img
+            src="/images/lumi-w-_mOcsXDTYKQ-unsplash.jpg"
+            alt="A woman walk over a bridge"
+            class="card__image"
+          />
+        </section>
+      </article>
+      <article class="flip-card-2">
+        <section class="flip-face flip-face-front">
+          <img
+            src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+            alt="Small Town streets view"
+            class="card__image"
+          />
+        </section>
+        <section class="flip-face flip-face-back">
+          <img
+            src="/images/lumi-w-_mOcsXDTYKQ-unsplash.jpg"
+            alt="A woman walk over a bridge"
+            class="card__image"
+          />
+        </section>
+      </article>
+    </section>
+    <hr />
+    <section class="animations">
+      <h2>Animaciones</h2>
+      <article class="card card--animation">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+      <article class="card card--animation-1">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+      <article class="card card--animation-multiple">
+        <img
+          src="/images/nadine-marfurt-b7_W-Xb2UOM-unsplash.jpg"
+          alt="Small Town streets view"
+          class="card__image"
+        />
+      </article>
+    </section>
+    <hr />
+    <section class="motion-examples">
+      <h2>Ejemplos de efectos de movimiento en CSS</h2>
+      <h3>FadeIn / FadeOut</h3>
+      <div class="fade-in">🙂</div>
+      <div class="fade-out">🙃</div>
+      <h3>Sacudir</h3>
+      <div class="shake">🍻</div>
+      <h3>Pulsaciones</h3>
+      <div class="pulse">💓</div>
+      <h3>Dibujando y animando con CSS</h3>
+      <h4>Corazón</h4>
+      <div class="pulse">Eres el CSS de mi HTML</div>
+      <div class="heart pulse"></div>
+      <h4>Spinner/Loader</h4>
+      <div class="spinner"></div>
+      <h3>Botones animados</h3>
+      <button class="btn animation--bottom to-center">Animación Centro</button>
+      <button class="btn animation--bottom to-right">Animación Derecha</button>
+      <button class="btn animation--bottom to-left">Animación Izquierda</button>
+      <button class="btn animation--bg-gradient">Fondo con Gradiente</button>
+      <h3>Menú de Pestañas(Tabs)</h3>
+      <nav class="tabs-menu">
+        <input type="radio" id="tab-1" name="tabs" />
+        <label for="tab-1">Seccion 1</label>
+        <input type="radio" id="tab-2" name="tabs" />
+        <label for="tab-2">Seccion 2</label>
+        <input type="radio" id="tab-3" name="tabs" />
+        <label for="tab-3">Seccion 3</label>
+        <input type="radio" id="tab-4" name="tabs" />
+        <label for="tab-4">Seccion 4</label>
+        <div class="tab-bg-cover"></div>
+      </nav>
+      <h3>Menú off canvas</h3>
+      <input type="checkbox" class="off-canvas-btn" />
+      <label class="off-canvas-burger"></label>
+      <nav class="off-canvas-menu">
+        <div class="off-canvas-menu-container">
+          <a href="#" class="off-canvas-link">Sección 1</a>
+          <a href="#" class="off-canvas-link">Sección 2</a>
+          <a href="#" class="off-canvas-link">Sección 3</a>
+          <a href="#" class="off-canvas-link">Sección 4</a>
+          <a href="#" class="off-canvas-link">Sección 5</a>
+        </div>
+      </nav>
+      <h3>Ventana Modal</h3>
+      <a href="#modal-1" target="_blank">Abrir Modal</a>
+      <article id="modal-1" class="modal-1">
+        <div class="modal-container">
+          <a href="#cerrar" class="modal-close">X</a>
+          <h2>Esto es una ventana modal</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
+            quisquam vel error, facere repellendus itaque soluta neque eaque
+            temporibus numquam adipisci aspernatur ratione aliquam sed illum eos
+            eligendi harum quidem.
+          </p>
+          <ul>
+            <li><a href="">Enlace-1</a></li>
+            <li><a href="">Enlace-2</a></li>
+            <li><a href="">Enlace-3</a></li>
+            <li><a href="">Enlace-4</a></li>
+            <li><a href="">Enlace-5</a></li>
+            <li><a href="">Enlace-6</a></li>
+          </ul>
+        </div>
+      </article>
+      <h3>Star Wars Intro</h3>
+      <article class="star-wars">
+        <div class="star-wars-container">
+          <h2>Epiosdio III</h2>
+          <h3>Revenge of Sith</h3>
+          <p>
+            War! The Republic is crumbling under attacks by the ruthless Sith
+            Lord, Count Dooku. There are heroes on both sides. Evil is
+            everywhere.
+          </p>
+          <p>
+            In a stunning move, the fiendish droid leader, General Grievous, has
+            swept into the Republic capital and kidnapped Chancellor Palpatine,
+            leader of the Galactic Senate.
+          </p>
+          <p>
+            As the Separatist Droid Army attempts to flee the besieged capital
+            with their valuable hostage, two Jedi Knights lead a desperate
+            mission to rescue the captive Chancellor....
+          </p>
+        </div>
+      </article>
+    </section>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

@@ -1,0 +1,723 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+.box {
+    border: 5px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 200px;
+    height: 200px;
+}
+
+.card {
+    border: 5px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    width: 600px;
+    height: 400px;
+}
+
+.card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+
+/* TRANSICIONES: 
+transition-propierty:
+transition-duration:
+transition-timing-function:
+transition-delay:
+transition: property duration timing-function delay; */
+.transitions .box {
+    background-color: magenta;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    transition-duration: .5s;
+    transition: border-color 500ms linear 1s;
+    transition: background-color 2s 250ms,
+    border-color 2s ease-in-out 250ms,
+    border-radius 2s ease-in-out 250ms;
+}
+
+.transitions .box:hover {
+    background-color: cyan;
+    border-color: red;
+    border-radius: 2rem;
+    border-style: dashed;
+}
+
+.transitions .card {
+    transition: opacity 1s ease-out,
+    border-color 3s steps(3),
+    filter 2s ease-in 1s,
+    box-shadow 1.5s linear 2s;
+}
+
+.transitions .card:hover {
+    opacity: .75rem;
+    border-color: orchid;
+    filter: blur(.15rem);
+    box-shadow: 1rem 1rem 2rem .5rem #000;
+}
+
+.transitions .card .card__image {
+    transition: object-position 2s ease-in-out 3s;
+}
+
+.transitions .card .card__image:hover {
+   object-position: 0% 100%;
+}
+
+/* TRANSFORMACIONES EN DOS DIMENSIONES */
+.transform-2d img {
+    transition: transform 2s ease-in-out;
+}
+
+.transform-2d img:hover {
+    transform: translateX(4rem);
+    transform: translate(4rem, 4rem);
+    transform: scale(2);
+    transform: rotate(90deg);
+    transform: skew(20deg);
+    transform: matrix(1,2,2,1,20,10);
+    /* matrix(scaleY(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* TRANSFORMACIONES MULTIPLES */
+    transform: translate(25%, -50%) rotate(45deg) skew(10deg, 20deg);
+}
+
+/* TRANSFORMACIONES EN TRES DIMENSIONES */
+.transform-3d {
+    perspective: 10rem;
+}
+
+.transform-3d .card__image {
+    transition: transform 2s ease-in-out;
+
+}
+
+.transform-3d .card__image:hover {
+    /* Es imprescindible aplicar la propiedad perspective. También es viable aplicar esta propiedad a su padre. */
+    transform: perspective(1000px) translateZ(8rem);
+    transform: perspective(100rem) translateZ(8rem);
+    transform: perspective(20rem) translateZ(8rem);
+    transform: perspective(10rem) translateZ(-8rem);
+    transform: translate3d(2rem,50%,-3rem);
+    transform: scaleZ(1.5);
+    transform: scale3d(2,.5,3);
+    transform: rotateX(60deg);
+    transform: rotateY(60deg);
+    /* transformaciones multiples */
+    transform: rotate3d(-1,2.5,-2,60deg) translate3d(2rem,50%,-3rem) scale3d(2, 50%, 3);
+}
+
+/* TRANSFORMACIONES ESPECIFICANDO EL PUNTO DE ORIGEN */
+.transform-origin img {
+    transition: transform 2s ease-in-out;
+    /* transform-origin: x y z; */
+    transform-origin: 0 0;
+    transform-origin: 25% 25%;
+    transform-origin: top left;
+}
+
+.transform-origin img:hover {
+    transform: rotate(360deg);
+}
+
+/* FLIP CARDS */
+.flip-card-1,
+.flip-card-2 {
+    border: 5px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    width: 400px;
+    height: 600px;
+
+    position: relative;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+    perspective: 10rem;
+    transform-style: preserve-3d;
+}
+
+.flip-card-2 {
+    transform-origin: center right;
+}
+
+.flip-card-1 img,
+.flip-card-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+}
+
+.flip-card-1:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card-2:hover {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.flip-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-face-front {
+    transform: rotateY(0deg);
+}
+
+.flip-face-back {
+    transform: rotateY(180deg);
+}
+
+/* ANIMACIONES */
+
+@keyframes myAwesomeAnimation {
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+
+.card--animation {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; Un total de 8 propiedades*/
+    animation-name: myAwesomeAnimation;
+    animation-duration: 3s;
+    /* https://cubic-bezier.com */
+    animation-timing-function: cubic-bezier(.45,1.12,.66,.39);
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    /* forwards: al final de la animación se queda con los estilos finales de la animación */
+    animation-fill-mode: forwards;
+    /* backwards: al final de la animación se queda con los estilos iniciales de la animación */
+    animation-fill-mode: backwards;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-play-state: running;
+}
+
+@keyframes myAwesomeAnimation1 {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: .5;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(100%);
+    }
+
+}
+
+.card--animation-1 {
+    animation: myAwesomeAnimation1 2s;
+}
+
+@keyframes multipleAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;  
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes multipleAnimation-2 {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.card--animation-multiple {
+    animation: multipleAnimation 2s infinite;
+    animation: multipleAnimation-2 2s infinite;
+    animation: multipleAnimation 2s infinite, multipleAnimation-2 2s infinite;
+}
+
+/* MOTION EXAMPLES */
+.motion-examples {
+    text-align: center;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    font-size: 5vw;
+    animation: fade-in 2s linear infinite alternate;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    font-size: 5vw;
+    animation: fade-out 2s linear infinite alternate;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate(-1px,0);
+    }
+    20%, 80% {
+        transform: translate(2px,0)
+    }
+    30%, 50%, 70% {
+        transform: translate(-4px,0)
+    }
+    40%, 60% {
+        transform: translate(4px,0)
+    }
+}
+
+.shake {
+    font-size: 10vw;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.shake:hover {
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate(0);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    font-size: 10vw;
+    animation: pulse 1s linear infinite;
+}
+
+@keyframes heartColor {
+    10% {
+        background-color: #d00;
+    }
+}
+
+.heart {
+    position: relative;
+    width: 10vw;
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: '';
+    left: 5vw;
+    top: 0;
+    width:5vw;
+    height: 8vw;
+    background-color: #a00;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    border-radius: 5vw 5vw 0 0;
+    animation: heartColor 1s linear infinite;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    width: 5vw;
+    height: 5vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: .5vw solid rgba(0, 0, 0,.1);
+    border-top-color: #09f;
+    animation: spinner 1s ease-out infinite;
+}
+
+/* BUTTONS */
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    position: relative;
+    border: none;
+    border-radius: .25rem;
+    padding: .2rem;
+    width:15rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow:.25rem .25rem .5rem .25rem rgba(0, 0, 0,.15);
+}
+
+.animation--bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: .25rem;
+    background-color: #d00;
+    transition: width .5s ease, left .5s ease, right .5s ease;
+}
+
+.animation--bottom:hover::after {
+    width: 100%;
+}
+
+.to-left::after {
+    left: 0;
+}
+
+.to-center::after {
+    left: 50%;
+}
+
+.to-center:hover::after {
+    left: 0;
+}
+
+.to-right::after {
+    right: 0;
+}
+
+.animation--bg-gradient {
+    background-image: linear-gradient(to right, pink, violet, orange, orangered);
+    background-size: 300% 100%;
+    transition: background-position .5s ease-in-out;
+}
+
+.animation--bg-gradient:hover {
+    background-position: 100% 0;   
+}
+
+.tabs-menu {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DDD;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs-menu input[type='radio'] {
+    display: none;
+}
+
+.tabs-menu label {
+    position: relative;
+    z-index: 1;
+    width: calc(100% / 4 - 0.5rem);
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabs-menu label:hover {
+    color: #fff;
+}
+
+.tabs-menu input[type='radio']:checked+label {
+    color: #fff;
+}
+
+.tab-bg-cover {
+    position: absolute;
+    width: calc(100% / 4 - 0.5rem);
+    height: 2rem;
+    border-radius: .5rem;
+    background-image: linear-gradient(90deg, #a00, #d00);
+    transition: transform .3s ease-in-out;
+}
+
+/* Se debería de usar JavaScript dado que utilizar id es un antipatrón */
+#tab-1:checked~.tab-bg-cover {
+    transform: translateX(0)
+}
+#tab-2:checked~.tab-bg-cover {
+    transform: translateX(100%)
+}
+#tab-3:checked~.tab-bg-cover {
+    transform: translateX(200%)
+}
+#tab-4:checked~.tab-bg-cover {
+    transform: translateX(300%)
+}
+
+.off-canvas-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 999;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;  
+}
+
+.off-canvas-burger {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 998;
+    width: 3rem;
+    height: .6rem;
+    background-color: #d00;
+    border-radius: .3rem;
+    transform: rotate(0) traslateY(-1.2rem);
+    transition: transform .5s ease, background-color .5s ease;
+    transform-origin: top left;
+}
+
+.off-canvas-burger::before,
+.off-canvas-burger::after {
+content: "";
+display: block;
+width: 100%;
+height: .6rem;
+background-color: #d00;
+border-radius: .3rem;
+transition: transform .5s ease;
+}
+
+.off-canvas-burger::before {
+    transform: rotate(0) translate(0, -0.9rem);
+}
+ 
+.off-canvas-burger::after {
+    transform: rotate(0) translate(0, 0.3rem);
+}
+ 
+.off-canvas-btn:checked + .off-canvas-burger {
+    background-color: transparent;
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::before {
+    transform:rotate(45deg) translate(0,0);
+}
+
+.off-canvas-btn:checked + .off-canvas-burger::after {
+    transform:rotate(-45deg) translate(.4rem, -0.5rem);
+}
+
+.off-canvas-menu {
+    position: fixed;
+    /* Al dar un valor de cero a las cuatro dimensiones el elemento se extiende a lo largo de todo el documento */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 997;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0008;
+    transition: transform .5s ease-in-out;
+    transform: translate(0, -100%);
+}
+
+.off-canvas-btn:checked~.off-canvas-menu {
+    transform: translate(0,0)
+}
+
+.off-canvas-menu-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.off-canvas-link {
+    border-bottom: 1px solid #d00;
+    padding:2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .3s ease;
+}
+
+.off-canvas-link:first-child {
+    border-top: 1px solid #d00;
+}
+
+.off-canvas-link:hover {
+    background-color: #d005;
+}
+
+.modal-1 {
+    position: fixed;
+    /* Al dar un valor de cero a las cuatro dimensiones el elemento se extiende a lo largo de todo el documento */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 997;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0008;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+}
+
+.modal-1:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container {
+    position: relative;
+    border: 5px double #d00;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    text-decoration: none;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #d00;
+    text-align: center;
+    line-height: 3rem;
+    transition: background-color 300ms linear, transform 300ms ease-in-out;
+}
+
+.modal-close:hover {
+    background-color: #a00;
+    transform: scale(1.2);
+}
+
+@keyframes introStarWars {
+    0%{
+        transform: perspective(100vh) rotateX(15deg) translateY(100%);
+    }
+    100% {
+        transform: perspective(100vh) rotateX(25deg) translateY(-200%);
+    }
+}
+
+.star-wars {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffb13a;
+    background-image: url(images/star-wars-backgrounds-25.jpg);
+}
+
+.star-wars-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    text-align: justify;
+    letter-spacing: .1rem;
+    animation: introStarWars 20s linear infinite;
+}
+
+.star-wars h2,
+.star-wars h3 {
+    text-align: center;
+    font-size: 5vw;
+}
+
+.star-wars p {
+    font-size: 2rem;
+    line-height: 3vw;
+}
