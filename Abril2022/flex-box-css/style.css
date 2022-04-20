@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1201px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap; flex
+}
+
+.flex-item {
+    border: 1px solid black;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 576px) { 
+    .flex-item {
+        flex: 0 0 50%;
+    }
+ }
+
+@media (min-width: 768px) {
+    .flex-item {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media (min-width: 992px) {
+    .flex-item {
+        flex: 0 0 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .flex-item {
+        flex: 0 0 16.66%;
+    }
+}

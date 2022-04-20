@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.titulares {
+    background-color: #222;
+    color: #eee;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.hero-image {
+    background-image: url('https://placeimg.com/640/480/animals');
+    color: #fff;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-image div {
+    min-height: inherit;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.hero-image h1 {
+    font-size: 5vw;
+}
+
+@media  screen and (min-width: 1024px) {
+    .header {
+        display: flex;
+    }
+    .menu ul {
+        display: flex;
+    }
+}
