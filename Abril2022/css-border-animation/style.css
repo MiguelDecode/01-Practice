@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #162052;
+}
+
+/* Base circular de color negro de fondo */
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Base de color que despues se anima para generar el efecto de giro */
+.box::before {
+  content: "";
+  position: absolute;
+  inset: -10px 140px;
+  /* Propiedad experimental */
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cambio del before a tamaño aumentado para cubrir al completo toda la caja */
+.box:hover::before {
+  inset: -20px 0px;
+}
+
+/* Caja circular posterior que cubre todo el centro */
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background-color: #162052;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Caja de contenido interior */
+.box__content {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #070a1c;
+    z-index: 30;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.box:hover .box__image {
+    opacity: 0;
+}
+
+.box__title,
+.box__subtitle {
+    position: relative;
+    margin: .3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.box__subtitle {
+    font-weight: 300;
+    font-size: .75rem;
+}
+
+.box__link {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #070a1c;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.box__link:hover {
+    letter-spacing: .2rem;
+}
