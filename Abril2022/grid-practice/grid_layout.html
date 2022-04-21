@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* No se deben aplicar estilos en linea o en el html */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, auto);
+      }
+
+      body > * {
+        background-color: #666;
+        border: medium solid #222;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .header {
+        grid-row: span 1;
+        grid-column: span 6;
+      }
+
+      .nav {
+        grid-column: span 6;
+        grid-row: span 1;
+      }
+
+      .uc-left {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .uc-center {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .uc-right {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .middle {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .lower {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .footer {
+        grid-row: span 1;
+        grid-column: span 6;
+      }
+
+      /* DESKTOP VERSION */
+      @media (min-width: 768px) {
+        body {
+          grid-template-columns: repeat(5, 1fr);
+          grid-templote-rows: repeat(5, auto);
+        }
+
+        .header {
+          grid-row: span 1;
+          grid-column: span 5;
+        }
+
+        .nav {
+          grid-column: 1/2;
+          grid-row: 2/5;
+        }
+
+        .uc-left {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+
+        .uc-center {
+          grid-column: 3/5;
+          grid-row: 2/3;
+        }
+
+        .uc-right {
+          grid-column: 5/6;
+          grid-row: 2/3;
+        }
+
+        .middle {
+          grid-column: 2/6;
+          grid-row: 3/4;
+        }
+
+        .lower {
+          grid-column: 2/6;
+          grid-row: 4/5;
+        }
+
+        .footer {
+          grid-row: span 1;
+          grid-column: span 5;
+        }
+      }
+    </style>
+    <title>Grid Layout</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2>Header</h2>
+    </header>
+    <nav class="nav">
+      <h2>Nav</h2>
+    </nav>
+    <article class="uc-left">
+      <h2>Upper Content Left</h2>
+    </article>
+    <article class="uc-center">
+      <h2>Upper Content Center</h2>
+    </article>
+    <article class="uc-right">
+      <h2>Upper Content Right</h2>
+    </article>
+    <article class="middle">
+      <h2>Middle Content</h2>
+    </article>
+    <article class="lower">
+      <h2>Lower Content</h2>
+    </article>
+    <footer class="footer">
+      <h2>Footer Content</h2>
+    </footer>
+  </body>
+</html>
