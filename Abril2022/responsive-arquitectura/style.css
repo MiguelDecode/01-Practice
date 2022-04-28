@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+img, audio, video, iframe, canvas, svg, picture {
+    max-width:100%;
+    height: auto;
+}
+
+[class^='box'] {
+    margin: 3rem auto;
+    background-color: orangered;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+}
+
+.box-flexible {
+    width: 50%;
+    height: 20vh;
+}
+
+.box-flexible-2 {
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+}
+
+.box-flexible-3 {
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+    /* No es recomendable dar medidas absolutas */
+    width: 300px;
+    height: 300px;
+}
+
+.box-flexible-4 {
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+    width: 50%;
+    height: 20vh;
+}
+
+/* Forma usada antiguamente */
+.responsive-media {
+    position: relative;
+    max-width: 100%;
+    /* Los porcentajes en altura no funcionan correctamente a menos que el elmento padre tenga una altura definida */
+    height: 0;
+    /* Formato widescreen */
+    padding-bottom: 56.25%;
+}
+
+.responsive-media > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Técnica mas moderna */
+.aspect-ratio-16-9 {
+    background-color: rebeccapurple;
+    aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+@media print {
+    @page {
+        size: A5 landscape;
+    }
+
+    body {
+        font-size: 10pt;
+        font-family: sans-serif;
+        background-color: #000;
+        color: greenyellow;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background-color: #000;
+        color: #fff; 
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+        color: darkblue;
+    }
+}
+
+@media screen and (prefers-color-scheme: no-preference) {
+    html {
+        background-color: white;
+        color: darkred;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    html {
+        background-color: white;
+        color: black;
+    }
+}
+
+/*
+Mobile first
+@media screen and (min-width: 480px) {
+    html {
+        background-color: lightpink;
+    }
+}
+
+Desktop first
+@media screen and (max-width: 1024px) {
+    html {
+        background-color: lightskyblue;
+    }
+}
+*/
+

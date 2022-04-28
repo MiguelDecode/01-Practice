@@ -1,0 +1,151 @@
+:root {
+  --primary-1: hsl(243, 87%, 12%);
+  --primary-2: hsl(238, 22%, 44%);
+  --accent-1: hsl(224, 93%, 58%);
+  --accent-2: hsl(170, 45%, 43%);
+  --neutral-1: hsl(240, 75%, 98%);
+  --neutral-2: hsl(0, 0%, 75%);
+  --font-head: "Raleway", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+.header {
+  padding: 2rem;
+  min-height: 100vh;
+  text-align: center;
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    width: 25%;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  list-style-type: none;
+  font-family: var(--font-head);
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--primary-2);
+  font-weight: 700;
+}
+
+.header__image {
+    padding: 2rem;
+}
+
+.header__title {
+    font-size: 2rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--primary-1);
+}
+
+.header__text {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.form--header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form * {
+    padding: .7rem;
+    border-radius: .2rem;
+    font-family: var(--font-head);
+}
+
+.form input {
+    padding-left: 1.3rem;
+    font-weight: 400;
+    border: thin solid var(--neutral-2);
+}
+
+.form button {
+    font-weight: 700;
+    color: var(--neutral-1);
+    background-color: var(--accent-1);
+    border: none;
+}
+
+/* MAIN */
+.location {
+    background-color: var(--neutral-1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.location__image {
+    padding: 2rem;
+}
+
+.location__title {
+    font-family: var(--font-head);
+    color: var(--primary-1);
+}
+
+.location__text {
+    text-align: left;
+    color: var(--primary-2);
+}
+
+.location__link {
+    color: var(--accent-2);
+    text-decoration: none;
+    border-bottom: thin solid var(--accent-2);
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    padding: 2rem;
+    background-color: var(--neutral-2);
+}
+
+.testimonial__data {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial__image {
+    width: 3rem;
+    border-radius: 50%;
+}
