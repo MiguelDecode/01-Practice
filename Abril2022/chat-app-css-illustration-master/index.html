@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="main">
+      <header class="user">
+        <svg class="user__back" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        <img class="user__portrait" src="/images/avatar.jpg" alt="User portrait">
+        <div class="user__data">
+          <span class="user__name">Samuel Green</span>
+          <br>
+          <span class="user__status">Available to Walk</span>
+        </div>
+        <svg class="user__options" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+        </svg>
+      </header>
+      <article class="chat">
+        <section class="chat__message chat--left">
+          <p>That sounds great. I’d be happy to discuss more. </p>
+        </section>
+        <section class="chat__message chat--left">
+          <p>Could you send over some pictures of your dog, please?</p>
+        </section>
+        <section class="chat__message chat--images">
+          <img class="chat__image" src="/images/dog-image-1.jpg" alt="Dog with tongue outside">
+          <img class="chat__image" src="/images/dog-image-2.jpg" alt="Lying dog">
+          <img class="chat__image" src="/images/dog-image-3.jpg" alt="Dog with a stick">
+        </section>
+        <section class="chat__message chat--right">
+          <p>Here are a few pictures. She’s a happy girl!</p>
+        </section>
+        <section class="chat__message chat--right">
+          <p>Can you make it?</p>
+        </section>
+        <section class="chat__message chat--left">
+          <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        </section>
+        <section class="chat__message chat--price">
+          <div class="circle"></div>
+          <p class="chat__walk-time">30 minute walk</p>
+          <p class="chat__walk-price">$29</p>
+        </section>
+        <section class="chat__message chat--price">
+          <div class="circle"></div>
+          <p class="chat__walk-time">1 hour walk</p>
+          <p class="chat__walk-price">$49</p>
+        </section>
+      </article>
+      <footer class="input">
+        <input class="input__box" placeholder="Type a message..." type="text">
+        <div class="input__btn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </footer>
+    </main>
+    <aside class="aditional">
+      <h2 class="aditional__title">Simple booking</h2>
+      <p class="aditional__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+    </aside>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+:root {
+    --sub-head: hsl(276, 100%, 81%);
+    --chat-left: hsl(276, 55%, 52%);
+    --chat-right: hsl(271, 15%, 43%);
+    --placeholder: hsl(206, 6%, 79%);
+    --main-head: hsl(271, 36%, 24%);
+    --parragraph: hsl(270, 7%, 64%);
+    --gradient1: hsl(293, 100%, 63%);
+    --gradient2: hsl(264, 100%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --bg: hsl(270, 20%, 96%);
+    --submit-bg: hsl(271, 36%, 24%);
+    --outline-radio:  hsl(289, 100%, 72%);
+    --left-bg:  hsl(289, 100%, 95%);
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;  
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.main {
+    background-color: var(--bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 375px;
+    max-height: 870px;
+    position: relative;
+}
+
+/* USER HEADER */
+.user {
+    background: linear-gradient(to left, var(--gradient1), var(--gradient2));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border-radius: .3rem;
+    gap: .5rem;
+}
+
+.user__back {
+    width: 1.5rem;
+}
+
+.user__portrait {
+    border-radius: 50%;
+    width: 2.5rem;
+    border: 2px solid var(--white);
+}
+
+.user__name {
+    font-weight: var(--font-bold);
+    color: var(--bg);
+}
+
+.user__status {
+    font-weight: var(--font-regular);
+    color: var(--sub-head);
+    font-size: .8rem;
+}
+.user__options {
+    width: 1.5rem;
+    margin-left: auto;
+}
+
+/* CHAT */
+.chat {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chat__message {
+    padding: .6rem 1rem;
+}
+
+.chat__message p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.chat--left {
+    border-radius: 1rem 1rem 1rem .3rem;
+    color: var(--chat-left);
+    max-width: 75%;
+    background-color: var(--left-bg);
+}
+
+.chat--right {
+    background-color: var(--white);
+    border-radius: 1rem 1rem .3rem 1rem;
+    color: var(--chat-right);
+    align-self: flex-end;
+    max-width: 75%;
+}
+
+.chat--images {
+    display: flex;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.chat__image {
+    border-radius: 1rem;
+    width: 5rem;
+}
+
+.chat--price {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    max-width: 80%;
+    height: 3rem;
+    background: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    border-radius: 1rem 1rem 1rem .3rem;
+    color: var(--white);
+}
+
+.circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: thin solid var(--outline-radio);
+}
+
+.chat__walk-price {
+    font-weight: var(--font-bold);
+    margin-left: auto;
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+.input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: sticky;
+    bottom: 1rem;
+}
+
+.input__box {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.input__box::placeholder {
+    font-family: inherit;
+    color: var(--placeholder);
+}
+
+.input__btn {
+    position: absolute;
+    width: 2.3rem;
+    height: 2.3rem;
+    right: 10px;
+    bottom: 5px;
+    background-color: var(--main-head);
+    border-radius: 50%;
+}
+
+.aditional {
+    display: none;
+}
+
+@media screen and (min-width: 48em) {
+    body {
+        background-image: url(/images/bg-product.jpg);
+        background-size: cover;
+    }
+    
+    .main {
+        flex: 0 0 375px;
+    }
+    
+    .aditional {
+        display: block;
+        flex: 0 0 375px;
+    }
+
+    .aditional__title {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    .aditional__text {
+        color: var(--parragraph);
+        line-height: 2rem;
+    }
+}
