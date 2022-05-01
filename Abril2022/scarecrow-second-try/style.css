@@ -1,0 +1,102 @@
+:root {
+    --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
+    --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
+    --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+    --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
+    --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
+    --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
+    --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
+    --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+  }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__title {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 20px;
+  margin: 0;
+}
+
+.main {
+  width: 80%;
+  max-width: 1440px;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Space Mono", monospace;
+}
+
+.main__image img {
+  max-width: 100%;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: var(--step-4);
+  line-height: 71px;
+}
+
+.main__text {
+  font-weight: 400;
+  font-size: var(--step-0);
+  line-height: 27px;
+}
+
+.main__btn {
+  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--step-0);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer {
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    gap: var(--step-2);
+  }
+
+  .footer {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+  }
+
+  .footer__text span {
+    color: #60588e;
+  }
+}
