@@ -21,7 +21,7 @@ font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .header__title {
@@ -33,13 +33,18 @@ font-family: 'Montserrat', sans-serif;
   border: thin solid #fff;
 }
 
+.header__nav {
+  display: none;
+}
+
 .header__menu {
   width: 3rem;
+  cursor: pointer;
 }
 
 /* MAIN */
 .main {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .main__title {
@@ -71,19 +76,24 @@ font-family: 'Montserrat', sans-serif;
   padding-left: 1rem;
 }
 
+.main__box-2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .main__image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1024px;
 }
 
 /* CARD */
 .card {
-  width: clamp(300px, 50vw, 600px);
-  height: 30%;
-  padding: 2rem;
+  width: clamp(300px, 35vw, 600px);
+  padding: 1rem 2rem;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  bottom: 150px;
+  bottom: 100px;
   background-color: #181719;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
@@ -95,7 +105,7 @@ font-family: 'Montserrat', sans-serif;
 
 .card__image {
   border-radius: 50%;
-  width: 4rem;
+  width: 50px;
   margin-right: 1rem;
 }
 
@@ -111,13 +121,16 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .card__text {
+  margin-top: .5rem;
+  margin-bottom: 0;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 /* FOOTER */
 .footer {
+  padding: 1rem;
   text-align: center;
 }
 
@@ -129,4 +142,60 @@ font-family: 'Montserrat', sans-serif;
 
 .footer__text span {
     color: #fff;
+}
+
+/* MEDIAQUERRIES */
+@media screen and (min-width: 48em) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 2rem 0 2rem;
+  }
+
+  .header__nav {
+    display: block;
+    width: 60%;
+  }
+
+  .header__ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  .header__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .header__link:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    gap: 2rem;
+    align-self: center;
+  }
+
+  .main__box-1,
+  .main__box-2 {
+    min-width: 300px;
+  }
+  
+  .card {
+    margin-right: 10px;
+  }
+  
 }
