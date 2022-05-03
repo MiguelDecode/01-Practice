@@ -1,0 +1,62 @@
+:root {
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+
+body {
+    margin: 0;
+    background-color: #a8a8a8;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.toggle-menu {
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.main__menu {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+    list-style: none;
+    font-weight: bold;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: transform .5s;
+    transform: translateY(-100%);
+}
+
+.main__menu--show {
+    transform: translateY(0);
+}
+
+.main__list-item {
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.main__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main__link:hover {
+    border-bottom: 2px solid #fff;
+}
