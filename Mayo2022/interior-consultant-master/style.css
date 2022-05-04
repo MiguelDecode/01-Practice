@@ -10,12 +10,6 @@ body {
   color: #fff;
 }
 
-/* 
-font-family: 'Crimson Pro', serif;
-font-family: 'Lora', serif;
-font-family: 'Montserrat', sans-serif; 
-*/
-
 /* HEADER */
 .header {
   display: flex;
@@ -37,9 +31,47 @@ font-family: 'Montserrat', sans-serif;
   display: none;
 }
 
+.header__nav--show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #181719;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__link:hover {
+  border-bottom: 2px solid #fff;
+  transition: 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
 .header__menu {
   width: 3rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 /* MAIN */
@@ -88,7 +120,7 @@ font-family: 'Montserrat', sans-serif;
 
 /* CARD */
 .card {
-  width: clamp(300px, 35vw, 600px);
+  width: 320px;
   padding: 1rem 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -121,11 +153,11 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .card__text {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: 1.5rem;
 }
 
 /* FOOTER */
@@ -141,12 +173,15 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .footer__text span {
-    color: #fff;
+  color: #fff;
 }
 
 /* MEDIAQUERRIES */
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 64em) {
   body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -156,24 +191,22 @@ font-family: 'Montserrat', sans-serif;
 
   .header__nav {
     display: block;
+    margin-left: auto;
     width: 60%;
   }
 
+  .header__nav--show {
+    display: block;
+    margin-left: auto;
+    width: 60%;
+    background-color: #181719;
+    position: inherit;
+    height: auto;
+  }
+
   .header__ul {
-    display: flex;
-    list-style: none;
+    flex-direction: row;
     justify-content: space-between;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-  }
-
-  .header__link {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .header__link:hover {
-    border-bottom: 2px solid #fff;
   }
 
   .header__menu {
@@ -193,9 +226,9 @@ font-family: 'Montserrat', sans-serif;
   .main__box-2 {
     min-width: 300px;
   }
-  
+
   .card {
+    width: 400px;
     margin-right: 10px;
   }
-  
 }
