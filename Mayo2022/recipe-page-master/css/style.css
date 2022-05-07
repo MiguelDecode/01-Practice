@@ -44,7 +44,7 @@ p {
   max-width: 969px;
 }
 
-/* VISUAL LOG TIME/YIELDS */
+/* VISUAL LOG TIME/PORTIONS */
 .visual {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -52,35 +52,36 @@ p {
   padding-left: 0;
 }
 
-.visual > * {
+.list-item {
   display: flex;
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.visual img {
+.icon-fork,
+.icon-clock {
   width: 18px;
   margin-right: 0.5rem;
 }
 
-.visual h4,
-.visual p {
+.list-item__title,
+.list-item__text {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.visual h4 {
+.list-item__title {
   color: #bdbdbd;
   font-size: 12px;
 }
 
-.visual p {
+.list-item__text {
   font-size: 14px;
   color: #333;
 }
 
-p.yields__text {
+.list-item__text--orange {
   color: #f2994a;
 }
 
@@ -115,38 +116,36 @@ p.yields__text {
   line-height: 24px;
 }
 
-.ingredient__box input {
+.ingredient__input {
   width: 20px;
   height: 20px;
   filter: hue-rotate(180deg) brightness(1.5);
   flex-shrink: 0;
 }
 
-.graham-cracker p,
-.cheesecake p {
+.ingredient__text {
   font-family: var(--f-text);
   font-size: 14px;
   font-weight: 400;
 }
 
-.graham-cracker span,
-.cheesecake span {
+.ingredient__text--bold {
   font-weight: 700;
 }
 
-.cheesecake div:last-child span {
+.ingredient__text--italic {
   font-weight: 500;
   font-style: italic;
 }
 
 /* INSTRUCTIONS */
 .instructions {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .instructions__box {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .instructions__number {
@@ -164,7 +163,7 @@ p.yields__text {
   line-height: 24px;
 }
 
-.instructions__text span {
+.instructions__text--bold {
   font-weight: 700;
 }
 
@@ -221,6 +220,6 @@ p.yields__text {
 
   .ingredients,
   .instructions {
-      max-width: 800px;
+    max-width: 800px;
   }
 }
