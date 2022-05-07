@@ -1,0 +1,226 @@
+:root {
+  --f-title: "Playfair Display", serif;
+  --f-text: "Montserrat", sans-serif;
+}
+
+/* GENERAL STYLES */
+
+body {
+  margin: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* PRESENTATION/HEADER */
+
+.title {
+  font-family: var(--f-title);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.header__box {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  font-family: var(--f-text);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.six-dots {
+  margin-top: 5px;
+}
+
+.piece-cake {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 969px;
+}
+
+/* VISUAL LOG TIME/YIELDS */
+.visual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  padding-left: 0;
+}
+
+.visual > * {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.visual img {
+  width: 18px;
+  margin-right: 0.5rem;
+}
+
+.visual h4,
+.visual p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.visual h4 {
+  color: #bdbdbd;
+  font-size: 12px;
+}
+
+.visual p {
+  font-size: 14px;
+  color: #333;
+}
+
+p.yields__text {
+  color: #f2994a;
+}
+
+/* INGREDIENTS */
+.graham-cracker,
+.cheesecake {
+  font-size: 18px;
+  font-family: var(--f-title);
+  font-weight: 700;
+  padding-left: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.graham-cracker__title,
+.cheesecake__title {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: var(--f-title);
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ingredient__box,
+.instructions__box {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 24px;
+}
+
+.ingredient__box input {
+  width: 20px;
+  height: 20px;
+  filter: hue-rotate(180deg) brightness(1.5);
+  flex-shrink: 0;
+}
+
+.graham-cracker p,
+.cheesecake p {
+  font-family: var(--f-text);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.graham-cracker span,
+.cheesecake span {
+  font-weight: 700;
+}
+
+.cheesecake div:last-child span {
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.instructions__box {
+    margin-bottom: 3rem;
+}
+
+.instructions__number {
+  width: 36px;
+}
+
+.instructions__list {
+  padding-left: 0;
+}
+
+.instructions__text {
+  font-family: var(--f-text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.instructions__text span {
+  font-weight: 700;
+}
+
+.source {
+  list-style: none;
+  color: #bdbdbd;
+  font-family: var(--f-text);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+}
+
+.creator {
+  font-family: var(--f-title);
+  font-size: 14px;
+  font-weight: 500;
+  color: #828282;
+}
+
+.creator__link {
+  font-weight: 700;
+  color: #828282;
+}
+
+/* MEDIAQUERRIES */
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main {
+    position: relative;
+    max-width: 969px;
+  }
+
+  .visual {
+    position: absolute;
+    right: 0;
+    width: 180px;
+    height: 367px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .ingredients,
+  .instructions {
+      max-width: 800px;
+  }
+}
