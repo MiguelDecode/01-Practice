@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Checkout Page Master</title>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Checkout</h1>
+      <article class="cart">
+        <section class="items">
+          <article class="item">
+            <img
+              class="item__image"
+              src="./images/photo1.png"
+              alt="A backbag"
+            />
+            <div class="item__data">
+              <h3 class="item__name">Vintage Backbag</h3>
+              <div class="item__prices">
+                <p class="item__now">$54.99</p>
+                <p class="item__before">$94.99</p>
+              </div>
+              <div class="item__box">
+                <span class="material-icons"> remove </span>
+                <p class="item__quantity">1</p>
+                <span class="material-icons"> add </span>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <img
+              class="item__image"
+              src="./images/photo2.png"
+              alt="A backbag"
+            />
+            <div class="item__data">
+              <h3 class="item__name">Levi Shoes</h3>
+              <div class="item__prices">
+                <p class="item__now">$74.99</p>
+                <p class="item__before">$124.99</p>
+              </div>
+              <div class="item__box">
+                <span class="material-icons"> remove </span>
+                <p class="item__quantity">1</p>
+                <span class="material-icons"> add </span>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="costs">
+          <div class="cost">
+            <p class="cost__name">Shipping</p>
+            <p class="cost__price">$19</p>
+          </div>
+          <div class="cost">
+            <p class="cost__name">Total</p>
+            <p class="cost__price">$148.98</p>
+          </div>
+        </section>
+      </article>
+      <form class="form__container" action="#" method="get">
+        <section class="form">
+          <h3 class="form__title">Contact information</h3>
+          <label class="form__label" for="email" required>E-mail</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            placeholder=" Enter your email..."
+          />
+          <label class="form__label" for="phone">Phone</label>
+          <input
+            class="form__input"
+            type="telephone"
+            id="phone"
+            placeholder="  Enter your phone..."
+          />
+        </section>
+        <section class="form">
+          <h3 class="form__title">Shipping address</h3>
+          <label class="form__label" for="name">Full name</label>
+          <input
+            class="form__input"
+            type="text"
+            id="name"
+            placeholder="  Enter your name..."
+          />
+          <label class="form__label" for="address">Address</label>
+          <input
+            class="form__input"
+            type="text"
+            id="address"
+            placeholder="  Your address"
+          />
+          <label class="form__label" for="city">City</label>
+          <input
+            class="form__input"
+            type="text"
+            id="city"
+            placeholder="  Your city..."
+          />
+          <div class="form__box">
+            <div class="form__area">
+              <label class="form__label" for="country">Country</label>
+              <select class="form__select" name="country" id="country">
+                <option class="form__option" value="default" default>  Your country...</option>
+                <option class="form__option" value="Spain">Spain</option>
+                <option class="form__option" value="Greece">Greece</option>
+                <option class="form__option" value="Japan">Japan</option>
+              </select>
+            </div>
+            <div class="form__area">
+              <label class="form__label" for="postal-code">Postal code</label>
+              <input
+                class="form__input form__input--half"
+                type="text"
+                id="postal-code"
+                placeholder="  Your postal code..."
+              />
+            </div>
+          </div>
+          <section class="information">
+            <input class="information__checkbox" type="checkbox" />
+            <p class="information__text">Save this information for next time</p>
+          </section>
+        </section>
+        <input class="submit__button" type="submit" value="Continue" />
+      </form>
+      <footer class="footer">
+        <p class="creator">
+          created by
+          <a
+            class="creator__link"
+            href="https://migueldecode.github.io/"
+            target="_blank"
+            >Miguel Decode</a
+          >
+          - devChallenges.io
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
