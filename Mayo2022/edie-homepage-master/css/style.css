@@ -1,0 +1,109 @@
+:root {
+  --clr-accent: #2d9cdb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+/* 
+font-family: 'Heebo', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+ */
+
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: 'Heebo', sans-serif;
+}
+
+.menu {
+  width: 1.5rem;
+}
+
+.main-nav {
+  display: none;
+}
+
+/* SECTION INTRO */
+.intro,
+.purpose {
+  padding-left: 40px;
+  width: 275px;
+}
+
+.intro__question {
+  color: var(--clr-accent);
+  font-weight: 500;
+  font-size: .75rem;
+}
+
+.intro__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.hero-image {
+  border-radius: 1.125rem;
+}
+
+.intro__text {
+  font-weight: 400;
+  font-size: .75rem;
+  color: #4f4f4f;
+}
+
+/* COMPONENT CONTACT */
+.contact {
+  position: relative;
+}
+
+.contact__text {
+  font-weight: 500;
+  font-size: .625rem;
+  color: #828282;
+  margin-bottom: .6rem;
+}
+
+.contact__email {
+  background-color: #f2f2f2;
+  border-radius: .75rem;
+  padding: .5em 1em;
+  border: none;
+  max-width: 100%;
+  font-size: .875rem;
+}
+
+.contact__submit {
+  position: absolute;
+  right: 1px;
+  top: 23px;
+  background-color: var(--clr-accent);
+  color: #fff;
+  border: none;
+  border-radius: .75rem;
+  padding: .25em 1em;
+  cursor: pointer;
+}
+
+Retocar el tamaño del input
