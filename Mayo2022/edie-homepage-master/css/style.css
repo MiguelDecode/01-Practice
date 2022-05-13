@@ -14,7 +14,7 @@ img {
 
 body {
   margin: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333333;
 }
 
@@ -23,7 +23,6 @@ font-family: 'Heebo', sans-serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif;
  */
-
 
 /* HEADER */
 .header {
@@ -34,7 +33,7 @@ font-family: 'Poppins', sans-serif;
 
 .logo {
   font-size: 24px;
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 
 .menu {
@@ -52,13 +51,13 @@ font-family: 'Poppins', sans-serif;
   width: 275px;
 }
 
-.intro__question {
+.question {
   color: var(--clr-accent);
   font-weight: 500;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
-.intro__title {
+.title {
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -67,9 +66,9 @@ font-family: 'Poppins', sans-serif;
   border-radius: 1.125rem;
 }
 
-.intro__text {
+.text {
   font-weight: 400;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #4f4f4f;
 }
 
@@ -80,30 +79,189 @@ font-family: 'Poppins', sans-serif;
 
 .contact__text {
   font-weight: 500;
-  font-size: .625rem;
+  font-size: 0.625rem;
   color: #828282;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
 }
 
 .contact__email {
   background-color: #f2f2f2;
-  border-radius: .75rem;
-  padding: .5em 1em;
+  border-radius: 0.75rem;
+  height: 47px;
+  padding: 0.5em 1em;
   border: none;
   max-width: 100%;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 .contact__submit {
   position: absolute;
-  right: 1px;
-  top: 23px;
+  height: 39px;
+  width: 71px;
+  right: 3px;
+  top: 25.5px;
   background-color: var(--clr-accent);
   color: #fff;
   border: none;
-  border-radius: .75rem;
-  padding: .25em 1em;
+  border-radius: 0.75rem;
   cursor: pointer;
 }
 
-Retocar el tamaño del input
+/* SECTION SERVICES */
+.card-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  width: 341px;
+  height: 422px;
+}
+
+.card-services:hover {
+  border: 1px solid white;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(51, 51, 51, 0.1);
+}
+
+.card-services__img {
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  width: 67px;
+  height: 67px;
+}
+
+.card-services__img--blue {
+  background-color: var(--clr-accent);
+}
+
+.card-services__img--green {
+  background-color: #27ae60;
+}
+
+.card-services__img--red {
+  background-color: #eb5757;
+}
+
+.card-services__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.card-services__text {
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.card-services__btn {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  padding: .7em 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.card-services__btn:hover {
+  background-color: var(--clr-accent);
+}
+
+/* SECTION DESIGNS */
+.design-card__img {
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+}
+
+.design-card__subtitle {
+  color: #828282;
+  font-weight: 300;
+  font-size: .75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.design-card__title {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 0;
+}
+
+.design-link {
+  color: var(--clr-accent);
+}
+
+.design-link__see-more {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+
+.design-link__arrow {
+  width: 1rem;
+  vertical-align: middle;
+}
+
+/* SECTION TEAM */
+.team {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.team__subtitle {
+  color: #eb5757;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.team__title {
+  max-width: 280px;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #333;
+  line-height: 54px;
+}
+
+.team__text {
+  max-width: 275px;
+  font-weight: 400;
+  color: #4f4f4f;
+  line-height: 24px;
+}
+
+.team-grid {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 68px);
+}
+
+.team-grid__profile-photo {
+  border-radius: 24px;
+}
+
+.team-grid__profile-photo--big {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  width: 178px;
+  height: 178px;
+}
+
+.team-grid__profile-photo--medium {
+  grid-row: 3/5;
+  grid-column: 2/3;
+  width: 162px;
+  height: 167px;
+}
+
+.team-grid__profile-photo--small {
+  grid-row: 1/3;
+  grid-column: 2/3;
+  width: 145px;
+  height: 145px;
+}
