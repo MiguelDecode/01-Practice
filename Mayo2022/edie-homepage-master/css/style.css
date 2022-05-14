@@ -40,62 +40,79 @@ body {
   display: none;
 }
 
-/* SECTION INTRO */
-.intro,
-.purpose {
-  padding-left: 40px;
-  width: 275px;
+/* HOME */
+.home {
+  padding: 1rem;
+  margin-bottom: 7rem;
 }
 
 .question {
+  padding-left: 2rem;
   color: var(--clr-accent);
   font-weight: 500;
   font-size: 0.75rem;
+  margin: 0;
 }
 
 .title {
+  padding-left: 2rem;
   font-weight: 500;
   font-size: 1.5rem;
+  line-height: 2.25rem;
+  max-width: 365px;
+}
+
+.title--home {
+  max-width: 550px;
 }
 
 .hero-image {
   border-radius: 1.125rem;
 }
 
-.text {
+.home__text {
+  max-width: 365px;
+  padding-left: 2rem;
   font-weight: 400;
   font-size: 0.75rem;
   color: #4f4f4f;
+  line-height: 1.125rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* COMPONENT CONTACT */
 .contact {
-  position: relative;
+  padding-left: 2rem;
 }
 
 .contact__text {
   font-weight: 500;
   font-size: 0.625rem;
   color: #828282;
-  margin-bottom: 0.6rem;
+}
+
+.contact__inputs {
+  position: relative;
+  max-width: 300px;
 }
 
 .contact__email {
+  max-width: 100%;
   background-color: #f2f2f2;
   border-radius: 0.75rem;
-  height: 47px;
+  height: 2.5rem;
   padding: 0.5em 1em;
   border: none;
-  max-width: 100%;
   font-size: 0.875rem;
+  outline: none;
 }
 
 .contact__submit {
   position: absolute;
-  height: 39px;
-  width: 71px;
   right: 3px;
-  top: 25.5px;
+  top: 3px;
+  padding: 0.5em 1em;
   background-color: var(--clr-accent);
   color: #fff;
   border: none;
@@ -103,13 +120,25 @@ body {
   cursor: pointer;
 }
 
-/* SECTION SERVICES */
+/* SERVICES */
+.services {
+  padding: 1rem;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .card-services {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 341px;
   height: 422px;
 }
@@ -155,7 +184,7 @@ body {
 .card-services__btn {
   background-color: #e0e0e0;
   border-radius: 12px;
-  padding: .7em 1em;
+  padding: 0.7em 1em;
   border: none;
   cursor: pointer;
 }
@@ -164,7 +193,11 @@ body {
   background-color: var(--clr-accent);
 }
 
-/* SECTION DESIGNS */
+/* OUR WORKS */
+.our-works {
+  padding: 1rem;
+}
+
 .design-card__img {
   border-radius: 1.5rem;
   margin-top: 2rem;
@@ -173,7 +206,7 @@ body {
 .design-card__subtitle {
   color: #828282;
   font-weight: 300;
-  font-size: .75rem;
+  font-size: 0.75rem;
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
@@ -201,38 +234,39 @@ body {
   vertical-align: middle;
 }
 
-/* SECTION TEAM */
+/* TEAM */
 .team {
+  padding: 1rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.team__container {
+  max-width: 280px;
+  font-weight: 500;
 }
 
 .team__subtitle {
   color: #eb5757;
   font-size: 1.125rem;
-  font-weight: 500;
 }
 
 .team__title {
-  max-width: 280px;
-  font-weight: 500;
-  font-size: 2.5rem;
-  color: #333;
+  font-size: 2.25rem;
   line-height: 54px;
 }
 
 .team__text {
-  max-width: 275px;
   font-weight: 400;
   color: #4f4f4f;
   line-height: 24px;
 }
 
 .team-grid {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   max-width: 375px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 68px);
@@ -270,6 +304,8 @@ body {
 }
 
 .carlos-profile {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -297,18 +333,41 @@ body {
 /* FOOTER */
 .footer {
   padding: 2rem;
-  background-color: #100E1D;
+  background-color: #100e1d;
   color: #fff;
 }
 
 .sub-nav {
+  font-weight: 400;
+  font-size: 1.125rem;
   list-style: none;
+  padding-left: 0;
+  line-height: 2rem;
+}
+
+.sub-nav__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sub-nav__link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.social {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact--footer {
+  margin-top: 4rem;
+  margin-bottom: 12rem;
   padding-left: 0;
 }
 
 .creator {
   font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-align: center;
 }
@@ -316,4 +375,11 @@ body {
 .creator__link {
   font-weight: 700;
   color: white;
+}
+
+
+/* MEDIAQUERRIES */
+@media screen and (min-width: 768px) {
+ 
+  
 }

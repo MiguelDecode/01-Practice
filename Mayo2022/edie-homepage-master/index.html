@@ -44,123 +44,133 @@
           <li class="main-nav__li">Contact</li>
         </ul>
       </nav>
-    <article class="home">
-      <p class="question">Unhappy with your website?</p>
-      <h2 class="title">We create beautiful and fast web services</h2>
+    <article id="home" class="home">
+      <section class="home__box home__box--top">
+        <p class="question">Unhappy with your website?</p>
+        <h2 class="title title--home">We create beautiful and fast web services</h2>
+      </section>
       <img
         src="./images/heroImage.jpg"
         alt="People working around a white board"
         class="hero-image"
       />
-      <h2 class="title">Story, emotion and purpose</h2>
-      <p class="home__text">
-        We help transform your ideas into real world applications that will
-        outperform your toughest competition and help you achive your
-        strategic goals in short period of time.
-      </p>
-        <form action="#" class="contact">
-          <h4 class="contact__text">Want us to contact you?</h4>
-          <input class="contact__email" type="email" placeholder="Email" />
-          <input class="contact__submit" type="submit" value="Join" />
-        </form>
+      <section class="home__box  home__box--bottom">
+        <h2 class="title">Story, emotion and purpose</h2>
+        <p class="home__text">
+          We help transform your ideas into real world applications that will
+          outperform your toughest competition and help you achive your
+          strategic goals in short period of time.
+        </p>
+          <form action="#" class="contact">
+            <h4 class="contact__text">Want us to contact you?</h4>
+            <div class="contact__inputs">
+              <input class="contact__email" type="email" placeholder="Email" />
+              <input class="contact__submit" type="submit" value="Join" />
+            </div>
+          </form>
+      </section>
       </article>
     </article>
     <section class="services">
       <h2 class="title">We offer high demand services</h2>
-      <article class="card-services">
-        <div class="card-services__img card-services__img--blue">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-            />
-          </svg>
-        </div>
-        <h3 class="card-services__title">UI/UX Design</h3>
-        <h4 class="card-services__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          consectetur voluptate dolorum ullam labore, quod beatae dolorem
-          tempora.
-        </h4>
-        <button class="card-services__btn">Get started</button>
-      </article>
-      <article class="card-services">
-        <div class="card-services__img card-services__img--green">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-            />
-          </svg>
-        </div>
-        <h3 class="card-services__title">Front End</h3>
-        <h4 class="card-services__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          consectetur voluptate dolorum ullam labore, quod beatae dolorem
-          tempora.
-        </h4>
-        <button class="card-services__btn">Get started</button>
-      </article>
-      <article class="card-services">
-        <div class="card-services__img card-services__img--red">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
-            />
-          </svg>
-        </div>
-        <h3 class="card-services__title">Back End</h3>
-        <h4 class="card-services__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          consectetur voluptate dolorum ullam labore, quod beatae dolorem
-          tempora.
-        </h4>
-        <button class="card-services__btn">Get started</button>
-      </article>
+      <section class="services__container">
+        <article class="card-services">
+          <div class="card-services__img card-services__img--blue">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+              />
+            </svg>
+          </div>
+          <h3 class="card-services__title">UI/UX Design</h3>
+          <h4 class="card-services__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+            consectetur voluptate dolorum ullam labore, quod beatae dolorem
+            tempora.
+          </h4>
+          <button class="card-services__btn">Get started</button>
+        </article>
+        <article class="card-services">
+          <div class="card-services__img card-services__img--green">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+              />
+            </svg>
+          </div>
+          <h3 class="card-services__title">Front End</h3>
+          <h4 class="card-services__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+            consectetur voluptate dolorum ullam labore, quod beatae dolorem
+            tempora.
+          </h4>
+          <button class="card-services__btn">Get started</button>
+        </article>
+        <article class="card-services">
+          <div class="card-services__img card-services__img--red">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+              />
+            </svg>
+          </div>
+          <h3 class="card-services__title">Back End</h3>
+          <h4 class="card-services__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+            consectetur voluptate dolorum ullam labore, quod beatae dolorem
+            tempora.
+          </h4>
+          <button class="card-services__btn">Get started</button>
+        </article>
+      </section>
     </section>
-    <section class="designs">
+    <section class="our-works">
       <h2 class="title">Good design means good business</h2>
-      <article class="design-card">
-        <img class="design-card__img" src="./images/smarthome.jpg" alt="Smarthome design">
-        <h5 class="design-card__subtitle">Full stack application</h5>
-        <h4 class="design-card__title">Smart home dashboard</h4>
-      </article>
-      <article class="design-card">
-        <img class="design-card__img" src="./images/onboard.png" alt="Onboard application">
-        <h5 class="design-card__subtitle">UX/UI design</h5>
-        <h4 class="design-card__title">Onboard application</h4>
-      </article>
-      <article class="design-card">
-        <img class="design-card__img" src="./images/booking.png" alt="Mobile booking system">
-        <h5 class="design-card__subtitle">Mobile application</h5>
-        <h4 class="design-card__title">Booking system</h4>
-      </article>
-      <article class="design-card">
-        <img class="design-card__img" src="./images/juice-product.png" alt="Juice product homepage">
-        <h5 class="design-card__subtitle">Front End application</h5>
-        <h4 class="design-card__title">Juice product homepage</h4>
-      </article>
+      <div class="designs-container">
+        <article class="design-card">
+          <img class="design-card__img" src="./images/smarthome.jpg" alt="Smarthome design">
+          <h5 class="design-card__subtitle">Full stack application</h5>
+          <h4 class="design-card__title">Smart home dashboard</h4>
+        </article>
+        <article class="design-card">
+          <img class="design-card__img" src="./images/onboard.png" alt="Onboard application">
+          <h5 class="design-card__subtitle">UX/UI design</h5>
+          <h4 class="design-card__title">Onboard application</h4>
+        </article>
+        <article class="design-card">
+          <img class="design-card__img" src="./images/booking.png" alt="Mobile booking system">
+          <h5 class="design-card__subtitle">Mobile application</h5>
+          <h4 class="design-card__title">Booking system</h4>
+        </article>
+        <article class="design-card">
+          <img class="design-card__img" src="./images/juice-product.png" alt="Juice product homepage">
+          <h5 class="design-card__subtitle">Front End application</h5>
+          <h4 class="design-card__title">Juice product homepage</h4>
+        </article>
+      </div>
       <div class="design-link">
         <a href="#" class="design-link__see-more" target="_blank">see more <svg xmlns="http://www.w3.org/2000/svg" class="design-link__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -168,17 +178,19 @@
       </div>
     </section>
     <section class="team">
-      <h3 class="team__subtitle">Meet the team</h3>
-      <h2 class="team__title">We are chilled and a laidback team</h2>
-      <p class="team__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      <article class="team__container">
+        <h3 class="team__subtitle">Meet the team</h3>
+        <h2 class="team__title">We are chilled and a laidback team</h2>
+        <p class="team__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </article>
       <article class="team-grid">
         <img src="./images/person3.png" alt="A girl profile photo" class="team-grid__profile-photo team-grid__profile-photo--big">
         <img src="./images/person1.png" alt="A boy profile photo" class="team-grid__profile-photo team-grid__profile-photo--small">
         <img src="./images/person2.png" alt="A boy profile photo" class="team-grid__profile-photo team-grid__profile-photo--medium">
       </article>
-      <blockquote class="team__quote">
-        'Fast and outstanding results. Edie understands their customer's needs. They have a young and talented team.'
-      </blockquote>
+      <div class="team__quote">
+        "Fast and outstanding results. Edie understands their customer's needs. They have a young and talented team."
+      </div>
       <article class="carlos-profile">
         <img src="./images/person4.png" alt="Profile photo" class="carlos-profile__photo">
         <div class="carlos-profile__data">
@@ -189,23 +201,26 @@
     </section>
     <footer class="footer">
       <ul class="sub-nav">
-        <li class="sub-nav__link">Home</li>
-        <li class="sub-nav__link">Services</li>
-        <li class="sub-nav__link">Our Work</li>
-        <li class="sub-nav__link">Clients</li>
-        <li class="sub-nav__link">Contact</li>
+        <li class="sub-nav__li"><a href="#" class="sub-nav__link">Home</a></li>
+        <li class="sub-nav__li"><a href="#" class="sub-nav__link">Services</a></li>
+        <li class="sub-nav__li"><a href="#" class="sub-nav__link">Our Work</a></li>
+        <li class="sub-nav__li"><a href="#" class="sub-nav__link">Clients</a></li>
+        <li class="sub-nav__li"><a href="#" class="sub-nav__link">Contact</a></li>
       </ul>
       <div class="social">
         <h2 class="logo">Edie</h2>
-        <img src="./images/instagram.svg" alt="Icon instagram" class="icon-instagram">
-        <img src="./images/linkedin.svg" alt="Icon Linkedin" class="icon-linkedin">
-        <img src="./images/twitter.svg" alt="Icon twitter" class="icon-twitter">
+        <a href="#" class="social__link"><img src="./images/instagram.svg" alt="Icon instagram" class="icon-instagram"></a>
+        <a href="#" class="social__link"><img src="./images/linkedin.svg" alt="Icon Linkedin" class="icon-linkedin"></a>
+        <a href="#" class="social__link"><img src="./images/twitter.svg" alt="Icon twitter" class="icon-twitter"></a>
       </div>
-      <form action="#" class="contact">
+      <form action="#" class="contact contact--footer">
         <h4 class="contact__text">Want us to contact you?</h4>
-        <input class="contact__email" type="email" placeholder="Email" />
-        <input class="contact__submit" type="submit" value="Join" />
+        <div class="contact__inputs">
+          <input class="contact__email" type="email" placeholder="Email" />
+          <input class="contact__submit" type="submit" value="Join" />
+        </div>
       </form>
+      
       <p class="creator">created by <a class="creator__link" href="https://migueldecode.github.io/" target="_blank" rel="noopener noreferrer">Miguel Decode</a> - devChallenges.io</p>
     </footer>
   </body>
