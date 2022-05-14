@@ -17,29 +17,26 @@ body {
   color: #333333;
 }
 
-/* 
-font-family: 'Heebo', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Poppins', sans-serif;
- */
-
-/* HEADER */
-.header {
+/* MAIN NAV */
+.main-nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 800;
   font-family: "Heebo", sans-serif;
 }
 
 .menu {
   width: 1.5rem;
+  cursor: pointer;
 }
 
-.main-nav {
+.main-nav__ul {
   display: none;
 }
 
