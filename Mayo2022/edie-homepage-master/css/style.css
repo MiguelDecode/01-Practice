@@ -13,7 +13,6 @@ img {
 }
 
 body {
-  margin: 1rem;
   font-family: "Poppins", sans-serif;
   color: #333333;
 }
@@ -234,9 +233,10 @@ font-family: 'Poppins', sans-serif;
 
 .team-grid {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   display: grid;
   gap: .5rem;
+  max-width: 375px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 68px);
 }
@@ -264,4 +264,59 @@ font-family: 'Poppins', sans-serif;
   grid-column: 2/3;
   width: 145px;
   height: 145px;
+}
+
+.team__quote {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+
+.carlos-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carlos-profile__photo {
+  width: 82px;
+  border-radius: 12px;
+}
+
+.carlos-profile__name {
+  margin: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.carlos-profile__position {
+  margin: 1rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #828282;
+}
+
+/* FOOTER */
+.footer {
+  padding: 2rem;
+  background-color: #100E1D;
+  color: #fff;
+}
+
+.sub-nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.creator {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+
+.creator__link {
+  font-weight: 700;
+  color: white;
 }

@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.box {
+  background-color: #23424a;
+  color: #fff;
+  padding: 3rem;
+}
+
+.card {
+  width: 50%;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.btn {
+  font-weight: 700;
+  color: #23424a;
+  background-color: #38cfd9;
+  padding: 1em 3em;
+  font-size: 21px;
+  border-radius: 1.8rem;
+  border: none;
+}
