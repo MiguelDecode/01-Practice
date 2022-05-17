@@ -1,0 +1,70 @@
+/* GENERAL STYLES */
+:root {
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #fff;
+    background-image: url("../assets/images/elden-ring-18.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* GRID */
+.main {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.title,
+.subtitle {
+    margin: 0;
+}
+
+.title {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 3rem;
+}
+
+.quote {
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 1em 3em;
+    cursor: pointer;
+}
+
+.alexander {
+    max-width: 360px;
+}
+
+
