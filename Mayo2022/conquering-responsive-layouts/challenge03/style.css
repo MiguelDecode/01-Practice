@@ -5,23 +5,22 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.box {
+.container {
   background-color: #23424a;
-  color: #fff;
-  padding: 3rem;
+  width: 100%;
+}
+
+.container__box {
+  margin: 0 auto;
   width: 80%;
 }
 
 .card {
   width: 50%;
+  color: #fff;
+  padding: 1rem;
 }
 
 .title {
@@ -54,21 +53,25 @@ body {
   top: -2px;
 }
 
-.container {
-  width: 80%;
-  max-width: 1100px;
+.container--middle {
+  background-color: #fff;
+  color: #23424a;
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
-.row {
-  /* display flex => flex container */
+.container__box {
+  padding: 3rem 1rem 3rem 1rem;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
 }
 
 .col {
-  background-color: limegreen;
-  margin: 10px;
   width: 100%;
 }
 
+.container--bottom {
+  text-align: center;
+  color: #fff;
+}
