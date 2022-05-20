@@ -1,0 +1,96 @@
+/* ESTILOS GENERALES */
+
+:root {
+    --clr-light: #fff;
+    --bg-one: #f3eed9;
+    --bg-two: #824936;
+    --bg-three: #222c2a;
+    --ft-title: 'Playfair Display', serif;
+    --ft-text: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: 660px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1128px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.subtitle {
+    font-family: var(--ft-title);
+    font-size: 36px;
+}
+
+.text {
+    font-family: var(--ft-text);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 2.5rem;
+}
+
+/* SECTION-1 */
+
+.section-1 {
+    min-height: 100vh;
+    background-color: var(--bg-one);
+    text-align: center;
+}
+
+.slogan {
+    font-family: var(ft-text);
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: .5rem;
+}
+
+.title {
+    font-family: var(--ft-title);
+    font-size: 60px;
+    color: var(--bg-two);
+    margin: 0;
+}
+
+/* SECTION 2 */
+.subtitle--bg-two {
+    color: var(--bg-two);
+    text-align: center;
+}
+
+/* SECTION-3 */
+.section-3 {
+    background-color: var(--bg-three);
+}
+
+.subtitle--bg-one {
+    color: var(--bg-one);
+}
+
+.text--light {
+    color: var(--clr-light);
+}
+
+/* SECTION 4 */
+.section-4 {
+    background-color: var(--bg-two);
+}
