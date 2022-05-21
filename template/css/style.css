@@ -1,3 +1,5 @@
+/* MAIN STYLES */
+
 :root {
 
 }
@@ -9,8 +11,7 @@
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
 }
 
-/* ESTILOS GENERALES */
 
