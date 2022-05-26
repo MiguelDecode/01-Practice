@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      /* 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
+
+      function contador(cadena) {
+        if (typeof cadena === "string" && cadena != "") {
+          console.log(cadena.length);
+        } else {
+          console.log("Introduce una cadena de texto valida");
+        }
+      }
+
+      function contador2(cadena = "") {
+        if (!cadena) {
+          console.log("No ingresaste ninguna cadena");
+        } else {
+          console.log(
+            `La cadena de texto ${cadena} tiene ${cadena.length} caracteres`
+          );
+        }
+      }
+
+      const contador3 = (cadena = "") =>
+        typeof cadena === "string" && cadena != ""
+          ? console.log(
+              `La cadena de texto ${cadena} tiene ${cadena.length} caracteres`
+            )
+          : console.log("No ingresaste una cadena de texto");
+
+      /* contador("");
+       contador("Hola Mundo");
+       contador(7);
+       contador(true);
+       contador(Object);
+       contador("Cualquier cosa"); */
+
+      /* contador2("");
+       contador2("Hola mundo"); */
+
+      /* contador3("Hola Marco");
+       contador3();
+       contador3(5);
+       contador3(true); */
+
+      /* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+
+      /* function recorte(cadena, numero) {
+         if (typeof cadena === "string" && typeof numero === "number") {
+           console.log(cadena.slice(0, numero));
+         } else {
+           console.log("Introduce una cadena de texto valida");
+         }
+       } */
+
+      /* const recorte = (cadena = '', numero = undefined) => {
+         if (typeof cadena === "string" && typeof numero === "number"  && cadena != '' && numero != undefined) {
+             console.log(`La cadena de texto ${cadena} se ha quedado en ${cadena.slice(0, numero)}`)
+         } else {
+           console.log("Introduce una cadena de texto valida");
+         }
+       } */
+
+      const recorte = (cadena = "", numero = undefined) =>
+        typeof cadena === "string" &&
+        typeof numero === "number" &&
+        cadena != "" &&
+        numero != undefined
+          ? console.log(
+              `La cadena de texto ${cadena} se ha quedado en ${cadena.slice(
+                0,
+                numero
+              )}`
+            )
+          : console.log("Introduce una cadena de texto valida");
+
+      /* recorte("Hola Mundo", 4);
+      recorte("Papagayo", "loro");
+      recorte("Las mañanas de la mejicana", -5);
+      recorte(5, "Hola mundo");
+      recorte();
+      recorte("Hola mundo");
+      recorte("Hola mundo", "siete"); */
+
+      /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
+      miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+
+      function separador(cadena, caracter) {
+        if (typeof cadena === "string") {
+          console.log(cadena.split(caracter));
+        } else console.log("Introduce una cadena de texto valida");
+      }
+
+      let texto =
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eos error quidem reiciendis temporibus alias atque, perferendis culpa maiores. Corporis sequi asperiores odit nulla nihil minima at, possimus accusamus obcaecati.";
+
+      /* separador("Hola Mundo", " ");
+       separador(texto, ",");
+       separador(6, "n");
+       separador(texto, "e"); */
+
+      /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
+
+      function repetir(cadena, veces) {
+        if (typeof cadena === "string" && typeof veces === "number") {
+          cadena = cadena + " ";
+          console.log(cadena.repeat(parseInt(veces)));
+        } else {
+          console.log("Introduce una cadena de texto valida");
+        }
+      }
+
+      /* repetir("Hola mundo", 3);
+       repetir(3, 5);
+       repetir(true, 5);
+       repetir(texto, 3);
+       repetir("Un barco rampante se dejo las velas en puerto", 21); */
+    </script>
+  </body>
+</html>

@@ -223,11 +223,10 @@ body {
 .social-media__img {
     width: 2.5rem;
     opacity: .7;
-    transition: tranform 1s ease-in-out;
 }
 
 .social-media__img:hover{
-    transform: translateY(-2px);
+    filter: invert(70%) sepia(62%) saturate(4684%) hue-rotate(145deg) brightness(95%) contrast(101%);
 }
 
 /* SECTION ABOUT-ME */
@@ -257,7 +256,7 @@ body {
 .about-me__side-box {
     display: flex;
     justify-content: space-between;
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
     gap: 2rem;
     text-align: justify;
@@ -319,10 +318,13 @@ body {
 
 .card {
     border: 3px solid var(--clr-dark);
-    background-image: url(../assets/img/app.jpg);
+    background-image: url(../assets/img/recipe.png);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
+
+
 
 /* SKILLS */
 
