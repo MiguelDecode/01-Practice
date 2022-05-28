@@ -92,36 +92,73 @@
       /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
       miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
 
-      function separador(cadena, caracter) {
-        if (typeof cadena === "string") {
+      /* function separador(cadena, caracter) {
+        if (typeof cadena === "string" && cadena != '' && caracter != '') {
           console.log(cadena.split(caracter));
         } else console.log("Introduce una cadena de texto valida");
-      }
+      } */
+
+      // OPERADOR TERNARIO
+      const separador = (cadena = "", caracter = undefined) =>
+        typeof cadena === "string" && cadena != "" && caracter != undefined
+          ? console.log(cadena.split(caracter))
+          : console.log("Introduce una cadena de texto valida");
 
       let texto =
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eos error quidem reiciendis temporibus alias atque, perferendis culpa maiores. Corporis sequi asperiores odit nulla nihil minima at, possimus accusamus obcaecati.";
 
       /* separador("Hola Mundo", " ");
-       separador(texto, ",");
-       separador(6, "n");
-       separador(texto, "e"); */
+      separador(texto, ",");
+      separador(6, "n");
+      separador(texto, "e");
+      separador("Hola mundo", "");
+      separador("", "l"); */
 
       /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
 
-      function repetir(cadena, veces) {
-        if (typeof cadena === "string" && typeof veces === "number") {
+      /* function repetir(cadena = "", veces = undefined) {
+        if (
+          typeof cadena === "string" &&
+          cadena != "" &&
+          typeof veces === "number" &&
+          veces != undefined
+        ) {
           cadena = cadena + " ";
           console.log(cadena.repeat(parseInt(veces)));
         } else {
           console.log("Introduce una cadena de texto valida");
         }
-      }
+      } */
+
+      const repetir2 = (cadena = '', veces = undefined) => {
+        if (typeof cadena != "string")
+          return console.log("No has introducido un texto valido");
+        else if (cadena === "")
+          return console.log("No has introducido una cadena de texto");
+        else if (typeof veces != "number")
+          return console.log("El tipo de dato no es un numero");
+        else if (veces === 0) return console.log("No se puede repetir 0 veces");
+        else if (veces === undefined)
+          return console.log("No has introducido un numero");
+        else if (Math.sign(veces) === -1)
+          return console.log("El numero de veces no puede ser negativo");
+        else return console.log(cadena.repeat(veces));
+      };
+      
+      repetir2(3, 5);
+      repetir2(true, 5);
+      repetir2("Hola Mundo", 0);
+      repetir2("", -5);
+      repetir2("Hola mundo", 3);
+      repetir2(texto, 3);
+      repetir2("Un barco rampante se dejo las velas en puerto", 12);
 
       /* repetir("Hola mundo", 3);
-       repetir(3, 5);
-       repetir(true, 5);
-       repetir(texto, 3);
-       repetir("Un barco rampante se dejo las velas en puerto", 21); */
+      repetir(3, 5);
+      repetir(true, 5);
+      repetir(texto, 3);
+      repetir("Un barco rampante se dejo las velas en puerto", 21); */
+
     </script>
   </body>
 </html>

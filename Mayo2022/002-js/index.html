@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>002-js</title>
+  </head>
+  <body>
+    <script>
+      // 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+
+      /* const darVuelta = (cadena = "") => {
+        if (cadena != "" && typeof cadena === "string") {
+          const myArray = cadena.split("");
+          const reverseArray = myArray.reverse();
+          const string = reverseArray.toString();
+          console.log(string.replace(/,/g, ""));
+        } else {
+          console.log("Introduce una cadena de texto");
+        }
+      }; */
+
+      const invertirCadena = (cadena = "") =>
+        cadena != "" && typeof cadena === "string"
+          ? //Recordar que cualquier dato que no sea un string con el metodo split genera un error.
+            console.log(cadena.split("").reverse().join(""))
+          : console.log("No ingresaste una cadena de texto válida");
+
+      /* invertirCadena("Hola Mundo");
+      invertirCadena("5");
+      invertirCadena(7);
+      invertirCadena();
+      invertirCadena(-3);
+      invertirCadena("");
+      invertirCadena(true);
+      invertirCadena("arenera"); */
+
+      /* darVuelta("Hola Mundo cruel");
+      darVuelta(7);
+      darVuelta(-3);
+      darVuelta("");
+      darVuelta(true);
+      darVuelta("arenera"); */
+
+      // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+      const repeticiones = (cadena = "", palabra = "") => {
+        if (cadena === "" || typeof cadena != "string") {
+          console.log("No has introducido una cadena de texto válida");
+        } else if (palabra === "" || typeof palabra != "string") {
+          console.log("No has introducido una palabra a buscar válida");
+        } else if (cadena.includes(palabra) === false) {
+          console.log("Tu palabra no se encuentra en el texto");
+        } else {
+          const replace = cadena.replace(/,/g, "");
+          const array = replace.split(" ");
+          let contador = 0;
+          for (let i = 0; i < array.length; i++) {
+            array[i] === palabra ? (contador += 1) : (contador += 0);
+          }
+          console.log(`La palabra que buscas se repite ${contador} vez/veces`);
+        }
+      };
+
+      /*   */
+
+      // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+      /* const darVuelta2 = (cadena = "") => {
+        if (cadena != "" && typeof cadena === "string") {
+          // const myArray = cadena.split("");
+          // const reverseArray = myArray.reverse();
+          // const string = reverseArray.toString();
+          // return string.replace(/,/g, "");
+          const myArray = cadena
+            .split("")
+            .reverse()
+            .toString()
+            .replace(/,/g, "");
+          return myArray;
+        } else {
+          console.log("Introduce una cadena de texto");
+        }
+      }; */
+
+      const palindromo = (palabra = "") => {
+        if (palabra != "" && typeof palabra === "string") {
+          palabra = palabra.toLowerCase();
+          const reversePalabra = palabra.split("").reverse().join("");
+          return reversePalabra === palabra
+            ? console.log("Es un palíndromo")
+            : console.log("No es un palíndromo");
+        } else {
+          console.log("No has introducido una palabra válida");
+        }
+      };
+
+      /* palindromo("arenera");
+      palindromo("Capitolio");
+      palindromo("Arya");
+      palindromo("Ana");
+      palindromo();
+      palindromo(4);
+      palindromo(true);
+      palindromo("Rodador"); */
+
+      // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+      const eliminarCaracteres = (texto = "", patron = "") => {
+        texto != "" && patron != ""
+          ? console.log(texto.replace(new RegExp(patron, "ig"), ""))
+          : console.log("No ingresaste datos válidos");
+      };
+
+      eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+      eliminarCaracteres();
+      eliminarCaracteres("xyz, 3xyz", "");
+      eliminarCaracteres("", "xyz")
+    </script>
+  </body>
+</html>
