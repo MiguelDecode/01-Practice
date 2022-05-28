@@ -4,7 +4,7 @@ let menu = document.getElementById("toggle");
 let nav = document.getElementById("nav");
 
 menu.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  menu.classList.toggle("bg-close");
   nav.classList.toggle("active");
 });
 

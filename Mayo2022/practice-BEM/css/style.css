@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+Versión Básica
+
+.header {}
+.header .h1 {}
+.header .h1 .a {}
+.header .nav {}
+.header .nav .ul {}
+.header .nav .ul .li {}
+.header .nav .ul .li .a {}
+
+.main {}
+.section {}
+.section .h2 {}
+.section .p {}
+.section .a {}
+
+.footer {}
+.footer .h2 {}
+.footer .ul {}
+.footer .ul .li {}
+.footer .ul .li .a {} 
+*/
+
+
+/* Básica Plus */
+/* .header {}
+.header .h1 {}
+.header .h1 .a {}
+.header .nav {}
+.header .ul {}
+.header .li {}
+.header .li .a {}
+
+.main {}
+.section {}
+.section .h2 {}
+.section .p {}
+.section .a {}
+
+.footer {}
+.footer .h2 {}
+.footer .ul {}
+.footer .li {}
+.footer .a {} */
+
+/* METODOLOGÍA BEM */
+/* Header */
+.header {}
+.header__h1 {}
+.header__a {}
+.header__nav {}
+.nav__ul {}
+.nav__li {}
+.nav__a {}
+
+/* Main */
+.main {}
+.section {}
+.section__h2 {}
+.section__p {}
+.section__a {}
+
+/* Footer */
+.footer {}
+.footer__h3 {}
+.footer__ul {}
+.footer__li {}
+.footer__a {}
