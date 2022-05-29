@@ -196,12 +196,19 @@ header {
     .nav {
         visibility: visible;
         display: flex;
+        justify-content: end;
+        gap: 4rem;
         height: auto;
+    }
+
+    .nav__list {
+        display: flex;
     }
 
     .row {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
     }
 
