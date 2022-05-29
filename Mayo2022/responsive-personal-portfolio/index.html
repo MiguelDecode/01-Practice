@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
     <div class="toggle" id="toggle"></div>
 
     <section class="banner" id="home">
@@ -49,7 +48,11 @@
 
         <ul class="social-media">
           <li class="social-media__item">
-            <a href="https://twitter.com/MiguelDecode" target="_blank" class="social-media__link">
+            <a
+              href="https://twitter.com/MiguelDecode"
+              target="_blank"
+              class="social-media__link"
+            >
               <img
                 src="./assets/img/twitter.svg"
                 alt="Twitter"
@@ -58,7 +61,11 @@
             </a>
           </li>
           <li class="social-media__item">
-            <a href="https://www.instagram.com/migueldecode/" target="_blank" class="social-media__link">
+            <a
+              href="https://www.instagram.com/migueldecode/"
+              target="_blank"
+              class="social-media__link"
+            >
               <img
                 src="./assets/img/instagram.svg"
                 alt="Instagram"
@@ -67,7 +74,11 @@
             </a>
           </li>
           <li class="social-media__item">
-            <a href="https://github.com/MiguelDecode" target="_blank" class="social-media__link">
+            <a
+              href="https://github.com/MiguelDecode"
+              target="_blank"
+              class="social-media__link"
+            >
               <img
                 src="./assets/img/github.svg"
                 alt="Github"
@@ -86,11 +97,18 @@
         </div>
         <div class="about-me__side-box">
           <p class="about-me__text">
-            Lo que comenzó como pura curiosidad y un pasatiempo más, se ha convertido con el paso del tiempo en una verdadera afición por merito propio. Cada dia hay algo nuevo que aprender o probar, siempre hay margen de mejora o mas de una forma de llegar a lo deseado.<br><br>
-            Mis primeras metas son llegar a dominar HTML, CSS y Javascript ayudandome de todo el contenido y documentación disponible en la red. Además a ratos libres trato de ir familiarizándome con nuevas tecnologías como Git o Figma sin olvidar mis otras pasiones como la lectura, el anime o los videojuegos.
+            Lo que comenzó como pura curiosidad y un pasatiempo más, se ha
+            convertido con el paso del tiempo en una verdadera afición por
+            merito propio. Cada dia hay algo nuevo que aprender o probar,
+            siempre hay margen de mejora o mas de una forma de llegar a lo
+            deseado.<br /><br />
+            Mis primeras metas son llegar a dominar HTML, CSS y Javascript
+            ayudandome de todo el contenido y documentación disponible en la
+            red. Además a ratos libres trato de ir familiarizándome con nuevas
+            tecnologías como Git o Figma sin olvidar mis otras pasiones como la
+            lectura, el anime o los videojuegos.
           </p>
-          <div class="about-me__imgbox">
-          </div>
+          <div class="about-me__imgbox"></div>
         </div>
       </div>
     </section>
@@ -101,59 +119,93 @@
           <h2 class="projects__title title">Mis proyectos</h2>
         </div>
         <div class="projects__grid-container">
-          <article class="card">
-          </article>
-          <article class="card">
-          </article>
-          <article class="card">
-          </article>
-          <article class="card">
-          </article>
-          <article class="card">
-          </article>
-          <article class="card">
-          </article>
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
+          <article class="card"></article>
         </div>
       </article>
     </section>
 
     <section class="skills" id="skills">
-      <h2 class="skills__title title">Habilidades</h2>
-      <article class="skills__container container">
-        <img class="skills__image" src="./assets/img/html.svg" alt="HTML icon">
-        <img class="skills__image" src="./assets/img/css.svg" alt="CSS icon">
-        <img class="skills__image" src="./assets/img/javascript.svg" alt="Javascript icon">
-      </article>
+      <h2 class="skills__title title">Conocimientos</h2>
+      <div class="skills__container container">
+        <article class="skill__card skill__card--html">
+          <p class="skill__name">HTML</p>
+        </article>
+        <article class="skill__card skill__card--css">
+          <p class="skill__name">CSS</p>
+        </article>
+        <article class="skill__card skill__card--javascript">
+          <p class="skill__name">JavaScript</p>
+        </article>
+        <article class="skill__card skill__card--much-more">
+          <p class="skill__name">Much More</p>
+        </article>
+      </div>
     </section>
 
     <footer class="contact" id="contact">
       <div class="contact__container container">
-        <div class="contact__title-box">
+        <section class="contact__title-box">
           <h2 class="contact__title title">Contacto</h2>
-          <p class="contact__text">Me encantaría trabajar contigo y ayudarte en tu proyecto.</p>
-        </div>
+          <p class="contact__text">
+            Me encantaría trabajar contigo y ayudarte en tu proyecto.
+          </p>
+        </section>
+
+        <form class="form">
+          <fieldset class="form__fieldset">
+            <input
+              type="text"
+              class="form__input"
+              required
+              placeholder="Nombre"
+            />
+            <input type="text" class="form__input" placeholder="Apellidos" />
+          </fieldset>
+          <input
+            type="email"
+            class="form__input"
+            required
+            placeholder="email"
+            name="email"
+            id="email"
+          />
+          <textarea
+            name="text"
+            class="form__text-area"
+            placeholder="Mensaje"
+            required
+          ></textarea>
+          <button type="submit" class="form__btn btn">Enviar</button>
+        </form>
+        
       </div>
     </footer>
 
-    <nav class="nav" id="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#home" class="nav__link" id="home">Inicio</a>
-        </li>
-        <li class="nav__item">
-          <a href="#about-me" class="nav__link" id="about-me">Sobre mi</a>
-        </li>
-        <li class="nav__item">
-          <a href="#projects" class="nav__link" id="projects">Proyectos</a>
-        </li>
-        <li class="nav__item">
-          <a href="#skills" class="nav__link" id="skills">Habilidades</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contact" class="nav__link" id="contact">Contacto</a>
-        </li>
-      </ul>
-    </nav>
-
+    <aside>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link" id="home">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-me" class="nav__link" id="about-me">Sobre mi</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link" id="projects">Proyectos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link" id="skills">Conocimientos</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link" id="contact">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
   </body>
 </html>
