@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 004 js</title>
+  </head>
+  <body>
+    <script>
+      // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+
+      const primo = (numero = undefined) => {
+        if (numero != undefined && typeof numero === "number" && numero > 1) {
+          for (let i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+              console.log("El número no es primo");
+              break;
+            } else {
+              console.log("El número es primo");
+              break;
+            }
+          }
+        } else {
+          console.log("Introduce un número valido");
+        }
+      };
+
+      primo(5);
+      primo(7);
+      primo(56);
+      primo("Hello");
+      primo(true);
+      primo(13);
+      primo(1);
+
+      // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+      const paridad = (numero = undefined) => {
+        if (numero != undefined && typeof numero === "number") {
+          numero % 2 === 0
+            ? console.log("El número es par")
+            : console.log("El número es impar");
+        } else {
+          console.log("No has introducido un número válido");
+        }
+      };
+
+      paridad(2);
+      paridad(5);
+      paridad(7);
+      paridad(8);
+
+      // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+      const celsiusToFarenheit = (number = undefined) => {
+        number != undefined && typeof number === "number"
+          ? console.log(number * (9 / 5) + 32 + " grados Farenheit")
+          : console.log("Introduce un número válido");
+      };
+
+      celsiusToFarenheit(0);
+
+      const farenheitToCelsius = (number = undefined) => {
+        number != undefined && typeof number === "number"
+          ? console.log(((number - 32) * 5) / 9) + " grados Celsius"
+          : console.log("Introduce un número válido");
+      };
+
+      farenheitToCelsius(100);
+
+      const temperatureConverter = (number = undefined, unit = "") => {
+        unit = unit.toLowerCase();
+        if (unit != "" && typeof unit === "string") {
+          if (unit === "celsius") {
+            celsiusToFarenheit(number);
+          } else if (unit === "farenheit") {
+            farenheitToCelsius(number);
+          } else {
+            console.log("No has introducido la unidad correctamente");
+          }
+        } else {
+          console.log("No has introducido una unidad correcta");
+        }
+      };
+
+      temperatureConverter(32, "celsius");
+      temperatureConverter(100, "farenheit");
+      temperatureConverter("hello", "celsius");
+      temperatureConverter(399, "caaaalsius");
+      temperatureConverter(-56, "celsius");
+    </script>
+  </body>
+</html>
