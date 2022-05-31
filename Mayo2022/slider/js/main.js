@@ -10,12 +10,16 @@ const DIRECTION = {
   LEFT: "LEFT",
 };
 
+const getTranformValue = () => Number(rootStyles.getPropertyValue('--slide-tranform').replace('%', ''));
+
 const moveSlide = direction => {
 
+  const transformValue = getTranformValue();
+
   if(direction === DIRECTION.LEFT) {
-    rootStyles.setProperty('--slide-transform', '100%')
+    rootStyles.setProperty('--slide-transform', `${transformValue + 100}%`)
   } else if (direction === DIRECTION.RIGHT) {
-    rootStyles.setProperty('--slide-transform', '0')
+    rootStyles.setProperty('--slide-transform', `${transformValue - 100}%`)
   }
 }
 
