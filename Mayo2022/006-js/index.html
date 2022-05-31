@@ -10,13 +10,112 @@
     <script>
       // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 
+      /* const letters = (cadena = "") => {
+        if (cadena === "")
+          return console.log("No has introducido ningun texto");
 
+        if (typeof cadena !== "string")
+          return console.log("El tipo de dato introducido no es un texto");
+
+        let vocal = 0;
+        let consonante = 0;
+        let myArray = cadena.replace(' ', '').replace('.', '').replace(',', '').split('');
+        for (let i = 0; i < myArray.length; i++) {
+          if (
+            myArray[i] === "a" ||
+            myArray[i] === "e" ||
+            myArray[i] === "i" ||
+            myArray[i] === "o" ||
+            myArray[i] === "u"
+          ) {
+            vocal++;
+          } else {
+            consonante++;
+          }
+        }
+        console.log(`Tiene ${vocal} vocales y ${consonante} consonantes`);
+      }; */
+
+      const contarLetras = (cadena = "") => {
+        if (cadena === "")
+          return console.log("No has introducido ningun texto");
+
+        if (typeof cadena !== "string")
+          return console.log("El tipo de dato introducido no es un texto");
+
+        let vocal = 0;
+        let consonante = 0;
+        cadena = cadena.toLowerCase();
+
+        for (const letra of cadena) {
+          if (/[aeiouáéíóú]/.test(letra)) vocal++;
+
+          if (/[bcdfghjklmnñpqrstvwxyz]/.test(letra)) consonante++;
+        }
+
+        console.log(`Tiene ${vocal} vocales y ${consonante} consonantes`);
+      };
+
+      /* contarLetras();
+      contarLetras(3);
+      contarLetras("Hola Mundo");
+      contarLetras("Un velero surcando el mar"); */
 
       // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 
+      /* const validate = (name = "") => {
+        if (name === "") return console.log("No has introducido ningún nombre");
+        if (typeof name !== "string")
+          "No has introducido un tipo de dato válido";
 
-      
+        name = name.toLowerCase();
+
+        if (/jonathan mircha/.test(name)) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }; */
+
+      const validate = (name = "") => {
+        if (name === "") return console.log("No has introducido ningún nombre");
+        if (typeof name !== "string")
+          "No has introducido un tipo de dato válido";
+
+        let expReg = /^[A-Za-zÑñáéíóúÁÉÍÓÚ\s]+$/g.test(name);
+
+        return (expReg)
+          ? console.log('El nombre es válido')
+          : console.log('El nombre no es válido')
+      };
+
+      /* validate("Jonathan Mircha");
+      validate("Pepe el gallo");
+      validate('Janathan Mircha')
+      validate(3)
+      validate()
+      validate('$ Tio Gilito')
+      validate('Tom-Jerry') */
+
       // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+      const validateEmail = (email = '') => {
+        if (email === "") return console.log("No has introducido ningún email");
+        if (typeof email !== "string")
+          "No has introducido un tipo de dato válido";
+
+        let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+
+        return (expReg)
+          ? console.log('El email es válido')
+          : console.log('El email no es válido')
+      }
+
+      validateEmail('esteesmiemail@gmail.com')
+      validateEmail()
+      validateEmail(4)
+      validateEmail('holamundogmail.com')
+
     </script>
   </body>
 </html>
