@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript exercises</title>
+  </head>
+  <body>
+    <script>
+      // 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+      /* const elevarCuadrado = (array) => {
+        const newArray = [];
+        for (let i = 0; i < array.length; i++) {
+          newArray.push(Math.pow(array[i], 2));
+        }
+        console.log(newArray);
+      } */
+
+      const elevarCuadrado = (array = undefined) => {
+        if (array === undefined)
+          return console.log("No has ingresado un arreglo de números");
+
+        if (!(array instanceof Array))
+          return console.log("El valor ingresado no es un arreglo");
+
+        if (array.length === 0) return console.error("El arreglo esta vacío");
+
+        for (const number of array) {
+          if (typeof number !== "number") {
+            return console.error("No has ingresado un array numérico");
+          }
+        }
+
+        const newArray = array.map((el) => el * el);
+
+        console.log(newArray);
+      };
+
+      /* elevarCuadrado([1, 4, 5]);
+      elevarCuadrado(["hello", 3, 7]);
+      elevarCuadrado("Hello");
+      elevarCuadrado();
+      elevarCuadrado([]); */
+
+      // 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+      const minMax = (myArray = undefined) => {
+        if (myArray === undefined)
+          return console.log("No has ingresado un arreglo de números");
+
+        if (!(myArray instanceof Array))
+          return console.log("El valor ingresado no es un arreglo");
+
+        if (myArray.length === 0) return console.error("El arreglo esta vacío");
+
+        for (const number of myArray) {
+          if (typeof number !== "number") {
+            return console.error("No has ingresado un array numérico");
+          }
+        }
+
+        return console.info(
+          `Arreglo original: ${myArray}\nValor Mayor: ${Math.max(
+            ...myArray
+          )}\nValor Menor: ${Math.min(...myArray)}`
+        );
+
+        /* let min = myArray[0];
+        let max = myArray[0];
+
+        for (let i = 0; i < myArray.length; i++) {
+          if (myArray[i] <= min) {
+            min = myArray[i];
+          } else if (myArray[i] >= max) {
+            max = myArray[i];
+          }
+        }
+
+        console.log(min, max); */
+      };
+
+      /* minMax([1, 4, 5, 99, -60]);
+      minMax([5, 78, 987, 7, 5, 34]);
+      minMax([999, 87, 5, -654, 54, 89, 45]);
+      minMax();
+      minMax("hello");
+      minMax(["Hello", 3, 89, 69]); */
+
+      // 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+      const parity = (numberArray) => {
+        if (numberArray === undefined)
+          return console.log("No has ingresado un arreglo de números");
+
+        if (!(numberArray instanceof Array))
+          return console.log("El valor ingresado no es un arreglo");
+
+        if (numberArray.length === 0)
+          return console.error("El arreglo esta vacío");
+
+        for (const number of numberArray) {
+          if (typeof number !== "number") {
+            return console.error("No has ingresado un array numérico");
+          }
+        }
+
+        /* const pares = [];
+        const impares = []; */
+
+        /* for (let i = 0; i < numberArray.length; i++) {
+          if (numberArray[i] % 2 !== 0) {
+            impares.push(numberArray[i]);
+          } else {
+            pares.push(numberArray[i]);
+          }
+        } */
+
+        console.info({
+          pares: numberArray.filter((num) => num % 2 === 0),
+          impares: numberArray.filter((num) => num % 2 === 1),
+        });
+
+        /* console.log(pares, impares);
+        console.log(numeros); */
+      };
+
+      parity([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
+      parity();
+      parity([]);
+      parity(["hello", 3, 6]);
+    </script>
+  </body>
+</html>
