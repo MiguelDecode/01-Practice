@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
-  --slide-transform: 0;
+  --slide-transform: 0%;
   --transition: transform 1s;
 }
 
@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Permanent Marker', cursive;
   background-color: #f00;
 }
 
@@ -60,12 +60,13 @@ img {
   font-weight: 500;
 }
 
-/* BANNER SECTION */
+/* SLIDER SECTION */
 
 .slider__container {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .slider {
@@ -130,4 +131,22 @@ img {
   border-left: 3px solid #111;
   border-bottom: 3px solid #111;
   transform: rotate(225deg);
+}
+
+/* CONTENT */
+
+.content {
+  position: absolute;
+  bottom: 0;
+  max-width: 800px;
+  color: #fff;
+  padding: 30px 100px;
+}
+
+.content__title {
+  font-size: 3rem;
+}
+
+.content__text {
+  font-size: 1.5rem;
 }
