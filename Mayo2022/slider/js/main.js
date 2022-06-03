@@ -3,7 +3,7 @@ const slider = document.getElementById("slider");
 const buttonLeft = document.getElementById("left");
 const buttonRight = document.getElementById("right");
 
-const sliderImages = document.querySelectorAll(".slider__image");
+const sliderImages = document.querySelectorAll(".place");
 
 const rootStyles = document.documentElement.style;
 

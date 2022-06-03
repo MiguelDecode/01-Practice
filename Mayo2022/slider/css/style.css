@@ -76,32 +76,42 @@ img {
   transition: var(--transition);
 }
 
+.place {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .slider__image {
   min-width: 100%;
   height: 100%;
   position: relative;
 }
 
-.product__image {
+.place__image {
   min-width: 100%;
   height: 100%;
   object-fit: cover;
   background-position: center;
 }
 
-.product__description {
+.place__description {
   position: absolute;
   bottom: 0;
-  max-width: 800px;
+  max-width: 900px;
   color: #fff;
   padding: 30px 100px;
 }
 
-.product__title {
+.place__description--dark {
+  color: #000;
+}
+
+.place__title {
   font-size: 3rem;
 }
 
-.product__text {
+.place__text {
   font-size: 1.5rem;
 }
 
