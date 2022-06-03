@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Slider</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Paranoia Travels</a>
+      <nav class="main-nav">
+        <ul class="main-nav__ul">
+          <li class="main-nav__li">
+            <a href="#" class="main-nav__link">Home</a>
+          </li>
+          <li class="main-nav__li">
+            <a href="#" class="main-nav__link">About</a>
+          </li>
+          <li class="main-nav__li">
+            <a href="#" class="main-nav__link">Travels</a>
+          </li>
+          <li class="main-nav__li">
+            <a href="#" class="main-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="slider__container" id="slider-container">
+      <div class="slider" id="slider">
+        <article class="place">
+          <img class="place__image" src="./assets/images/japan.jpg" alt="#" />
+          <section class="place__description">
+            <h3 class="place__title">Japón</h3>
+            <p class="place__text">Japón es una nación insular del océano Pacífico con densas ciudades, palacios imperiales, parques nacionales montañosos y miles de santuarios y templos. El tren bala Shinkansen conecta las islas principales de Kyushu (con las playas subtropicales de Okinawa), Honshu (con Tokio y el memorial del bombardeo atómico en Hiroshima) y Hokkaido (famosa por el esquí). Tokio, la capital, es famosa por sus rascacielos, el comercio y la cultura pop.</p>
+          </section>
+        </article>
+        <article class="place">
+          <img class="place__image" src="./assets/images/punta-cana.jpg" alt="#" />
+          <section class="place__description place__description--dark">
+            <h3 class="place__title">Punta Cana</h3>
+            <p class="place__text">Punta Cana, el extremo más oriental de República Dominicana, limita con el mar Caribe y con el océano Atlántico. Es una región conocida por sus 32 km de extensión de playas y aguas claras. El área del Bávaro y Punta Cana se combinan para formar lo que se conoce como La Costa del Coco. </p>
+          </section>
+        </article>
+        <article class="place">
+          <img class="place__image" src="./assets/images/estados-unidos.jpg" alt="#" />
+          <section class="place__description">
+            <h3 class="place__title">Hollywood</h3>
+            <p class="place__text">Los turistas acuden a Hollywood, todo un icono del sector del entretenimiento, para ver lugares de interés como el teatro chino TCL y las estrellas del Paseo de la Fama. Aquí también se encuentran los estudios de Paramount Pictures, el anfiteatro Hollywood Bowl y el teatro Dolby, donde se celebra la gala de los Óscar. Los hípsteres pueden elegir entre clubes de comedia improvisada, bares de estilo retro-moderno y discotecas muy exclusivas. Los lugareños suelen comer en los restaurantes del cercano Thai Town.</p>
+          </section>
+        </article>
+        <article class="place">
+          <img class="place__image" src="./assets/images/cuba.jpg" alt="#" />
+          <section class="place__description place__description--dark">
+            <h3 class="place__title">Cuba</h3>
+            <p class="place__text">Cuba es un país insular bajo un régimen comunista. Tiene playas de arena blanca como el azúcar y lo cubren campos de tabaco, que tienen un papel fundamental en la producción de los legendarios cigarros puros del país. La capital, La Habana, está rodeada de casas de colores pastel, con autos de la década de 1950 y arquitectura colonial española en el centro, que data del siglo XVI, La Habana Vieja. En los clubes de danza, se escucha salsa y se realizan espectáculos en el famoso cabaré Tropicana.</p>
+          </section>
+        </article>
+      </div>
+
+      <div class="controls">
+        <button class="controls__left" id="left"></button>
+        <button class="controls__right" id="right"></button>
+      </div>
+
+    </section>
+  </body>
+</html>
