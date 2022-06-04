@@ -44,6 +44,8 @@ img {
 .main-nav__ul {
   position: relative;
   display: flex;
+  gap: 80px;
+  padding-left: 0;
   justify-content: center;
   align-items: center;
 }
@@ -51,7 +53,6 @@ img {
 .main-nav__li {
   position: relative;
   list-style-type: none;
-  margin-left: 40px;
 }
 
 .main-nav__link {
