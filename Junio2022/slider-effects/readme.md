@@ -1,0 +1,1 @@
+Intento fallido no se logra que el slide sea infinito. Pendiente de nuevo intento a posterior.

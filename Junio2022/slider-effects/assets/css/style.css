@@ -101,6 +101,11 @@ body {
   cursor: pointer;
 }
 
+.btn-left__icon,
+.btn-right__icon {
+  filter: invert(1);
+}
+
 .btn-left {
   left: 1rem;
 }

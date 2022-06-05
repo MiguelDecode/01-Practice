@@ -17,11 +17,13 @@ const DIRECTION = {
 const getTransformValue = () =>
   Number(rootStyles.getPropertyValue("--slide-transform").replace("px", ""));
 
+// Considero que el problema se encuentra en este pedazo de código o también en el estilo aplicado al contenedor justify-content: center;
 const reorderSlide = () => {
-  if (slideCounter === sliderItems.length -1) {
+  if (slideCounter === sliderItems.length - 1) {
     sliderItem.appendChild(sliderItem.firstElementChild);
   }
 };
+// Considero que el problema se encuentra en este pedazo de código
 
 const moveSlider = (direction) => {
   const transformValue = getTransformValue();
@@ -41,7 +43,6 @@ const moveSlider = (direction) => {
 
   reorderSlide();
 };
-
 
 btnRight.addEventListener("click", () => moveSlider(DIRECTION.RIGHT));
 btnLeft.addEventListener("click", () => moveSlider(DIRECTION.LEFT));
