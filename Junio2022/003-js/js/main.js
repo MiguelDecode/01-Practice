@@ -36,6 +36,47 @@ class Pelicula {
     this.validarDirector(director);
     this.validarEstreno(estreno);
     this.validarPais(pais);
+    this.validarGeneros(generos);
+    this.validarCalificacion(calificacion);
+  }
+
+  static get listaGeneros() {
+    return [
+      "Action",
+      "Adult",
+      "Adventure",
+      "Animation",
+      "Biography",
+      "Comedy",
+      "Crime",
+      "Documentary",
+      "Drama",
+      "Family",
+      "Fantasy",
+      "Film Noir",
+      "Game-Show",
+      "History",
+      "Horror",
+      "Musical",
+      "Music",
+      "Mystery",
+      "News",
+      "Reality-TV",
+      "Romance",
+      "Sci-Fi",
+      "Short",
+      "Sport",
+      "Talk-Show",
+      "Thriller",
+      "War",
+      "Western",
+    ];
+  }
+
+  static generosAceptados() {
+    return console.info(
+      `Los géneros aceptados son: ${Pelicula.listaGeneros.join(", ")}`
+    );
   }
 
   validarCadena(propiedad, valor) {
@@ -68,6 +109,8 @@ class Pelicula {
           `El valor: ${valor} ingresado de la propiedad ${propiedad} requiere que sea un string`
         );
     }
+
+    return true;
   }
 
   validarLonguitudCadena(propiedad, valor, longuitud) {
@@ -117,14 +160,81 @@ class Pelicula {
   }
 
   validarPais(pais) {
-    this.validarArreglo('País', pais)
+    this.validarArreglo("País", pais);
+  }
+
+  validarGeneros(generos) {
+    if (this.validarArreglo("Géneros", generos)) {
+      for (let genero of generos) {
+        if (!Pelicula.listaGeneros.includes(genero)) {
+          console.error(`Género/s incorrectos: ${generos.join(", ")}`);
+          Pelicula.generosAceptados();
+        }
+      }
+    }
+  }
+
+  validarCalificacion(calificacion) {
+    if (this.validarNumero("Calificación", calificacion))
+      return calificacion < 0 || calificacion > 10
+        ? console.error(
+            `La calificación tiene que estar en un rango entre 0 y 10`
+          )
+        : (this.calificacion = calificacion.toFixed(1));
+  }
+
+  fichaTecnica() {
+    console.info(
+      `Ficha Técnica:\nTítulo:${this.titulo}\nDirector:${
+        this.director
+      }\nPaís:${this.pais.join(", ")}\nGéneros:${this.generos.join(
+        ", "
+      )}\nCalificación:${this.calificacion}\nIMDB id:${this.id}`
+    );
   }
 }
 
+/* Pelicula.generosAceptados();
 const peli = new Pelicula({
   id: "tt1234567",
   titulo: "Título de la pelicula",
   director: "Director de la pelicula",
   estreno: 1875,
-  pais: ['Spain', 'Portugal'],
+  pais: ["Spain", "Portugal"],
+  generos: ["Comedy", "Sport"],
+  calificacion: 7.4,
 });
+
+peli.fichaTecnica(); */
+
+const misPelis = [
+  {
+    id: "tt0758758",
+    titulo: "Into the Wild",
+    director: "Sean Penn",
+    estreno: 2007,
+    pais: ["USA"],
+    generos: ["Adventure", "Biography", "Drama"],
+    calificacion: 8.1,
+  },
+  {
+    id: "tt0479143",
+    titulo: "Rocky Balboa",
+    director: "Sylvester Stallone",
+    estreno: 2006,
+    pais: ["USA"],
+    generos: ["Action", "Drama", "Sport"],
+    calificacion: 7.1,
+  },
+  {
+    id: "tt0468569",
+    titulo: "The Dark Knight",
+    director: "Chirstopher Nolan",
+    estreno: 2008,
+    pais: ["USA", "UK"],
+    generos: ["Action", "Crime", "Drama"],
+    calificacion: 9,
+  },
+];
+
+misPelis.forEach((el) => new Pelicula(el).fichaTecnica());
