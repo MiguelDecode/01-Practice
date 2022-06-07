@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // The prime factors of 13195 are 5, 7, 13 and 29.
+
+      // What is the largest prime factor of the number 600851475143 ?
+
+      // Los números primos son aquellos números naturales que solamente se pueden dividir por sí mismos y por 1, es decir, que si intentamos dividirlos por cualquier otro número, el resultado no es entero.
+
+      const primo = numero =>{
+        let esPrimo = false
+        for (let i = 2; i < numero; i++) {
+          if(numero % i === 0) {
+            esPrimo = false;
+            break
+          } else {
+            esPrimo = true;
+          }
+       }
+       return esPrimo
+      }
+
+      const maxPrimo = numero => {
+        for (let i = numero; i >= 2; i--) {
+          if(primo(i)) {
+            console.log(i)
+            break
+          }
+        }
+      }
+
+      maxPrimo(100);
+      maxPrimo(992);
+      maxPrimo(614);
+      maxPrimo(11000)
+      
+      
+
+      
+
+
+    
+
+
+    </script>
+  </body>
+</html>

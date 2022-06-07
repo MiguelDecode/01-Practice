@@ -99,6 +99,7 @@ body {
   position: absolute;
   top: 50%;
   cursor: pointer;
+  z-index: var(--z-one);
 }
 
 .btn-left__icon,

@@ -8,6 +8,7 @@ const sliderItems = document.querySelectorAll(".slider-item");
 const rootStyles = document.documentElement.style;
 
 let slideCounter = 2;
+let isInTransition = false;
 
 const DIRECTION = {
   RIGHT: "RIGHT",
@@ -17,16 +18,32 @@ const DIRECTION = {
 const getTransformValue = () =>
   Number(rootStyles.getPropertyValue("--slide-transform").replace("px", ""));
 
-// Considero que el problema se encuentra en este pedazo de código o también en el estilo aplicado al contenedor justify-content: center;
 const reorderSlide = () => {
+  const transformValue = getTransformValue();
+  rootStyles.setProperty("--transition", "none");
   if (slideCounter === sliderItems.length - 1) {
-    sliderItem.appendChild(sliderItem.firstElementChild);
+    sliderContainer.appendChild(sliderContainer.firstElementChild);
+    rootStyles.setProperty(
+      "--slide-transform",
+      `${transformValue + sliderItems[slideCounter].scrollWidth + 16}px`
+    );
+    slideCounter--;
+  } else if (slideCounter === 0) {
+    sliderContainer.prepend(sliderContainer.lastElementChild);
+    rootStyles.setProperty(
+      "--slide-transform",
+      `${transformValue - sliderItems[slideCounter].scrollWidth - 16}px`
+    );
+    slideCounter++;
   }
+  isInTransition = false;
 };
-// Considero que el problema se encuentra en este pedazo de código
 
 const moveSlider = (direction) => {
+  if(isInTransition) return;
   const transformValue = getTransformValue();
+  rootStyles.setProperty("--transition", "transform 1s");
+  isInTransition = true;
   if (direction === DIRECTION.LEFT) {
     rootStyles.setProperty(
       "--slide-transform",
@@ -40,9 +57,13 @@ const moveSlider = (direction) => {
     );
     slideCounter++;
   }
-
-  reorderSlide();
 };
+
+
 
 btnRight.addEventListener("click", () => moveSlider(DIRECTION.RIGHT));
 btnLeft.addEventListener("click", () => moveSlider(DIRECTION.LEFT));
+
+sliderItem.addEventListener('transitionend', reorderSlide);
+
+reorderSlide();
