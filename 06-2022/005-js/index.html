@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+      // Find the largest palindrome made from the product of two 3-digit numbers.
+
+      const isPalindrome = number => {
+        let stringNumber = String(number);
+
+        if (stringNumber === stringNumber.split('').reverse().join('')) {
+          return true
+        } else {
+          return false
+        }
+        
+      }
+
+      const largestPalindromeProduct = (number1, number2) => {
+        let product = number1 * number2;
+        for (let i = product; i >= 0; i--) {
+          if (isPalindrome(i)) {
+            return console.log(`El palíndromo mas grande del producto de ${number1} por ${number2} es ${i}`)
+          }
+        }
+      }
+
+      largestPalindromeProduct(99,99)
+      largestPalindromeProduct(91,99)
+      largestPalindromeProduct(98,99)
+      largestPalindromeProduct(998,999)
+
+
+    </script>
+  </body>
+</html>
