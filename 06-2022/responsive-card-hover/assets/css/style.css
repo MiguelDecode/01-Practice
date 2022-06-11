@@ -119,10 +119,11 @@ body {
 .card__link {
   position: relative;
   align-self: center;
-  color: #111;
+  color: #333;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #fff7;
+  transition: .5s;
 }
 
 .card__link:hover {

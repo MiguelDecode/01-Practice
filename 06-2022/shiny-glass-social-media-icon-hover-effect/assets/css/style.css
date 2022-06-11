@@ -1,0 +1,137 @@
+/* GOOGLE FONTS */
+
+/* VARIABLES CSS */
+:root {
+  /* Colors */
+  /* Font and typography */
+  /* z-index */
+  --level-one: 10;
+  --level-two: 20;
+  --level-three: 30;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* START */
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #ff4f8b, #dff1ff);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: var(--level-one);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+.color-one {
+  background-color: #ff359b;
+  width: 600px;
+  height: 600px;
+  top: -350px;
+}
+
+.color-two {
+  background-color: #00d2ff;
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  left: 100px;
+}
+
+.color-three {
+  background-color: #fffd87;
+  width: 300px;
+  height: 300px;
+  bottom: 50px;
+  right: 0px;
+}
+
+/* SOCIAL */
+
+.social {
+  position: relative;
+  display: flex;
+  z-index: var(--level-two);
+}
+
+.social__item {
+  position: relative;
+  margin: 10px;
+}
+
+.social__link {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.social__link:hover {
+  transform: translateY(-20px);
+}
+
+.social__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+
+.social__link:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+}
