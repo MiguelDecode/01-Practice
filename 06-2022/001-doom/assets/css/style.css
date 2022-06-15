@@ -1,5 +1,6 @@
-/* VARIABLES CSS */
+/* GOOGLE FONTS */
 
+/* VARIABLES CSS */
 :root {
   /* Colors */
   /* Font and typography */
@@ -8,8 +9,6 @@
   --level-two: 20;
   --level-three: 30;
 }
-
-/* BASE */
 
 *,
 *::after,
@@ -29,5 +28,3 @@ a {
 img {
   max-width: 100%;
 }
-
-/* START */

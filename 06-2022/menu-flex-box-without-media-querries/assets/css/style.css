@@ -1,0 +1,77 @@
+/* VARIABLES CSS */
+
+:root {
+  /* Colors */
+  /* Font and typography */
+  /* z-index */
+  --level-one: 10;
+  --level-two: 20;
+  --level-three: 30;
+}
+
+/* BASE */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  margin: 1rem;
+}
+
+/* START */
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header__article {
+  border: 1px solid darkblue;
+  padding: 1em;
+  flex-basis: 20rem;
+  flex-grow: 5;
+}
+
+.menu {
+  padding: 1em;
+  border: 1px solid purple;
+  flex-basis: 10em;
+  flex-grow: 1;
+}
+
+.menu__ul {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.menu__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 10em;
+  background-color: aliceblue;
+  color: #000;
+  margin: .5em;
+  padding: .3em;
+}

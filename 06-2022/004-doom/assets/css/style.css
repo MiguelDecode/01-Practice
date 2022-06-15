@@ -1,0 +1,55 @@
+/* VARIABLES CSS */
+
+:root {
+  /* Colors */
+  /* Font and typography */
+  /* z-index */
+  --level-one: 10;
+  --level-two: 20;
+  --level-three: 30;
+}
+
+/* BASE */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* START */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: #3335;
+}
+
+.gallery__item:hover {
+  background-color: #3332;
+}
+
+.red {
+  background-color: red;
+}

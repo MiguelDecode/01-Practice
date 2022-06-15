@@ -1,0 +1,101 @@
+/* VARIABLES CSS */
+
+:root {
+  /* Colors */
+  /* Font and typography */
+  /* z-index */
+  --level-one: 10;
+  --level-two: 20;
+  --level-three: 30;
+}
+
+/* BASE */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* START */
+
+body {
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* HAMBURGUER MENU */
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+
+.menu-btn__icon {
+  width: 50px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__icon::before,
+.menu-btn__icon::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__icon::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__icon::after {
+  transform: translateY(16px);
+}
+
+/* MENU ANIMATION */
+
+.menu-btn__icon.open {
+  transform: translateX(-50px);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.menu-btn__icon.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn__icon.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
