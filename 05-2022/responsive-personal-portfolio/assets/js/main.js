@@ -1,10 +1,10 @@
 // MENU
 
-let menu = document.getElementById("toggle");
+let menu = document.getElementById("menu-btn");
 let nav = document.getElementById("nav");
 
 menu.addEventListener("click", () => {
-  menu.classList.toggle("bg-close");
+  menu.classList.toggle("open");
   nav.classList.toggle("active");
 });
 
