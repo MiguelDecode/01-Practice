@@ -5,3 +5,4 @@ icon.addEventListener("click", () => {
   icon.classList.toggle("icon--active");
   nav.classList.toggle("nav--active");
 });
+
