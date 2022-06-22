@@ -1,0 +1,191 @@
+/* VARIABLES CSS */
+
+:root {
+  /* Colors */
+  --first-color: hsl(228, 81%, 49%);
+  --title-color: hsl(228, 12%, 15%);
+  --text-color: hsl(228, 8%, 50%);
+  --body-color: hsl(228, 100%, 99%);
+  --container-color: #fff;
+  /* Font and typography */
+  /* z-index */
+  --level-one: 10;
+  --level-two: 20;
+  --level-three: 30;
+}
+
+/* RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* BASE */
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.title {
+  color: var(--title-color);
+}
+
+/* NAV */
+
+.container {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.nav__link {
+  display: flex;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.25s ease-in-out;
+}
+
+.nav__link i {
+  font-size: 1.25rem;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+/* Active link */
+
+.nav__link--active {
+  color: var(--first-color);
+}
+
+.show-menu {
+  width: 255px;
+}
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 768px) {
+  .logo,
+  .brand__toggle,
+  .nav__link--name {
+    display: none;
+  }
+
+  .nav__list {
+    position: fixed;
+    bottom: 2rem;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px hsla(228, 81%, 24%, 0.15);
+    width: 90%;
+    padding: 30px 40px;
+    border-radius: 1rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: 7rem;
+    margin-right: 1.5rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 1px 0 4px hsla(228, 81%, 49%, 0.15);
+    width: 84px;
+    height: 100vh;
+    padding: 2rem;
+    transition: 0.25s ease-in-out;
+    overflow: hidden;
+  }
+
+  .brand {
+    justify-self: flex-start;
+  }
+
+  .logo__link {
+    display: flex;
+  }
+
+  .logo__link i {
+    font-size: 1.25rem;
+    color: var(--first-color);
+  }
+
+  .logo__link--name {
+    color: var(--title-color);
+    font-weight: 600;
+    padding-left: 2rem;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 50%;
+  }
+
+  .nav__link--name {
+    padding-left: 2rem;
+  }
+
+  .brand__toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--title-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: grid;
+    place-content: center;
+    top: 2rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+
+  .brand__toggle--rotate {
+    transform: rotate(180deg);
+  }
+
+  .show-menu {
+    width: 255px;
+  }
+}

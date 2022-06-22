@@ -22,3 +22,14 @@ img {
 }
 
 /* START */
+
+body {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff
+}
+
+.container {
+  background-color: #555;
+  padding: 1rem;
+}

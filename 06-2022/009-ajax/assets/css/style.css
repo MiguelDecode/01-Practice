@@ -1,0 +1,37 @@
+/* --- VARIABLES CSS --- */
+
+:root {
+  /* Colors */
+  --primary-color: ;
+  --secondary-color: ;
+  --accent-color: ;
+  --bg-color: ;
+  /* Font and typography */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* z-index */
+  --first-level: 10;
+  --second-level: 20;
+  --third-level: 30;
+  --modal-level: 999;
+}
+
+/* --- RESET --- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- BASE --- */
+
+body {
+min-height: 100vh;
+}
+
+/* --- BREAKPOINTS --- */
+
