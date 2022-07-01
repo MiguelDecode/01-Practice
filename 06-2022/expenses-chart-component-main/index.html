@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <section class="balance">
+        <div class="balance-total">
+          <h3 class="balance__title">My balance</h3>
+          <p class="balance__quantity">$921.48</p>
+        </div>
+        <img class="logo" src="./images/logo.svg" alt="logo" />
+      </section>
+
+      <section class="graph">
+        <h3 class="graph__title">Spending - Last 7 days</h3>
+        <div class="bars">
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="monday"></div>
+            <span class="bars__day">mon</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="tuesday"></div>
+            <span class="bars__day">tue</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="wednesday"></div>
+            <span class="bars__day">wed</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="thursday"></div>
+            <span class="bars__day">thu</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="friday"></div>
+            <span class="bars__day">fri</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="saturday"></div>
+            <span class="bars__day">sat</span>
+          </div>
+          <div class="bars__box">
+            <div class="bars__amount"></div>
+            <div class="bars__bar" id="sunday"></div>
+            <span class="bars__day">sun</span>
+          </div>
+        </div>
+        <hr class="separator" />
+        <div class="stats">
+          <div class="stats__this-month">
+            <h4 class="stats__text">Total this month</h4>
+            <p class="stats__number">$478.33</p>
+          </div>
+          <div class="stats__last-month">
+            <p class="stats__number stats__number--small">+2.4%</p>
+            <h4 class="stats__text">from last month</h4>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

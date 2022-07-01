@@ -96,6 +96,8 @@ body {
   text-decoration: line-through;
 }
 
+/* Button */
+
 .button__cart {
   display: flex;
   justify-content: center;
@@ -118,6 +120,8 @@ body {
 .button__icon {
   font-size: 1.125rem;
 }
+
+/* BREAKPOINTS */
 
 @media screen and (min-width: 768px) {
   .card {
