@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/main.js"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <img class="logo" src="./assets/images/logo.svg" alt="Logo de Snap">
+          <img class="menu" src="./assets/images/icon-menu.svg" alt="Icono de menu desplegable">
+          <ul class="nav__list">
+            <li class="nav__item">Features</li>
+            <li class="nav__item">Company</li>
+            <li class="nav__item">Careers</li>
+            <li class="nav__item">About</li>
+          </ul>
+        </nav>
+        <div class="access">
+          <button class="access__login button">Login</button>
+          <button class="access__register button">Register</button>
+        </div>
+      </header>
+      <main class="main">
+        <picture class="image">
+          <source media="(min-width: 768px)" srcset="./assets/images/image-hero-desktop.png">
+          <img src="./assets/images/image-hero-mobile.png" alt="Persona con portatil en brazos tecleando">
+        </picture>
+        <section class="content">
+          <h2 class="content__title">Make remote work</h2>
+          <p class="content__description">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <a href="#" class="content__link button button--invert">Learn more</a>
+          <ul class="brands">
+            <li class="brands__item"><img src="./assets/images/client-databiz.svg" alt="Logo de Databiz"></li>
+            <li class="brands__item"><img src="./assets/images/client-audiophile.svg" alt="Logo de audiophile"></li>
+            <li class="brands__item"><img src="./assets/images/client-meet.svg" alt="Logo de meet"></li>
+            <li class="brands__item"><img src="./assets/images/client-maker.svg" alt="Logo de maker"></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+/* --- VARIABLES CSS --- */
+:root {
+  /* Colors */
+  --clr-primary: hsl(0, 0%, 98%);
+  --clr-secondary: hsl(0, 0%, 41%);
+  --clr-tertiary: hsl(0, 0%, 8%);
+  --clr-bg: ;
+  /* Font and typography */
+  --font-family: "Epilogue", sans-serif;
+  --font-medium: 500;
+  --font-bold: 700;
+  /* z-index */
+  --z-first: 10;
+  --z-second: 20;
+  --z-third: 30;
+  --z-modal: 999;
+}
+
+/* --- DARK MODE / HIGH CONTRAST --- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primary: ;
+    --clr-secondary: ;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --clr-primary: ;
+    --clr-secondary: ;
+  }
+}
+
+/* --- RESET --- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+ul,ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+
+/* --- BASE & UTILITIES --- */
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: var(--font-medium);
+  color: var(--clr-tertiary);
+  background-color: var(--clr-primary);
+}
+
+.wrapper {
+  width: min(100%, 1440px);
+}
+
+.button {
+  display: inline-block;
+  color: var(--clr-tertiary);
+  font-weight: var(--font-bold);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  background-color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.button--invert {
+  color: var(--clr-primary);
+  background-color: var(--clr-tertiary);
+}
+
+.button:hover {
+  color: var(--clr-tertiary);
+  background-color: var(--clr-primary);
+  border: 2px solid var(--clr-tertiary);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo,
+.menu {
+  width: auto;
+}
+
+.nav__list {
+  display: none;
+}
+
+.access {
+  display: none;
+}
+
+/* CONTENT */
+
+.content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.content__title {
+  font-size: 2.5rem;
+}
+
+.content__description {
+  color: var(--clr-secondary);
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.content__link {
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brands__item {
+  padding: .3rem;
+}
+
+/* --- BREAKPOINTS --- */
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: start;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    width: max(50%, 300px);
+  }
+
+  .nav__item {
+    padding: .5rem;
+  }
+  
+  .access {
+    display: flex;
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .image,
+  .content {
+    width: calc(50% - 4rem);
+  }
+
+  .image {
+    max-width: 500px;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .content__title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
