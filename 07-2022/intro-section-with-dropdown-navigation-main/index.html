@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -23,41 +22,82 @@
 
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js" defer></script>
   </head>
   <body>
-
-    <div class="wrapper">
+    <div class="container">
       <header class="header">
-        <nav class="nav">
-          <img class="logo" src="./assets/images/logo.svg" alt="Logo de Snap">
-          <img class="menu" src="./assets/images/icon-menu.svg" alt="Icono de menu desplegable">
-          <ul class="nav__list">
-            <li class="nav__item">Features</li>
-            <li class="nav__item">Company</li>
-            <li class="nav__item">Careers</li>
-            <li class="nav__item">About</li>
-          </ul>
-        </nav>
-        <div class="access">
-          <button class="access__login button">Login</button>
-          <button class="access__register button">Register</button>
+        <img class="logo" src="./assets/images/logo.svg" alt="Logo de Snap" />
+        <div class="icon-menu" id="icon-menu"></div>
+        <div class="menu" id="menu">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item" id="features-li">
+                <a href="#" class="nav__link nav__link--arrow" id="features">Features</a>
+                <ul class="features__list">
+                  <li class="features__item"><a href="#" class="features__link features__link--todo">Todo List</a></li>
+                  <li class="features__item features__link--calendar"><a href="#" class="features__link">Calendar</a></li>
+                  <li class="features__item"><a href="#" class="features__link features__link--reminder">Reminders</a></li>
+                  <li class="features__item"><a href="#" class="features__link features__link--planning">Planning</a></li>
+                </ul>
+              </li>
+              <li class="nav__item" id="company-li">
+                <a href="#" class="nav__link nav__link--arrow" id="company">Company</a>
+                <ul class="company__list">
+                  <li class="company__item"><a href="#" class="company__link">History</a></li>
+                  <li class="company__item"><a href="#" class="company__link">Our Team</a></li>
+                  <li class="company__item"><a href="#" class="company__link">Blog</a></li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Careers</a>
+              </li>
+              <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            </ul>
+          </nav>
+          <div class="access">
+            <button class="access__login button">Login</button>
+            <button class="access__register button">Register</button>
+          </div>
         </div>
       </header>
       <main class="main">
         <picture class="image">
-          <source media="(min-width: 768px)" srcset="./assets/images/image-hero-desktop.png">
-          <img src="./assets/images/image-hero-mobile.png" alt="Persona con portatil en brazos tecleando">
+          <source
+            media="(min-width: 1024px)"
+            srcset="./assets/images/image-hero-desktop.png"
+          />
+          <img
+            src="./assets/images/image-hero-mobile.png"
+            alt="Persona con portatil en brazos tecleando"
+          />
         </picture>
         <section class="content">
           <h2 class="content__title">Make remote work</h2>
-          <p class="content__description">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <p class="content__description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
           <a href="#" class="content__link button button--invert">Learn more</a>
           <ul class="brands">
-            <li class="brands__item"><img src="./assets/images/client-databiz.svg" alt="Logo de Databiz"></li>
-            <li class="brands__item"><img src="./assets/images/client-audiophile.svg" alt="Logo de audiophile"></li>
-            <li class="brands__item"><img src="./assets/images/client-meet.svg" alt="Logo de meet"></li>
-            <li class="brands__item"><img src="./assets/images/client-maker.svg" alt="Logo de maker"></li>
+            <li class="brands__item">
+              <img
+                src="./assets/images/client-databiz.svg"
+                alt="Logo de Databiz"
+              />
+            </li>
+            <li class="brands__item">
+              <img
+                src="./assets/images/client-audiophile.svg"
+                alt="Logo de audiophile"
+              />
+            </li>
+            <li class="brands__item">
+              <img src="./assets/images/client-meet.svg" alt="Logo de meet" />
+            </li>
+            <li class="brands__item">
+              <img src="./assets/images/client-maker.svg" alt="Logo de maker" />
+            </li>
           </ul>
         </section>
       </main>
