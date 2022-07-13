@@ -134,9 +134,21 @@
         <div>
           <nav>
             <ul class="primary-navigation underline-indicators flex">
-              <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a>
-                <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
-                <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
+              <li class="active">
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>01</span>Active</a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>02</span>Hovered</a
+                >
+              </li>
+              <li>
+                <a class="uppercase text-white letter-spacing-2" href="#"
+                  ><span>03</span>Idle</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
@@ -151,12 +163,52 @@
             >
           </div>
 
-          <div style="margin-bottom: 50vh">
+          <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
             <!-- Tabs -->
-
+            <div class="tab-list underline-indicators flex">
+              <button
+                aria-selected="true"
+                class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond"
+              >
+                Moon
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond"
+              >
+                Mars
+              </button>
+              <button
+                aria-selected="false"
+                class="uppercase text-accent letter-spacing-2 bg-dark ff-sans-cond"
+              >
+                Europa
+              </button>
+            </div>
             <!-- Dots -->
-
+            <div class="dot-indicators flex">
+              <button aria-selected="true">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false">
+                <span class="sr-only">Slide title</span>
+              </button>
+            </div>
             <!-- Numbers -->
+            <div class="number-indicators flex">
+              <button aria-selected="true">
+                <span class="">1</span>
+              </button>
+              <button aria-selected="false">
+                <span class="">2</span>
+              </button>
+              <button aria-selected="false">
+                <span class="">3</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>

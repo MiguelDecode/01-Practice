@@ -12,30 +12,80 @@
     />
 
     <title>Frontend Mentor | Space tourism website</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- My CSS -->
     <link rel="stylesheet" href="./css/index.css" />
     <script src="./js/index.js" defer></script>
   </head>
-  <body>
-    <div class="container">
-      <h1>Design system</h1>
-    </div>
+  <body class="home">
+    <header class="primary-header flex">
+      <div>
+        <img
+          class="logo"
+          src="./assets/shared/logo.svg"
+          alt="Space tourism logo"
+        />
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+      <nav>
+        <ul class="primary-navigation underline-indicators flex" id="primary-navigation">
+          <li class="active">
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="./index.html"
+              ><span>00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="./destination.html"
+              ><span>01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="./crew.html"
+              ><span>02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="./technology.html"
+              ><span>03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="container grid">
-      <div class="box sr-only">a</div>
-      <div class="box">b</div>
-      <div class="box">c</div>
-      <div class="box">d</div>
-    </div>
+    <div class="grid-container grid-container--home">
+      <div>
+        <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+          So, you want to travel to
+          <span class="d-block fs-900 ff-serif text-white">Space</span>
+        </h1>
 
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space
-    Let’s face it; if you want to go to space, you might as well genuinely go to
-    outer space and not hover kind of on the edge of it. Well sit back, and
-    relax because we’ll give you a truly out of this world experience! Explore
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div>
+        <a href="#" class="large-button uppercase ff-serif text-dark bg-white"
+          >Explore</a
+        >
+      </div>
+    </div>
   </body>
 </html>
