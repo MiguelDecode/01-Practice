@@ -173,17 +173,31 @@ class Pelicula {
   }
 
   validarCalificacion(calificacion) {
-    if (this.validarNumero('Calificacion', calificacion)) {
-      return (calificacion < 0 || calificacion > 10)
-      ? console.log(`La calificación tiene que estar en un rango entre 0 y 10`)
-      : this.calificacion = calificacion.toFixed(1);
+    if (this.validarNumero("Calificacion", calificacion)) {
+      return calificacion < 0 || calificacion > 10
+        ? console.log(
+            `La calificación tiene que estar en un rango entre 0 y 10`
+          )
+        : (this.calificacion = calificacion.toFixed(1));
     }
+  }
+
+  fichaTecnica() {
+    console.log(
+      `Ficha Técnica:\nTítulo: ${this.titulo}\nDirector: ${
+        this.director
+      }\nAño: ${this.estreno}\nPaís: ${this.pais.join(
+        "-"
+      )}\nGéneros: ${this.generos.join(", ")}\nCalificación: ${
+        this.calificacion
+      }\nIMDB Id: ${this.id}`
+    );
   }
 }
 
 // Pelicula.generosAceptados();
 
-const peli = new Pelicula({
+/* const peli = new Pelicula({
   id: "tt0111161",
   titulo: "Cadena Perpetua",
   director: "Frank Darabont",
@@ -191,4 +205,41 @@ const peli = new Pelicula({
   pais: ["Estados Unidos"],
   generos: ["Drama"],
   calificacion: 9.3,
-});
+}); */
+
+// Método para sacar la ficha Técnica de una pelicula
+// peli.fichaTecnica();
+
+const misPelis = [
+  {
+    id: "tt0758758",
+    titulo: "Into the Wild",
+    director: "Sean Penn",
+    estreno: 2007,
+    pais: ["USA"],
+    generos: ["Adventure", "Biography", "Drama"],
+    calificacion: 8.1,
+  },
+  {
+    id: "tt0479143",
+    titulo: "Rocky Balboa",
+    director: "Sylvester Stallone",
+    estreno: 2006,
+    pais: ["USA"],
+    generos: ["Action", "Sport", "Drama"],
+    calificacion: 7.1,
+  },
+  {
+    id: "tt0468569",
+    titulo: "The Dark Knight",
+    director: "Christopher Nolan",
+    estreno: 2008,
+    pais: ["USA", "UK"],
+    generos: ["Action", "Crime", "Drama"],
+    calificacion: 9,
+  },
+];
+
+// Utilizar el forEach para recorrer el array de misPelis y aplicar el método fichaTécnica a cada uno de los elementos del array (el = peli = elemento iterado)
+
+misPelis.forEach(el => new Pelicula(el).fichaTecnica())
