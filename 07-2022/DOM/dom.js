@@ -316,4 +316,85 @@ document.body.appendChild($cloneCards); */
 
 // Clase 71 DOM: Modificando Elementos (Cool Style)
 
+/* 
+.insertAdjacent...
+  .insertAdjacentElement(position,el)
+  .insertAdjacentHTML(position,html)
+  .insertAdjacentText(position,text)
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+*/
+
+/* const $cards = document.querySelector(".cards");
+const $newCard = document.createElement("figure");
+
+const $contentCard = `
+<img src='https://placeimg.com/200/200/any' alt='Any'>
+<figcaption></figcaption>
+`;
+
+$newCard.classList.add("card");
+
+$newCard.insertAdjacentHTML("beforeend", $contentCard);
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+// $cards.insertAdjacentElement("afterbegin", $newCard);
+
+$cards.prepend($newCard);
+$cards.before($newCard);
+$cards.append($newCard);
+$cards.after($newCard) */
+
+// Clase 72 DOM: Manejadores de Eventos
+
+/* function helloWorld() {
+  alert("Hello World");
+  console.log(event);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico");
+
+$eventoSemantico.onclick = helloWorld;
+$eventoSemantico.onclick = function (e) {
+  alert("Hola Mundo manejador de eventos semántico");
+  console.log(e);
+  console.log(event);
+};
+
+const $eventoMultiple = document.getElementById("evento-multiple");
+
+$eventoMultiple.addEventListener("click", helloWorld);
+$eventoMultiple.addEventListener("click", (e) => {
+  alert("Hola Mundo manejador de Eventos Múltiples");
+  console.log(e);
+  console.log(e.type);
+  console.log(e.target);
+  console.log(event);
+}); */
+
+// Clase 73 DOM: Eventos con Parámetros y Remover Eventos.
+
+/* const $eventoMultiple = document.getElementById("evento-multiple");
+const $eventoRemover = document.getElementById("evento-remover");
+
+function greet(name = "Desconocido/a") {
+  console.log(`Hola ${name} - ${event}`);
+}
+
+$eventoMultiple.addEventListener("click", () => greet());
+$eventoMultiple.addEventListener("click", () => greet("Miguel"));
+
+const removerDobleClick = () => {
+  alert(`Removiendo el evento de tipo ${event.type}`);
+  console.log(event);
+  $eventoRemover.removeEventListener("dblclick", removerDobleClick); // Requiere el nombre de la función como segundo parámetro
+  $eventoRemover.disabled = true;
+};
+
+$eventoRemover.addEventListener("dblclick", removerDobleClick); */
+
+// Clase 74 DOM: Flujo de Eventos (Burbuja y Captura)
+
 
