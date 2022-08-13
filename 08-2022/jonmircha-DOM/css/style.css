@@ -1,0 +1,132 @@
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: hsl(53, 93%, 54%);
+  --second-color: hsl(0, 0%, 13%);
+  --main-modal-color: hsla(53, 93%, 54%, 0.85);
+  --second-modal-color: hsla(0, 0%, 13%, 0.85);
+  --container-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* RESET */
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  font-size: var(--main-font);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HAMBURGUER MENU */
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+.header__title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+section {
+  padding: 4rem 2rem 2rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 10;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5rem 3rem;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  background-color: var(--second-modal-color);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.aside.is-active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  text-align: center;
+}
+
+.nav__item {
+  width: inherit;
+}
+
+.nav__link {
+  display: block;
+  width: inherit;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+  border-radius: .2rem;
+}
