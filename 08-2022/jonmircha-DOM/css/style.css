@@ -146,3 +146,69 @@ section {
   border-radius: 50%;
   background-color: var(--main-color);
 }
+
+/* Scroll Top Button */
+
+.scroll-top-btn {
+  position: fixed;
+  z-index: 10;
+  bottom: 1vh;
+  right: calc(4.25rem + 1vw);
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Dark light Theme */
+
+.dark-theme-btn {
+  position: fixed;
+  z-index: 10;
+  bottom: 1vh;
+  left: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.dark-mode {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
