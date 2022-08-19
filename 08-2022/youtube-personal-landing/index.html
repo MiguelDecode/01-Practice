@@ -7,6 +7,13 @@
     <title>Document</title>
     <!-- Hamburger Menu -->
     <link href="dist/hamburgers.css" rel="stylesheet" />
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Javascript -->
     <script src="./js/main.js" defer></script>
     <!-- CSS -->
@@ -14,46 +21,111 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="nav">
-      <div class="logo"><img src="./assets/JD.png" alt="Logo personal" /></div>
-      <button class="hamburger hamburger--slider" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </nav>
     <main class="main">
-      <div class="grid-container">
-        <article class="profile">
-          <img src="" alt="" class="profile__photo" />
-          <h1 class="profile__name">Jhon Doe.</h1>
-        </article>
-        <article class="description">
-          <h3 class="description__intro">- Sobre mi</h3>
-          <h2 class="description__title">Soy un UX/UI Designer, Freelancer.</h2>
-          <p class="description__about">
-            Tengo 27 años, soy de Venezuela y me dedico al diseño UX/UI, me
-            gradué de Harvard como diseñador industrial, y trabajé para empresas
-            como <a href="#" class="Facebook">Facebook</a>,<a
-              href="#"
-              class="google"
-              >google</a
-            >
-            y <a href="#" class="microsoft">Microsoft</a>.
-          </p>
-          <button>Leer más</button>
-          <div class="description__projects">
-            <a href="#" class="start-project">Comenzar un proyecto</a>
-            <a href="#" class="my-projects">Mis Proyectos</a>
+      <nav class="nav">
+        <img src="./assets/JD.png" alt="Logo" />
+        <img src="./assets/menu.svg" alt="Menu icon" />
+      </nav>
+      <article class="photo">
+        <div class="photo__container">
+          <div class="photo__name">
+            <h1 class="photo__title">
+              Jhon <br> Doe<span class="photo__title--blue">.</span>
+            </h1>
+            <span class="photo__line"></span>
           </div>
-        </article>
-      </div>
+          <img
+            class="photo__image"
+            src="./assets/profile-photo.png"
+            alt="photo"
+          />
+        </div>
+      </article>
+      <article class="about">
+        <h3 class="about__intro">
+          <span class="about__intro--blue">-</span> Sobre mi
+        </h3>
+        <h2 class="about__title">
+          Soy un UX/UI Designer,
+          <span class="about__title--bold">
+            Freelancer<span class="about__title--blue">.</span>
+          </span>
+        </h2>
+        <p class="about__description">
+          Tengo 27 años, soy de Venezuela y me dedico al diseño UX/UI, me gradué
+          de Harvard como diseñador industrial, y trabajé para empresas como
+          <a href="#" class="about__link facebook">Facebook</a>,
+          <a href="#" class="about__link google">Google</a> y
+          <a href="#" class="about__link microsoft">Microsoft</a>.
+        </p>
+        <a href="#" class="about__more"
+          ><img
+            class="about__circle-arrow"
+            src="./assets/circle-arrow.png"
+            alt="#"
+          />Leer más</a
+        >
+        <div class="about__projects">
+          <a href="#" class="about__project about__project--start"
+            >Comenzar un proyecto <img src="./assets/right-arrow.png" alt="#"
+          /></a>
+          <a href="#" class="about__project about__project--projects"
+            >Mis Proyectos <img src="./assets/briefcase.png" alt="#"
+          /></a>
+        </div>
+      </article>
+      <footer class="footer">
+        <div class="brands">
+          <p class="brands__text">Ellos confiaron en mi</p>
+          <img
+            class="brands__logo"
+            src="./assets/facebook-logo 1.png"
+            alt="Logo de Facebook"
+          />
+          <img
+            class="brands__logo"
+            src="./assets/google-logo.png"
+            alt="Logo de Google"
+          />
+          <img
+            class="brands__logo"
+            src="./assets/microsoft-logo.png"
+            alt="Logo de Microsoft"
+          />
+        </div>
+        <ul class="social">
+          <li>
+            <img
+              class="social__image"
+              src="./assets/instagram.png"
+              alt="Instagram logo"
+            />
+          </li>
+          <li>
+            <img
+              class="social__image"
+              src="./assets/dribbble.png"
+              alt="Dribble logo"
+            />
+          </li>
+          <li>
+            <img
+              class="social__image"
+              src="./assets/behance.png"
+              alt="Behance logo"
+            />
+          </li>
+          <li>
+            <img
+              class="social__image"
+              src="./assets/twitter.png"
+              alt="Twitter logo"
+            />
+          </li>
+        </ul>
+      </footer>
     </main>
-    <footer>
-      <div class="companies">
-        <p class="companies__text">Ellos confiaron en mi</p>
-        
-      </div>
-    </footer>
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
   </body>
 </html>
