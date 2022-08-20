@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   margin:0;
+  background-color: hsl(0, 0%, 40%);
 }
 
 .container-flex {
@@ -34,10 +35,15 @@ body {
   display: flex;
   align-items: end;
   transition: all 0.7s ease-in;
+  overflow: hidden;
 }
 
 .flex-item.active {
   flex: 5;
+}
+
+.flex-item__country--no-wrap {
+  white-space: nowrap;
 }
 
 .flex-item__country {
