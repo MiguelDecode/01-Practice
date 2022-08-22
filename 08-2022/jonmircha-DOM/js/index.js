@@ -7,6 +7,8 @@ import darkTheme from "./dark_theme.js";
 import responsiveMedia from "./object_responsive.js";
 import responsiveTester from "./test_responsive.js";
 import userDeviceInfo from "./detection_device.js";
+import networkStatus from "./network_status.js";
+import webCam from "./webcam_detection.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // Menú de navegación
@@ -40,6 +42,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   responsiveTester("responsiveTester");
   // Detección de dispositivos (User Agent)
   userDeviceInfo("user-device");
+  // Detección de la cámara web
+  webCam("webcam");
 });
 
 // Eventos de teclado
@@ -51,3 +55,6 @@ document.addEventListener("keydown", (event) => {
 
 // Tema Oscuro
 darkTheme(".dark-theme-btn", "dark-mode");
+
+// Network Status
+networkStatus();
