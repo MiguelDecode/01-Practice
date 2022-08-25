@@ -9,6 +9,10 @@ import responsiveTester from "./test_responsive.js";
 import userDeviceInfo from "./detection_device.js";
 import networkStatus from "./network_status.js";
 import webCam from "./webcam_detection.js";
+import getGeolocation from "./geolocation.js";
+import searchFilters from "./filter_search.js";
+import draw from "./sorteo.js";
+import slider from "./slider.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // Menú de navegación
@@ -44,10 +48,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   userDeviceInfo("user-device");
   // Detección de la cámara web
   webCam("webcam");
+  // Detección de la geolocalización
+  getGeolocation('geolocation');
+  // Filtro de Búsqueda
+  searchFilters('.card-filter', '.card')
+  // Sorteo Digital
+  draw('#winner-btn', '.player')
+  // Slider
+  slider()
 });
 
 // Eventos de teclado
-
 document.addEventListener("keydown", (event) => {
   shortcuts(event);
   moveBall(event, ".ball", ".stage");
