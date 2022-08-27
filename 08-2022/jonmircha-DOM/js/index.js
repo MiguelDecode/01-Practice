@@ -13,6 +13,7 @@ import getGeolocation from "./geolocation.js";
 import searchFilters from "./filter_search.js";
 import draw from "./sorteo.js";
 import slider from "./slider.js";
+import scrollSpy from "./scroll_spy.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // Menú de navegación
@@ -56,6 +57,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   draw('#winner-btn', '.player')
   // Slider
   slider()
+  // Scroll Spy
+  scrollSpy();
 });
 
 // Eventos de teclado
