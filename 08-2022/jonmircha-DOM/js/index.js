@@ -14,6 +14,9 @@ import searchFilters from "./filter_search.js";
 import draw from "./sorteo.js";
 import slider from "./slider.js";
 import scrollSpy from "./scroll_spy.js";
+import smartVideo from "./video_intelligent.js";
+import contactFormValidations from "./validate_form.js";
+import speechReader from "./storyteller.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // Menú de navegación
@@ -58,7 +61,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   // Slider
   slider()
   // Scroll Spy
-  scrollSpy();
+  // scrollSpy();
+  // Video Intelligente
+  smartVideo();
+  // Validación de formulario de Contacto
+  contactFormValidations();
 });
 
 // Eventos de teclado
@@ -72,3 +79,6 @@ darkTheme(".dark-theme-btn", "dark-mode");
 
 // Network Status
 networkStatus();
+
+// Narrador
+speechReader();

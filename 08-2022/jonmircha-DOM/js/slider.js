@@ -25,7 +25,7 @@ export default function slider() {
       $slides[i].classList.remove("active");
       i++;
 
-      if (i > $slides.length) {
+      if (i >= $slides.length) {
         i = 0;
       }
 
