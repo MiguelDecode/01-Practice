@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabajando con el DOM</title>
+    <link rel="stylesheet" href="./ejemplo.css" />
+    <script src="./ejemplo.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="border-grey">
+      <h1>Mi web/blog para trastear con el DOM</h1>
+    </header>
+    <nav class="border-grey">
+      <ul>
+        <li><a href="#">LINK-1</a></li>
+        <li><a href="#">LINK-2</a></li>
+        <li><a href="#">LINK-3</a></li>
+      </ul>
+    </nav>
+    <main id="main">
+      <section class="border-grey">
+        <!-- <h2 id="form-title" onclick="clickTitle()">Formulario de registro</h2>  -->
+        <h2 id="form-title">Formulario de registro</h2>
+        <form id="form" class="border-grey register-form">
+          <input type="text" name="name" id="name" placeholder="Nombre" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Correo electrónico"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Contraseña"
+          />
+          <input type="submit" value="Registrarme" />
+        </form>
+      </section>
+      <section id="section" class="border-grey">
+        <h2 id="section-title">Título de la sección</h2>
+        <article id="section-article" class="border-gray">
+          <h3>Título de la sección</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+            quisquam natus laudantium eum sit omnis at quibusdam quis nobis
+            dolorum blanditiis iure mollitia veritatis repudiandae, ut ducimus.
+            Odio, consequatur ducimus.
+          </p>
+        </article>
+        <article class="border-gray">
+          <h3>Título de la sección</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+            quisquam natus laudantium eum sit omnis at quibusdam quis nobis
+            dolorum blanditiis iure mollitia veritatis repudiandae, ut ducimus.
+            Odio, consequatur ducimus.
+          </p>
+        </article>
+        <article class="border-gray">
+          <h3>Título de la sección</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+            quisquam natus laudantium eum sit omnis at quibusdam quis nobis
+            dolorum blanditiis iure mollitia veritatis repudiandae, ut ducimus.
+            Odio, consequatur ducimus.
+          </p>
+        </article>
+        <article class="border-gray">
+          <h3>Título de la sección</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem
+            quisquam natus laudantium eum sit omnis at quibusdam quis nobis
+            dolorum blanditiis iure mollitia veritatis repudiandae, ut ducimus.
+            Odio, consequatur ducimus.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer class="border-grey">
+      <p>Desarollo Útil</p>
+    </footer>
+  </body>
+</html>
