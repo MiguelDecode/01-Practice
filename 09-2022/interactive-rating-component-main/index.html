@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Typography -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Javascript -->
+
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <article id="card-rating" class="card">
+      <img
+        class="card__image card__image--star"
+        src="./images/icon-star.svg"
+        alt="Icon star"
+      />
+      <h2 class="card__title">How did we do?</h2>
+      <p class="card__description">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <div class="card__rating">
+        <button id="btn-1" class="card__btn">1</button
+        ><button id="btn-2" class="card__btn">2</button
+        ><button id="btn-3" class="card__btn">3</button
+        ><button id="btn-4" class="card__btn">4</button
+        ><button id="btn-5" class="card__btn">5</button>
+      </div>
+      <button class="card__submit" id="submit">SUBMIT</button>
+    </article>
+    <article id="card-response" class="card card--center card--none">
+      <img
+        src="./images/illustration-thank-you.svg"
+        alt="Mobile transaction"
+        class="card__image"
+      />
+      <p class="card__selected" id="card-selected">You selected 4 out of 5</p>
+      <h2 class="card__title">Thank you!</h2>
+      <p class="card__description">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+    </article>
+
+    <!-- You selected
+    out of 5 Thank you! We appreciate you taking the time to give a rating. If
+    you ever need more support, don’t hesitate to get in touch! -->
+  </body>
+</html>

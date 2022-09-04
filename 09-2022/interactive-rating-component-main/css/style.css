@@ -1,0 +1,137 @@
+:root {
+  /* Colors */
+  --clr-primary: hsl(25, 97%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-grey: hsl(216, 12%, 25%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+  /* Typography */
+  --font-size: 15px;
+  --font-family: 'Overpass', sans-serif;
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
+/* RESET */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  font-size: var(--font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* START */
+
+.card {
+  max-width: 375px;
+  padding: 1rem;
+  background-color: var(--clr-dark-blue);
+  border-radius: 1rem;
+}
+
+.card--center {
+  text-align: center;
+}
+
+.card--none {
+  display: none;
+}
+
+.card__image{
+  margin: 1rem auto;
+}
+
+.card__image--star {
+  background-color: var(--clr-medium-grey);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-left: 0;
+}
+
+.card__title {
+  font-weight: var(--font-bold);
+}
+
+.card__description {
+  color: var(--clr-light-grey);
+  margin: 1.5rem auto;
+  line-height: 1.5rem;
+}
+
+.card__selected {
+  background-color: var(--clr-medium-grey);
+  display: inline-block;
+  border-radius: 4rem;
+  color: var(--clr-primary);
+  padding: .5rem;
+}
+
+.card__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__btn {
+  background-color: var(--clr-medium-grey);
+  border: none;
+  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: var(--clr-light-grey);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.card__btn.active {
+  background-color: var(--clr-light-grey);
+  color: var(--clr-white);
+}
+
+.card__btn:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+.card__submit {
+  font-size: 1rem;
+  letter-spacing: .2rem;
+  display: block;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 4rem;
+  border:none;
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  font-weight: var(--font-bold);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.card__submit:hover {
+  cursor: pointer;
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+}
