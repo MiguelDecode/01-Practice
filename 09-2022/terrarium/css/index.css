@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-areas: "left jar right";
+}
+
+.left,
+.right {
+  background-color: #eee;
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+h1 {
+  color: #1bb33c;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* .plant {
+  max-width: 150px;
+} */
+
+.jar__walls {
+	height: 80%;
+	width: 60%;
+	background: #d1e1df;
+	border-radius: 2rem;
+	position: absolute;
+	bottom: 0.5%;
+	left: 20%;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+.jar__top {
+	width: 50%;
+	height: 5%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 80.5%;
+  border-radius: .5rem .5rem 0 0;
+	left: 25%;
+	opacity: 0.7;
+	z-index: -1;
+}
+
+.jar__bottom {
+	width: 50%;
+	height: 1%;
+	background: #d1e1df;
+	position: absolute;
+	bottom: 0%;
+	left: 25%;
+	opacity: 0.7;
+}
+
+.jar__dirt {
+	width: 60%;
+	height: 5%;
+	background: #3a241d;
+	position: absolute;
+	border-radius: 0 0 2rem 2rem;
+	bottom: 1%;
+	left: 20%;
+	opacity: 0.7;
+	z-index: -2;
+}
+
+.jar__glossy-long {
+  background-color: #fff;
+  width: 3%;
+  height: 15%;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  border-radius: 1rem;
+}
+
+.jar__glossy-short {
+  background-color: #fff;
+  width: 3%;
+  height: 5%;
+  position: absolute;
+  bottom: 32%;
+  left: 5%;
+  border-radius: 1rem;
+}
