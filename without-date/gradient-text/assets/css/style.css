@@ -1,0 +1,66 @@
+/* --- VARIABLES CSS --- */
+
+:root {
+  /* Colors */
+  --clr-primary: hsl(233, 100%, 97%);
+  --clr-secondary: hsl(0, 0%, 0%) ;
+  --clr-accent: hsl(0, 0%, 80%);
+  --clr-bg: hsl(0, 0%, 20%);
+  /* Font and typography */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* z-index */
+  --z-first: 10;
+  --z-second: 20;
+  --z-third: 30;
+  --z-modal: 999;
+}
+
+/* --- RESET --- */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --- BASE --- */
+
+body {
+  font-family: var(--font-family);
+  min-height: 100vh;
+  background-color: var(--clr-bg);
+  display: grid;
+  place-content: center;
+}
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 6rem;
+  background-color: var(--clr-accent);
+  background-image: radial-gradient(#eff1ff, #000);
+  background-image: url(https://images.unsplash.com/photo-1518705130527-a85ab6d25e6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FrdXJhJTIwZmxvd2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+  background-position: center;
+  background-size: cover;
+
+  /* Propiedades para conseguir el efecto */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* --- BREAKPOINTS --- */
+
+@media screen and (max-width: 768) {}
+
+@media screen and (max-width: 1024) {}
+
+
