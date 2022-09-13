@@ -1,0 +1,170 @@
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-inputs: 1.5rem;
+  --fw-bold: 700;
+}
+
+*,
+*::after,
+*::before,
+input {
+  box-sizing: border-box;
+  /* outline: 1px solid blue; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--clr-light-grayish-cyan);
+  font-family: "Space Mono", monospace;
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* CARD */
+
+.brand-logo {
+  margin-top: 1.7rem;
+  margin-bottom: 2.3rem;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 375px;
+  text-align: left;
+  background-color: var(--clr-white);
+  padding: 2rem;
+  border-radius: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin: 1rem 0;
+}
+
+.section__title {
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark-grayish-cyan);
+  margin-bottom: 0.3rem;
+}
+
+.section__input {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  text-align: right;
+  background-color: var(--clr-very-light-grayish-cyan);
+  border-radius: 0.5rem;
+  text-align: right;
+  font-size: var(--fs-inputs);
+  font-family: inherit;
+  color: var(--clr-very-dark-cyan);
+}
+
+/* BILL SECTION */
+
+.section__label {
+  position: relative;
+}
+
+.section__dolar,
+.section__person {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+/* PORCENTAGE TIP SECTION */
+
+.section__porcentage {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 0.25rem));
+  gap: 0.5rem;
+}
+
+.section__porcentage-number {
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--clr-white);
+  background-color: var(--clr-very-dark-cyan);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--fs-inputs);
+}
+
+.section__porcentage-number:hover,
+.section__porcentage-number.active {
+  color: var(--clr-very-dark-cyan);
+  background-color: var(--clr-strong-cyan);
+}
+
+/* NUMBER OF PEOPLE SECTION */
+
+/* TOTAL SECTION */
+
+.section__box {
+  background-color: var(--clr-very-dark-cyan);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.section__tip-amount,
+.section__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.section__concept-name {
+  color: var(--clr-white);
+}
+
+.section__concept-name,
+.section__concept-person {
+  margin: 0;
+}
+
+.section__concept-person {
+  color: var(--clr-grayish-cyan);
+}
+
+.section__amount {
+  color: var(--clr-strong-cyan);
+  font-size: var(--fs-inputs);
+}
+
+.btn-reset {
+  display: block;
+  background-color: var(--clr-strong-cyan);
+  font-family: inherit;
+  font-size: var(--fs-inputs);
+  cursor: pointer;
+  color: var(--clr-very-dark-cyan);
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}

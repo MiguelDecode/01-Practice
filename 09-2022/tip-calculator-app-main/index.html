@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <img class="brand-logo" src="./images/logo.svg" alt="Brand Logo" />
+    <main class="card">
+      <section class="section">
+        <h2 class="section__title">Bill</h2>
+        <label class="section__label">
+          <img
+            class="section__dolar"
+            src="./images/icon-dollar.svg"
+            alt="Icon dolar"
+          />
+          <input
+            class="section__input section__input--bill"
+            type="number"
+            name="bill"
+            id="bill"
+            step="any"
+            min="1"
+          />
+        </label>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Select Tip %</h2>
+        <div class="section__porcentage">
+          <div class="section__porcentage-number" id="tip-5">5%</div>
+          <div class="section__porcentage-number" id="tip-10">10%</div>
+          <div class="section__porcentage-number" id="tip-15">15%</div>
+          <div class="section__porcentage-number" id="tip-25">25%</div>
+          <div class="section__porcentage-number" id="tip-50">50%</div>
+          <input
+            class="section__input section__input--people"
+            type="number"
+            name="custom"
+            id="custom"
+            placeholder="Custom"
+            min="1"
+            max="100"
+            step="1"
+          />
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Number of People</h2>
+        <label for="" class="section__label">
+          <img
+            class="section__person"
+            src="./images/icon-person.svg"
+            alt="Icon person"
+          />
+          <input
+            class="section__input"
+            type="number"
+            name="people"
+            id="people"
+            step="1"
+            min="1"
+          />
+        </label>
+      </section>
+
+      <section class="section">
+        <div class="section__box">
+          <div class="section__tip-amount">
+            <div class="section__concept">
+              <h3 class="section__concept-name">Tip Amount</h3>
+              <p class="section__concept-person">/ person</p>
+            </div>
+            <div class="section__amount" id="tip-amount">$0.00</div>
+          </div>
+          <div class="section__total">
+            <div class="section__concept">
+              <h3 class="section__concept-name">Total</h3>
+              <p class="section__concept-person">/ person</p>
+            </div>
+            <div class="section__amount" id="total-amount">$0.00</div>
+          </div>
+          <div class="section__reset">
+            <button id="btn-reset" class="btn-reset">RESET</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
