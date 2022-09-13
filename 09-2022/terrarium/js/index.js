@@ -11,12 +11,14 @@ const $plants = document.querySelectorAll(".plant");
   });
 
   function update(event) {
+    console.log(event);
     plant.style.setProperty("position", "absolute");
     plant.style.setProperty("transform", "translate(-50%, -50%)");
     plant.style.setProperty("left", `${event.x}px`);
     plant.style.setProperty("top", `${event.y}px`);
   }
 }); */
+
 
 // Eventos del objeto básicos: "dragstart", "drag" and "dragend"
 
@@ -28,7 +30,6 @@ $plants.forEach((el) =>
 
     event.dataTransfer.setData("text/plain", event.target.id);
 
-    event.dataTransfer.effectAllowed = "move";
   })
 );
 
@@ -55,6 +56,7 @@ $terrarium.addEventListener("dragleave", (event) => {
 }); */
 
 $terrarium.addEventListener("dragover", (event) => {
+  // Necesario para que el evento drop funcione
   event.preventDefault();
   // console.log("Una planta se mueve dentro del terrario");
 });
@@ -66,10 +68,12 @@ $terrarium.addEventListener("drop", (event) => {
   );
 
   movedPlant.style.setProperty("position", "absolute");
-  movedPlant.style.setProperty("transform", "translate(-100%, -100%)");
+  movedPlant.style.setProperty("transform", "translate(-50%, -50%)");
   movedPlant.style.setProperty("left", `${event.x}px`);
   movedPlant.style.setProperty("top", `${event.y}px`);
 
-  $terrarium.appendChild(movedPlant);
-  // console.log("Una planta ha sido sembrada en el terrario"); 
+  // console.log("Una planta ha sido sembrada en el terrario");
 });
+
+
+
