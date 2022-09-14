@@ -66,9 +66,9 @@ function calculateTip() {
 
 // Función de reseteo de valores
 $reset.addEventListener("click", () => {
-  $bill.value = 0;
-  $people.value = 1;
-  $custom.value = 0;
+  $bill.value = "";
+  $people.value = "";
+  $custom.value = "";
   $tipAmount.innerHTML = "$" + (0.0).toFixed(2);
   $totalAmount.innerHTML = "$" + (0.0).toFixed(2);
 });

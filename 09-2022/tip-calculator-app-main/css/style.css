@@ -69,6 +69,7 @@ input::-webkit-inner-spin-button {
 }
 
 .section__input {
+  width: 100%;
   padding: 5px 15px;
   border: none;
   outline: none;
@@ -167,4 +168,60 @@ input::-webkit-inner-spin-button {
   border-radius: 0.5rem;
   border: none;
   outline: none;
+}
+
+/* MEDIAQUERRIES */
+@media screen and (min-width: 968px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-logo{
+    position: absolute;
+    top: 6rem;
+  }
+
+  .card {
+    display: grid;
+    column-gap: 2rem;
+    max-width: 800px;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-areas:
+      "left-top right"
+      "left-mid right"
+      "left-bottom right";
+  }
+
+  .section--bill {
+    grid-area: left-top;
+    margin: 0;
+  }
+
+  .section--calculate {
+    grid-area: left-mid;
+    margin: 0;
+  }
+
+  .section--people {
+    grid-area: left-bottom;
+    margin: 0;
+  }
+
+  .section--total {
+    grid-area: right;
+    margin-bottom: 0;
+  }
+  
+  .section__box{
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .section__reset{
+    margin-top: auto;
+  }
 }
