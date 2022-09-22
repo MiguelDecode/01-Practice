@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* 100,300,400,500,600 */
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* HEADER */
+.header {
+  background-color: white;
+  text-align: center;
+  border-bottom: 0.1875rem solid #333;
+}
+
+.header__title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* MAIN */
+.main {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 968px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  border: 0.1875rem solid #333;
+  border-radius: 0.625rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 0.9375rem;
+  cursor: pointer;
+}
+
+.card__cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.625rem;
+}
+
+.card__play {
+  position: absolute;
+  font-size: 8rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card__play i {
+  position: relative;
+}
+
+.card:hover .card__play {
+  opacity: 1;
+}
+
+.card__title {
+  margin-left: 0.2rem;
+}
+
+/* MUSIC PLAYER */
+.music-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.music-player--hidden {
+  height: 0;
+}
+
+.music-player__toggle {
+  position: absolute;
+  top: -30px;
+  right: 5px;
+  height: 50px;
+  width: 55px;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+  background: #fff;
+  border: 3px solid #333;
+  text-align: center;
+  transform: rotate(-180deg);
+}
+
+.music-player__toggle--active {
+  transform: rotate(0);
+}
+
+.music-player__title {
+  border-top: 0.1875rem solid #333;
+  padding: 0.5rem;
+}
+
+.music-player__controls {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}

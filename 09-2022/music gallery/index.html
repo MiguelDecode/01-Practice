@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Music gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Music Playlist</h1>
+    </header>
+    <main class="main">
+      <article class="card" data-src="images/music-1.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-1.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">NEFFEX Cold</h3>
+        </section>
+      </article>
+      <article class="card" data-src="images/music-2.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-2.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">Rize Up</h3>
+        </section>
+      </article>
+      <article class="card" data-src="images/music-3.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-3.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">Around The World</h3>
+        </section>
+      </article>
+      <article class="card" data-src="images/music-4.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-4.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">THNK U Jay Someday</h3>
+        </section>
+      </article>
+      <article class="card" data-src="images/music-5.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-5.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">NEFFEX Life</h3>
+        </section>
+      </article>
+      <article class="card" data-src="images/music-6.mp3">
+        <section class="card__cover">
+          <div class="card__play">
+            <i class="fas fa-play"></i>
+          </div>
+          <img class="card__image" src="images/album-6.png" alt="" />
+        </section>
+        <section class="card__title">
+          <h3 class="card__song">Fun House</h3>
+        </section>
+      </article>
+    </main>
+    <footer class="music-player">
+        <div id="close-player" class="fas fa-angle-up music-player__toggle"></div>
+        <h3 class="music-player__title">(play your song)</h3>
+        <audio class="music-player__controls" src="" controls></audio>
+    </footer>
+  </body>
+</html>
