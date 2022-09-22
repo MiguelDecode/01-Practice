@@ -10,3 +10,4 @@ console.log(typeof dbstr);
 console.log(str, dbstr);
 
 console.log(strLiteraly);
+
