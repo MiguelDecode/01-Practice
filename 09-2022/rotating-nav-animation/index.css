@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #333;
+  color: #222;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.circle-container {
+  position: fixed;
+  top: -6rem;
+  left: -6rem;
+  background-color: red;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  transition: transform 1s ease-in-out;
+  z-index: 1;
+}
+
+.circle-container--rotate {
+  transform: rotate(-90deg);
+}
+
+.circle {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 78%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.btn__close,
+.btn__open {
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  background-color: #fff;
+  padding: 4rem;
+  padding-top: 7rem;
+  transition: transform 1s ease-in-out;
+  transform-origin: left top;
+}
+
+.content--rotate {
+  transform: rotate(-15deg);
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: transform 1s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.nav--active {
+  transform: translateX(0);
+}
+
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav__item {
+  margin: 2rem;
+}
+
+.nav__item:nth-child(2) {
+  margin-left: 3rem;
+}
+
+.nav__item:last-child {
+  margin-left: 4rem;
+}
+
+.nav__icon {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 1rem;
+}
