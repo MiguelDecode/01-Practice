@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* CONTAINER */
+
+.container {
+  position: relative;
+  width: 30rem;
+  height: 31.25rem;
+  overflow: hidden;
+  cursor: grabbing;
+}
+
+.cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 300px);
+  gap: 3.125rem;
+  pointer-events: none;
+}
+
+.card {
+  border: 2px solid #ccc;
+  border-radius: 3.125rem;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+}
+
+.card__content {
+  color: hsl(0, 0%, 20%);
+  padding: 1rem;
+}

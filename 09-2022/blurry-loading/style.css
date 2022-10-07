@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background-image: url(./sergey-zigle-QTMWBbuEqv4-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  backdrop-filter: blur(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  font-size: 5rem;
+  color: #fff;
+  opacity: 1;
+}
