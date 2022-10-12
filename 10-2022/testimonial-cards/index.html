@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials cards</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <h2 class="title">Our reviews</h2>
+      <article class="review">
+        <div class="review__image-container">
+          <img
+            src="./img/person-1.jpeg"
+            id="person-img"
+            alt="Profile image of person reviewer"
+            class="review__image"
+          />
+          <i class="fa-solid fa-quote-right review__quotes"></i>
+        </div>
+        <h3 class="review__author" id="author">Sara Jones</h3>
+        <p class="review__job" id="job">Ux Designer</p>
+        <p class="review__text" id="info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, quam.
+          Sint alias cum voluptatem. Expedita est ratione provident excepturi
+          pariatur consequuntur autem, quisquam in mollitia consectetur beatae
+          quod architecto at.
+        </p>
+        <div class="review__buttons-container">
+          <button class="review__btn" id="previous-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="review__btn" id="next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <button class="review__random" id="random-btn">Surprise Me!</button>
+      </article>
+    </main>
+  </body>
+</html>

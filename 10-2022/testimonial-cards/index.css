@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(209, 61%, 16%);
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.main {
+  text-align: center;
+  width: 80vw;
+  max-width: 40rem;
+}
+
+.title {
+  position: relative;
+  padding: 0.4rem;
+  font-size: 3rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
+  width: 10rem;
+  height: 0.25rem;
+  background-color: hsl(205, 78%, 60%);
+}
+
+.review {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review__image-container {
+  position: relative;
+  background-color: hsl(205, 78%, 60%);
+  border-radius: 50%;
+}
+
+.review__image {
+  position: relative;
+  left: -0.5rem;
+  top: 0.3rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.review__quotes {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  padding: 0.5rem;
+  background-color: hsl(205, 78%, 60%);
+  border-radius: 50%;
+}
+
+.review__author {
+  font-size: 2rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+.review__job {
+  margin-top: 0;
+  color: hsl(205, 78%, 60%);
+  text-transform: uppercase;
+}
+
+.review__text {
+  max-width: 80%;
+  text-align: justify;
+}
+
+.review__buttons-container {
+  margin: 1rem;
+}
+
+.review__btn {
+  font-size: 1.25rem;
+  padding: .25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  border: 3px solid transparent;
+  color: hsl(205, 90%, 76%);
+}
+
+.review__btn:hover {
+  border: 3px solid hsl(205, 90%, 76%);
+  border-radius: 0.25rem;
+}
+
+.review__random {
+  background-color: hsl(205, 100%, 96%);
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.3s linear;
+  color: hsl(205, 78%, 60%);
+  border: 2px solid hsl(205, 78%, 60%);
+}
