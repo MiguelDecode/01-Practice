@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 2.93rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  gap: 0.65rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu__line {
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+.menu--active .menu__line:first-child {
+  transform: rotate(45deg);
+}
+
+.menu--active .menu__line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu--active .menu__line:last-child {
+  transform: rotate(-45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(0, 0%, 11%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background: url("./images/background-1.jpg");
+  transition: all 0.75s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.nav--active {
+  transform: translateY(0);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 6rem;
+  opacity: 0.3;
+  transition: opacity 0.5s;
+}
+
+.nav__link:hover {
+  opacity: 1;
+}
+
+.title,
+.text {
+  color: #fff;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.text {
+  text-align: justify;
+}
