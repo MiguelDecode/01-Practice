@@ -1,0 +1,92 @@
+@import "reset", "mixins", "keyframes";
+
+* {
+  outline: 2px solid cornflowerblue;
+}
+
+.header {
+  width: 100%;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__h1 {
+}
+
+.header__logo {
+}
+
+.header__img {
+}
+
+.header__nav {
+}
+
+.header__ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__li {
+}
+
+.header__a {
+}
+
+.header__svg {
+}
+
+.header__right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__btn--language {
+  word-break: keep-all;
+}
+
+.header__menu {
+  display: none;
+
+  width: 2rem;
+  height: 2rem;
+  
+}
+
+@media (max-width: 48rem) {
+  .header__nav,
+  .header__ul,
+  .header__right {
+    display: none;
+  }
+
+  .header__menu {
+    display: block;
+  }
+}
