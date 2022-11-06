@@ -4,6 +4,17 @@
   outline: 2px solid cornflowerblue;
 }
 
+body {
+  background-color: lightgrey;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+// SECTION HEADER
+
 .header {
   width: 100%;
 
@@ -29,7 +40,8 @@
 .header__logo {
 }
 
-.header__img {
+.header__image {
+  max-width: 9.5rem;
 }
 
 .header__nav {
@@ -76,7 +88,137 @@
 
   width: 2rem;
   height: 2rem;
-  
+}
+
+// SECTION SWIPEA
+
+.swipea {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipea__h2 {
+  margin: 0 0 1rem 0;
+}
+
+.swipea__btn {
+}
+
+// SECTION TESTIMONIALS
+
+.testimonials {
+  padding: 5vh 0;
+}
+
+.testimonials__wrapper {
+  overflow: hidden;
+}
+
+.testimonials__slider {
+  width: 200%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.testimonials__slide {
+  padding: 1.5rem;
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+}
+
+.testimonials__names {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+.testimonials__text {
+}
+
+// FOOTER
+
+.footer {
+}
+
+.legal {
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+.legal__col {
+}
+.legal__ul {
+}
+.legal__li {
+}
+.legal__a {
+}
+
+.app {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.app__h2 {
+}
+.app__ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.app__li {
+}
+.app__link {
+}
+.app__image {
+}
+
+.footer__claim {
+  margin-bottom: 1rem;
+}
+
+.footer__sub {
+  border-top: 1px solid grey;
+  padding-top: 1rem;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.faqs__li {
+  display: flex;
+}
+
+.faqs__li::after {
+  content: "/";
+  display: block;
+  margin-inline: 1rem;
+}
+.faqs__a {
+}
+.footer__copyright {
 }
 
 @media (max-width: 48rem) {
@@ -88,5 +230,10 @@
 
   .header__menu {
     display: block;
+  }
+
+  .testimonials__slider {
+    width: 600%;
+    gap: unset;
   }
 }

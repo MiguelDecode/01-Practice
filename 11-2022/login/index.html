@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Form</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="login">
+      <h2 class="login__title">Welcome Back</h2>
+      <p class="login__text">Enter your details</p>
+
+      <form class="form">
+        <div class="form__container">
+          <label class="form__label" for="email">Email</label>
+          <i class="bx bx-user form__icon"></i>
+          <input
+            class="form__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email"
+            required
+          />
+
+          <div class="form__container">
+            <label for="password" class="form__label">Password</label>
+            <i class="bx bxs-lock form__icon"></i>
+            <input
+              class="form__input"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Your password"
+              required
+            />
+          </div>
+        </div>
+
+        <a href="#" class="forgot__link">Forgot your password?</a>
+        <input class="forgot__input" type="submit" value="Log In" />
+      </form>
+    </main>
+  </body>
+</html>

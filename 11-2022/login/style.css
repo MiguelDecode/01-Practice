@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Varela Round", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/low-poly-grid-haikei.svg");
+  background-size: cover;
+
+  animation: move 15s linear alternate infinite;
+}
+
+@keyframes move {
+  50% {
+    background-position: 50%;
+  }
+}
+
+.login {
+  width: 25rem;
+  height: min-content;
+  padding: 2.5rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login__title {
+  font-size: 2.2rem;
+}
+
+.form {
+  text-align: left;
+  margin-top: 1.875rem;
+}
+
+.form__container {
+  margin: 18px 0;
+}
+
+.form__label {
+  display: block;
+  font-size: 1.25rem;
+  color: #101010;
+}
+
+.form__input {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 6px;
+  padding: 0 12px 0 34px;
+  border: 2px solid #c4c4c4;
+  border-radius: 3px;
+  font-size: 1.125rem;
+  color: $404040;
+  transition: 0.3s;
+}
+
+.form__input:focus {
+  border-color: #124ce7;
+  box-shadow: 0 0 12px #bbd3ff;
+}
+
+.form__input:valid {
+  border-color: #124ce7;
+  background-color: #e4edff;
+}
+
+.form__icon {
+  position: absolute;
+  color: #404040;
+  font-size: 1.25rem;
+  transform: translateX(12px) translateY(16px)
+}
+
+.forgot__link {
+  cursor: pointer;
+  color: #3784ff;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.forgot__link:hover {
+  color: #124ce7;
+}
+
+.forgot__input {
+  cursor: pointer;
+  width: 100%;
+  height: 2.875rem;
+  border-radius: 3px;
+  font-size: 1.375rem;
+  margin-top: 1.75rem;
+  color: #fff;
+  background: linear-gradient(0deg, #124ce7, #3784ff)
+}
