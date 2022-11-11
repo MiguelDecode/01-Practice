@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Login Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="box">
+        <div class="square" style="--i: 0"></div>
+        <div class="square" style="--i: 1"></div>
+        <div class="square" style="--i: 2"></div>
+        <div class="square" style="--i: 3"></div>
+        <div class="square" style="--i: 4"></div>
+        <div class="box__container">
+          <div class="box__wrapper">
+            <h2 class="box__title">Login Form</h2>
+            <form action="#" class="form">
+              <label for="username" class="form__label">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Username"
+                  class="form__input"
+                />
+              </label>
+              <label for="password" class="form__label">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  class="form__input"
+                />
+              </label>
+              <label for="submit" class="form__label">
+                <input
+                  type="submit"
+                  value="Login"
+                  id="submit"
+                  class="form__input form__input--submit"
+                />
+              </label>
+              <p class="form__forget">
+                Forgot Password?<a href="#" class="form__link">Click Here</a>
+              </p>
+              <p class="form__forget">
+                Don't have an account?<a href="#" class="form__link">Sign up</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
