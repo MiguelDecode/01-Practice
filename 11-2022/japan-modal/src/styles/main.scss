@@ -1,0 +1,85 @@
+@import "reset";
+@import "variables";
+
+body {
+  background-image: url("../../src/japan.jpg");
+  background-size: cover;
+  background-position: center;
+
+  font-family: "Permanent Marker", cursive;
+
+  overflow: hidden;
+}
+
+body:hover {
+  & .modal {
+    right: 0;
+  }
+
+  & .title {
+    left: -50%;
+  }
+
+  & .sakura {
+    opacity: 1;
+    scale: (1.3);
+  }
+}
+
+.title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 8rem;
+  transition: 1s ease-in-out;
+}
+
+.modal {
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  backdrop-filter: blur(10px);
+  transition: 1s ease-in-out;
+  color: white;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: 5rem;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+
+  &__capital,
+  &__language,
+  &__currency {
+    align-self: start;
+  }
+}
+
+.sakura {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, scale 1s ease-in-out;
+
+  &--top {
+    top: 0;
+    right: 0;
+  }
+
+  &--bottom {
+    rotate: 180deg;
+    bottom: 0;
+    left: 0;
+  }
+}
