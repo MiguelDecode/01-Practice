@@ -1,0 +1,28 @@
+@mixin btn($bg-color, $color, $weight) {
+  background-color: $bg-color;
+  border-radius: 50px;
+  padding: 20px 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $color;
+
+  @if ($weight == "true") {
+    font-weight: bolder;
+  }
+}
+
+.btn {
+  &.btn-cta {
+    @include btn($primary-color, $secondary-color, "true");
+    &:hover {
+      @include btn($secondary-color, $primary-color, "true");
+      box-shadow: $box-shadow;
+    }
+  }
+  &:hover {
+    @include btn($tertiary-color, $secondary-color, "true");
+    box-shadow: $box-shadow;
+  }
+}
