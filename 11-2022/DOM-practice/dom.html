@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-dark>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises of DOM</title>
+
+    <!-- Menu of hamburger -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Javascript -->
+    <script src="./js/index.js" defer type="module"></script>
+  </head>
+  <body data-dark>
+    <header class="header">
+      <h1 class="header__title">Exercises of DOM</h1>
+    </header>
+    <button class="hamburger hamburger--vortex" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="aside">
+      <nav class="menu">
+        <ul class="menu__list">
+          <il class="menu__item"
+            ><a class="menu__link" href="#section-1"
+              >Digital Clock and Alarm</a
+            ></il
+          >
+          <il class="menu__item"
+            ><a class="menu__link" href="#section-2">Keyboard Events</a></il
+          >
+          <il class="menu__item"
+            ><a class="menu__link" href="#section-3">Countdown</a></il
+          >
+          <il class="menu__item"
+            ><a class="menu__link" href="#section-4">Section 4</a></il
+          >
+          <il class="menu__item"
+            ><a class="menu__link" href="#section-5">Section 5</a></il
+          >
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <section id="section-1" class="section">
+        <h2>Digital Clock and Alarm</h2>
+        <div class="clock"></div>
+        <div class="btns-clock">
+          <button id="start-clock">Start Clock</button>
+          <button id="stop-clock">Stop Clock</button>
+          <button id="start-alarm">Start Alarm</button>
+          <button id="stop-alarm">Stop Alarm</button>
+        </div>
+      </section>
+      <section id="section-2" class="section">
+        <h2>Keyboard Events</h2>
+        <article class="stage">
+          <div class="ball"></div>
+        </article>
+      </section>
+      <section id="section-3" class="section">
+        <h2>Countdown</h2>
+        <div id="countdown"></div>
+      </section>
+      <section id="section-4" class="section">
+        <h2>Section 4</h2>
+      </section>
+      <section id="section-5" class="section">
+        <h2>Section 5</h2>
+      </section>
+    </main>
+    <button class="scroll-top-btn hidden">&#11014;</button>
+    <button class="dark-theme-btn">🌑</button>
+  </body>
+</html>
