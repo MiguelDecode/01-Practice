@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.island {
+  width: 85px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 37px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.island:hover {
+  cursor: pointer;
+  width: 75%;
+  height: 60px;
+  border-radius: 70px;
+  transition: 0.3s ease-in-out;
+}
+
+.island__content {
+  
+}
