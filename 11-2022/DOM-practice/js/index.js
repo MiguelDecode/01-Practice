@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Scroll Page
   scrollTopButton(".scroll-top-btn");
-
-  // Dark Theme
-  dark_theme('.dark-theme-btn', 'dark-mode')
 });
+
+// Dark Theme
+dark_theme(".dark-theme-btn", "dark-mode");
 
 // Keyboard Events
 document.addEventListener("keydown", () => {
