@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: #100f13;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  padding: 22px 46px;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  transition: 0.8s;
+}
+
+button:hover {
+  z-index: 1;
+  border-color: transparent;
+  background: linear-gradient(90deg, #f9d923, #00a19d, #0c87b7, #cb49ff, #ff6666, #f9d923);
+  background-size: 400%;
+  box-shadow: 0 0 15px rgb(2, 4, 24);
+  animation: glow 12s linear forwards;
+}
+
+@keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 400%;
+  }
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: inherit;
+  filter: blur(36px);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+button:hover::before {
+  z-index: -1;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=index.css.map */
