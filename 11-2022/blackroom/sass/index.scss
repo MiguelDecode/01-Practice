@@ -1,0 +1,150 @@
+@use "reset";
+@use "variables";
+
+body {
+  background-color: variables.$tertiary;
+  font-family: variables.$font-family;
+}
+
+.main {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  height: 10vh;
+
+  .logo__title {
+    font-size: variables.$font-xl;
+    color: variables.$dark;
+    font-weight: 100;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: variables.$dark;
+    font-weight: bold;
+    font-size: variables.$font-s;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 2rem;
+}
+
+.welcome {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    font-size: variables.$font-xxl;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    position: absolute;
+    top: -12rem;
+    left: -15rem;
+    width: 50rem;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__btn {
+    width: 15rem;
+    height: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: variables.$font-s;
+    background-color: variables.$light;
+    border-color: variables.$dark;
+
+    &--special {
+      background-color: variables.$accent;
+    }
+  }
+}
+
+.hero-image__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.hero-image {
+  // width: 33%;
+  position: relative;
+
+  &__image {
+    height: 900px;
+  }
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &--one {
+      width: 10rem;
+      height: 10rem;
+      top: 5%;
+      left: 10%;
+      background-color: variables.$circle-one;
+    }
+
+    &--two {
+      width: 5rem;
+      height: 5rem;
+      bottom: 15%;
+      right: 5%;
+      background-color: variables.$circle-two;
+
+    }
+
+    &--three {
+      width: 6rem;
+      height: 6rem;
+      right: -5%;
+      top: 30%;
+      background-color: variables.$circle-three;
+    }
+
+    &--four {
+      width: 1rem;
+      height: 1rem;
+      bottom: 10%;
+      left: 10%;
+      background-color: variables.$circle-one;
+    }
+  }
+}

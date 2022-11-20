@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 97%);
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  height: 10vh;
+}
+.nav .logo__title {
+  font-size: 40px;
+  color: hsl(23deg, 33%, 9%);
+  font-weight: 100;
+}
+.nav .logo__title--bold {
+  font-weight: bold;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav__link {
+  text-transform: uppercase;
+  color: hsl(23deg, 33%, 9%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 2rem;
+}
+
+.welcome {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcome__wrapper {
+  position: relative;
+}
+.welcome__title {
+  font-size: 90px;
+  text-transform: uppercase;
+}
+.welcome__image {
+  position: absolute;
+  top: -12rem;
+  left: -15rem;
+  width: 50rem;
+}
+.welcome__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.welcome__btn {
+  width: 15rem;
+  height: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: hsl(23deg, 33%, 9%);
+}
+.welcome__btn--special {
+  background-color: hsl(4deg, 78%, 75%);
+}
+
+.hero-image__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.hero-image {
+  position: relative;
+}
+.hero-image__image {
+  height: 900px;
+}
+.hero-image .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+.hero-image .circle--one {
+  width: 10rem;
+  height: 10rem;
+  top: 5%;
+  left: 10%;
+  background-color: hsla(4deg, 78%, 55%, 0.6);
+}
+.hero-image .circle--two {
+  width: 5rem;
+  height: 5rem;
+  bottom: 15%;
+  right: 5%;
+  background-color: hsla(4deg, 78%, 75%, 0.6);
+}
+.hero-image .circle--three {
+  width: 6rem;
+  height: 6rem;
+  right: -5%;
+  top: 30%;
+  background-color: hsla(4deg, 78%, 35%, 0.6);
+}
+.hero-image .circle--four {
+  width: 1rem;
+  height: 1rem;
+  bottom: 10%;
+  left: 10%;
+  background-color: hsla(4deg, 78%, 55%, 0.6);
+}
+
+/*# sourceMappingURL=index.css.map */
