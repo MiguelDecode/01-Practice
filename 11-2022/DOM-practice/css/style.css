@@ -222,3 +222,21 @@ ol {
   background-color: var(--second-color);
   color: var(--main-color);
 }
+
+/* Network Detection */
+.online,
+.offline {
+  position: sticky;
+  top: 0;
+  z-index: var(--modal-index);
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #1b7e20;
+  color: #fff;
+}
+
+.offline {
+  background-color: #b71c1c;
+}
