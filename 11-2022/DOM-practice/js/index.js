@@ -9,6 +9,10 @@ import responsiveTester from "./responsive_test.js";
 import userDeviceInfo from "./device_detection.js";
 import networkStatus from "./network_detection.js";
 import webCam from "./webcam_detection.js";
+import getGeolocation from "./geolocation.js";
+import searchFilter from "./search_filter.js";
+import draw from "./lottery.js";
+import slider from "./slider.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu
@@ -52,6 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // WebCam Detection
   webCam("webcam");
+
+  // Geolocation
+  getGeolocation("geolocation");
+
+  // Search Filter
+  searchFilter(".card-filter", ".card");
+
+  // Lottery
+  draw("#winner-btn", ".player");
+
+  // Slider Responsive
+  slider();
 });
 
 // Dark Theme

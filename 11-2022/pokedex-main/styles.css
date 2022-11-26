@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid blue; */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-image: url(./pokemon.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: "Patrick Hand", cursive;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  width: 400px;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 0.3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+ box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.card__header {
+  text-align: center;
+}
+
+.card__search {
+  font-family: inherit;
+  border-radius: 0.3rem;
+  max-width: 20rem;
+  margin-inline: auto;
+  border: 2px solid #000;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+.card__poke-name {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  position: relative;
+}
+
+.card__poke-img {
+  background-color: coral;
+  border-radius: 50%;
+  padding: 2rem;
+  width: 15rem;
+  height: 15rem;
+}
+
+.card__poke-number {
+  position: absolute;
+  bottom: 0px;
+  right: 30%;
+  font-size: 2rem;
+}
+
+form {
+  width: 200px;
+  margin: 20px auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+}
+
+.poke-card {
+  position: relative;
+  height: fit-content;
+  font-family: "Roboto Mono", monospace;
+  max-width: 300px;
+  border-radius: 4px;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.poke-card::before {
+  content: "";
+  background: radial-gradient(black 33%, transparent 33%);
+  background-size: 3px 3px;
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+.img-container {
+  position: relative;
+  width: 180px;
+  margin: 10px auto;
+}
+
+.poke-stats div {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.poke-types div {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px dashed black;
+}
+
+.poke-img {
+  width: 180px;
+  border-radius: 50%;
+}

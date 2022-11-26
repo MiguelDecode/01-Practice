@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="script.js" type="text/javascript" defer></script>
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="card">
+      <input type="search" name="pokedex" id="pokedex" class="card__search" />
+      <header class="card__header">
+        <h1 class="card__poke-name">Pokedex</h1>
+        <div class="card__image-container">
+          <img
+            src="./poke-shadow.png"
+            alt="Sprite of a pokemon"
+            class="card__poke-img"
+          />
+          <p class="card__poke-number"></p>
+        </div>
+      </header>
+      <section class="card__data">
+        <div class="card__poke-types"></div>
+        <div class="card__poke-stats"></div>
+      </section>
+    </main>
+  </body>
+</html>

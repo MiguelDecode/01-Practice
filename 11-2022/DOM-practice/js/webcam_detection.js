@@ -6,7 +6,7 @@ export default function webCam(id) {
     navigator.mediaDevices
       .getUserMedia({ video: true, audio: false })
       .then((stream) => {
-        console.log(stream);
+        // console.log(stream);
         $video.srcObject = stream;
         $video.onplay();
       })

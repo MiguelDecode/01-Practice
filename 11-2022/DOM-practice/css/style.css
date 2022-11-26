@@ -8,8 +8,9 @@
   --main-modal-color: hsla(53, 93%, 54%, 0.85);
   --second-modal-color: hsla(0, 0%, 13%, 0.85);
   --container-width: 1200px;
-  --modal-index: 20;
-  --aside-index: 10;
+  --modal-index: 3;
+  --aside-index: 2;
+  --header-index: 1;
 }
 
 *,
@@ -46,6 +47,7 @@ ol {
 
 .header {
   position: sticky;
+  z-index: var(--header-index);
   top: 0;
   padding: 1rem;
   background-color: var(--main-color);
@@ -99,6 +101,7 @@ ol {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   transform: translateY(-100%);
   opacity: 0;
+  overflow-y: auto;
 }
 
 .aside.active {
@@ -129,7 +132,7 @@ ol {
 }
 
 .menu__link {
-  padding: 2rem;
+  padding: 1rem;
   width: inherit;
   display: block;
   font-size: 1.5rem;
@@ -239,4 +242,80 @@ ol {
 
 .offline {
   background-color: #b71c1c;
+}
+
+/* Search Filters */
+.card-filter {
+  margin-block: 1rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  transition: all 0.3s ease-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card figcaption {
+  padding: 1rem;
+}
+
+.filter {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.sliders-container {
+  position: relative;
+  height: 400px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn__slider {
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.btn__slider--prev {
+  left: 1rem;
+}
+
+.btn__slider--next {
+  right: 1rem;
 }

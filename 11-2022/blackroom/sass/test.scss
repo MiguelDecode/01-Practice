@@ -93,7 +93,7 @@ body {
     justify-content: center;
     gap: 2rem;
   }
-
+  
   &__btn {
     width: 15rem;
     height: 5rem;
@@ -101,8 +101,8 @@ body {
     font-weight: bold;
     font-size: variables.$font-s;
     background-color: variables.$light;
+    border: 3px solid variables.$dark;
     cursor: pointer;
-    border: 2px solid variables.$dark;
 
     &:hover {
       color: variables.$accent;
@@ -135,13 +135,15 @@ body {
 .circle {
     position: absolute;
     border-radius: 50%;
-
+    animation: float 3.5s ease-in-out infinite;
+    
     &--one {
       width: 10rem;
       height: 10rem;
       top: 5%;
       left: 10%;
       background-color: variables.$circle-one;
+      animation-delay: 1s;
     }
 
     &--two {
@@ -150,7 +152,7 @@ body {
       bottom: 15%;
       right: 5%;
       background-color: variables.$circle-two;
-
+      animation-delay: 2s;
     }
 
     &--three {
@@ -159,6 +161,7 @@ body {
       right: 10%;
       top: 30%;
       background-color: variables.$circle-three;
+      animation-delay: 3s;
     }
 
     &--four {
@@ -167,5 +170,18 @@ body {
       bottom: 35%;
       left: 10%;
       background-color: variables.$circle-one;
+      animation-delay: .5s;
     }
   }
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

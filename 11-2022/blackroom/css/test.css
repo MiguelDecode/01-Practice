@@ -112,8 +112,8 @@ body {
   font-weight: bold;
   font-size: 20px;
   background-color: hsl(0deg, 0%, 100%);
+  border: 3px solid hsl(23deg, 33%, 9%);
   cursor: pointer;
-  border: 2px solid hsl(23deg, 33%, 9%);
 }
 .hero-text__btn:hover {
   color: hsl(4deg, 78%, 75%);
@@ -144,6 +144,7 @@ body {
 .circle {
   position: absolute;
   border-radius: 50%;
+  animation: float 3.5s ease-in-out infinite;
 }
 .circle--one {
   width: 10rem;
@@ -151,6 +152,7 @@ body {
   top: 5%;
   left: 10%;
   background-color: hsla(4deg, 78%, 55%, 0.6);
+  animation-delay: 1s;
 }
 .circle--two {
   width: 5rem;
@@ -158,6 +160,7 @@ body {
   bottom: 15%;
   right: 5%;
   background-color: hsla(4deg, 78%, 75%, 0.6);
+  animation-delay: 2s;
 }
 .circle--three {
   width: 6rem;
@@ -165,6 +168,7 @@ body {
   right: 10%;
   top: 30%;
   background-color: hsla(4deg, 78%, 35%, 0.6);
+  animation-delay: 3s;
 }
 .circle--four {
   width: 1rem;
@@ -172,6 +176,19 @@ body {
   bottom: 35%;
   left: 10%;
   background-color: hsla(4deg, 78%, 55%, 0.6);
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 /*# sourceMappingURL=test.css.map */
