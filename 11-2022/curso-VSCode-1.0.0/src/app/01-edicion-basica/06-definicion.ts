@@ -10,8 +10,8 @@
         Ir a la definición F12
 */
 
-import { saludar } from './extra/funciones';
+import { saludar } from "./extra/funciones";
 
-const saludo = saludar( 'Thanos' );
+const saludo = saludar("Thanos");
 
 console.log(saludo);

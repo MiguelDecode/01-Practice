@@ -25,7 +25,7 @@ export default function getGeolocation(id) {
     console.log(`Error: ${error.code}: ${error.message}`);
   };
 
-  console.log(
+ /*  console.log(
     navigator.geolocation.getCurrentPosition(success, error, options)
-  );
+  ); */
 }

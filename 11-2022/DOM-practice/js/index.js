@@ -13,6 +13,8 @@ import getGeolocation from "./geolocation.js";
 import searchFilter from "./search_filter.js";
 import draw from "./lottery.js";
 import slider from "./slider.js";
+import scrollSpy from "./scrollspy.js";
+import smartVideo from "./smart_video.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu
@@ -52,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   responsiveTester("responsive-tester");
 
   // Device Detection
-  userDeviceInfo("user-device");
+  // userDeviceInfo("user-device");
 
   // WebCam Detection
-  webCam("webcam");
+  // webCam("webcam");
 
   // Geolocation
   getGeolocation("geolocation");
@@ -68,6 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Slider Responsive
   slider();
+
+  // Scroll Spy
+  scrollSpy();
+
+  // Smart Video
+  smartVideo();
 });
 
 // Dark Theme

@@ -1,112 +1,55 @@
-const pokemonSearch = document.getElementById("pokedex");
-const pokemonName = document.querySelector(".card__poke-name");
-const pokemonCircle = document.querySelector(".card__image-container");
-const pokemonSprite = document.querySelector(".card__poke-img");
-const pokemonNumber = document.querySelector(".card__poke-number");
-const pokemonTypes = document.querySelector(".card__poke-types");
-const pokemonStats = document.querySelector(".card__poke-stats");
-
-const typeColors = {
-  electric: "#FFEA70",
-  normal: "#B09398",
-  fire: "#FF675C",
-  water: "#0596C7",
-  ice: "#AFEAFD",
-  rock: "#999799",
-  flying: "#7AE7C7",
-  grass: "#4A9681",
-  psychic: "#FFC6D9",
-  ghost: "#561D25",
-  bug: "#A2FAA3",
-  poison: "#795663",
-  ground: "#D2B074",
-  dragon: "#DA627D",
-  steel: "#1D8A99",
-  fighting: "#2F2F2F",
-  default: "#2A1A1F",
+const pokedex = document.getElementById("pokedex");
+const searchPokemon = document.getElementById("poke-search");
+const colors = {
+  normal: "#A8A77A",
+  fire: "#EE8130",
+  water: "#6390F0",
+  electric: "#F7D02C",
+  grass: "#7AC74C",
+  ice: "#96D9D6",
+  fighting: "#C22E28",
+  poison: "#A33EA1",
+  ground: "#E2BF65",
+  flying: "#A98FF3",
+  psychic: "#F95587",
+  bug: "#A6B91A",
+  rock: "#B6A136",
+  ghost: "#735797",
+  dragon: "#6F35FC",
+  dark: "#705746",
+  steel: "#B7B7CE",
+  fairy: "#D685AD",
 };
 
-pokemonSearch.addEventListener("change", (event) => {
-  event.preventDefault();
-  fetch(
-    `https://pokeapi.co/api/v2/pokemon/${pokemonSearch.value.toLowerCase()}`
-  )
-    .then((data) => data.json())
-    .then((response) => renderPokemonData(response))
-    .catch((err) => renderNotFound());
+document.addEventListener("change", (event) => {
+  if (event.target === searchPokemon) {
+    const searchValue = searchPokemon.value.toLowerCase();
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${searchValue}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const fragment = new DocumentFragment();
+        const pokemon = document.createElement("ARTICLE");
+        pokemon.classList.add("pokemon");
+
+        const bgColor = colors[data.types[0].type.name];
+        pokemon.setAttribute('style', `background-color:${bgColor}`)
+
+        const pokeId = ("00" + data.id).slice(-3);
+
+        const pokemonData = `
+        <div class="pokemon__img-container">
+            <img class="pokemon__img" src="${data.sprites.other.dream_world.front_default}" alt="${data.name}"> 
+        </div>
+        <div class="pokemon__reference">
+            <span class="pokemon__number">#${pokeId}</span>
+            <span class="pokemon__name">${data.name}</span>
+        </div>
+        `;
+        
+        pokemon.innerHTML = pokemonData;
+        pokedex.appendChild(pokemon);
+      })
+      .catch((error) => console.log(error));
+  }
 });
-
-const renderPokemonData = (data) => {
-  const sprite = data.sprites.front_default;
-  const { stats, types } = data;
-
-  pokemonName.textContent = data.name;
-  pokemonSprite.setAttribute("src", sprite);
-  pokemonNumber.textContent = `#${data.id}`;
-
-  setCardColor(types);
-
-  console.log(data);
-};
-
-const setCardColor = types => {
-    const colorOne = typeColors[types[0].type.name]
-    const colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
-
-}
-
-
-
-/* const renderPokemonData = data => {
-    const sprite =  data.sprites.front_default;
-    const { stats, types } = data;
-
-    pokeName.textContent = data.name;
-    pokeImg.setAttribute('src', sprite);
-    pokeId.textContent = `Nº ${data.id}`;
-    setCardColor(types);
-    renderPokemonTypes(types);
-    renderPokemonStats(stats);
-}
-
-
-const setCardColor = types => {
-    const colorOne = typeColors[types[0].type.name];
-    const colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
-    pokeImg.style.background =  `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
-    pokeImg.style.backgroundSize = ' 5px 5px';
-}
-
-const renderPokemonTypes = types => {
-    pokeTypes.innerHTML = '';
-    types.forEach(type => {
-        const typeTextElement = document.createElement("div");
-        typeTextElement.style.color = typeColors[type.type.name];
-        typeTextElement.textContent = type.type.name;
-        pokeTypes.appendChild(typeTextElement);
-    });
-}
-
-const renderPokemonStats = stats => {
-    pokeStats.innerHTML = '';
-    stats.forEach(stat => {
-        const statElement = document.createElement("div");
-        const statElementName = document.createElement("div");
-        const statElementAmount = document.createElement("div");
-        statElementName.textContent = stat.stat.name;
-        statElementAmount.textContent = stat.base_stat;
-        statElement.appendChild(statElementName);
-        statElement.appendChild(statElementAmount);
-        pokeStats.appendChild(statElement);
-    });
-}
-
-const renderNotFound = () => {
-    pokeName.textContent = 'No encontrado';
-    pokeImg.setAttribute('src', 'poke-shadow.png');
-    pokeImg.style.background =  '#fff';
-    pokeTypes.innerHTML = '';
-    pokeStats.innerHTML = '';
-    pokeId.textContent = '';
-}
- */

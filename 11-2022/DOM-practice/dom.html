@@ -31,50 +31,56 @@
       <nav class="menu">
         <ul class="menu__list">
           <il class="menu__item"
-            ><a class="menu__link" href="#section-1"
+            ><a class="menu__link" href="#section-1" data-scroll-spy
               >Digital Clock and Alarm</a
             ></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-2">Keyboard Events</a></il
+            ><a class="menu__link" href="#section-2" data-scroll-spy>Keyboard Events</a></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-3">Countdown</a></il
+            ><a class="menu__link" href="#section-3" data-scroll-spy>Countdown</a></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-4"
+            ><a class="menu__link" href="#section-4" data-scroll-spy
               >Responsive con Javascript</a
             ></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-5">Responsive Tester</a></il
+            ><a class="menu__link" href="#section-5" data-scroll-spy>Responsive Tester</a></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-6">User Agent</a></il
+            ><a class="menu__link" href="#section-6" data-scroll-spy>User Agent</a></il
           >
           <il class="menu__item"
-            ><a class="menu__link" href="#section-7">Network Detection</a></il
+            ><a class="menu__link" href="#section-7" data-scroll-spy>Network Detection</a></il
           >
           <li class="menu__item">
-            <a href="#section-8" class="menu__link">Web Cam Detection</a>
+            <a href="#section-8" class="menu__link" data-scroll-spy>Web Cam Detection</a>
           </li>
           <li class="menu__item">
-            <a href="#section-9" class="menu__link">Geolocation</a>
+            <a href="#section-9" class="menu__link" data-scroll-spy>Geolocation</a>
           </li>
           <li class="menu__item">
-            <a href="#section-10" class="menu__link">Search Filters</a>
+            <a href="#section-10" class="menu__link" data-scroll-spy>Search Filters</a>
           </li>
           <li class="menu__item">
-            <a href="#section-11" class="menu__link">Lottery</a>
+            <a href="#section-11" class="menu__link" data-scroll-spy>Lottery</a>
           </li>
           <li class="menu__item">
-            <a href="#section-12" class="menu__link">Responsive Slider</a>
+            <a href="#section-12" class="menu__link" data-scroll-spy>Responsive Slider</a>
+          </li>
+          <li class="menu__item">
+            <a href="#section-13" class="menu__link" data-scroll-spy="">Intelligent Video</a>
+          </li>
+          <li class="menu__item">
+            <a href="#section-14" class="menu__link" data-scroll-spy>Form validations</a>
           </li>
         </ul>
       </nav>
     </aside>
     <main class="main">
-      <section id="section-1" class="section">
+      <section id="section-1" class="section" data-scroll-spy>
         <h2>Digital Clock and Alarm</h2>
         <div class="clock"></div>
         <div class="btns-clock">
@@ -84,22 +90,22 @@
           <button id="stop-alarm">Stop Alarm</button>
         </div>
       </section>
-      <section id="section-2" class="section">
+      <section id="section-2" class="section" data-scroll-spy>
         <h2>Keyboard Events</h2>
         <article class="stage">
           <div class="ball"></div>
         </article>
       </section>
-      <section id="section-3" class="section">
+      <section id="section-3" class="section" data-scroll-spy>
         <h2>Countdown</h2>
         <div id="countdown"></div>
       </section>
-      <section id="section-4" class="section">
+      <section id="section-4" class="section" data-scroll-spy>
         <h2>Responsive con Javascript</h2>
         <div id="youtube"></div>
         <div id="gmaps"></div>
       </section>
-      <section id="section-5" class="section">
+      <section id="section-5" class="section" data-scroll-spy>
         <h2>Responsive Tester</h2>
         <form id="responsive-tester">
           <input type="url" name="direction" required placeholder="URL" />
@@ -112,23 +118,23 @@
           <input type="button" value="close" name="close" />
         </form>
       </section>
-      <section id="section-6" class="section">
+      <section id="section-6" class="section" data-scroll-spy>
         <h2>Detección de Dispositivos</h2>
         <h3>(User Agent)</h3>
         <div id="user-device"></div>
       </section>
-      <section class="section" id="section-7">
+      <section class="section" id="section-7" data-scroll-spy>
         <h2>Network Detection</h2>
       </section>
-      <section class="section" id="section-8">
+      <section class="section" id="section-8" data-scroll-spy>
         <h2>Web Cam Detection</h2>
         <video id="webcam"></video>
       </section>
-      <section class="section" id="section-9">
+      <section class="section" id="section-9" data-scroll-spy>
         <h2>Geolocation</h2>
         <div id="geolocation"></div>
       </section>
-      <section class="section" id="section-10">
+      <section class="section" id="section-10" data-scroll-spy>
         <h2>Search Filters</h2>
         <input type="search" placeholder="Search..." class="card-filter">
         <article class="cards">
@@ -164,7 +170,7 @@
           </figure>
         </article>
       </section>
-      <section class="section" id="section-11">
+      <section class="section" id="section-11" data-scroll-spy>
         <h2>Lottery</h2>
         <ul class="players">
           <li class="player">JavaScript</li>
@@ -180,7 +186,7 @@
         </ul>
         <button id="winner-btn">Obtain Winner</button>
       </section>
-      <section class="section" id="section-12">
+      <section class="section" id="section-12" data-scroll-spy>
         <h2>Responsive Slider</h2>
         <div class="slider">
           <div class="sliders-container">
@@ -193,6 +199,21 @@
           <a href="#" class="btn__slider btn__slider--prev" id="prev">&laquo</a>
           <a href="#" class="btn__slider btn__slider--next" id="next">&raquo</a>
         </div>
+      </section>
+      <section class="section" id="section-13" data-scroll-spy>
+        <h2>Intelligent Video</h2>
+        <video src="./assets/noria.mp4" muted loop data-smart-video autoplay></video>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <video src="./assets/noria.mp4" muted loop data-smart-video autoplay></video>
+      </section>
+      <section class="section" id="section-14" data-scroll-spy>
+        <h2>Form validations</h2>
+        <form class="form">
+          <legend class="form__legend">Send your comments</legend>
+          <input class="form__input form__input--name" type="text" name="name" id="name" placeholder="Write your name" title="Name only contain letters, not numbers or symbols" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+          <input class="form__input form__input--email" type="email" name="email" id="email" placeholder="Write your email" title="Email wrong, try again" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+          <input class="form__submit" type="submit" value="Send">
+        </form>
       </section>
     </main>
     <button class="scroll-top-btn hidden">&#11014;</button>

@@ -1,40 +1,40 @@
 /*
     Objetivo:
-        Crear múltiples cursores
-        Dar el formato deseado
+        crear múltiples cursores
+        dar el formato deseado
 
     Tips:
         ⇧ ⌥ ↑ / ↓
-        ⌃ ⇧ U
-        ⌃ ⇧ L
+        ⌃ ⇧ u
+        ⌃ ⇧ l
 
-        Ctrl + Alt+ ↑ / ↓
-        Ctrl + Shift + U
-        Ctrl + Shift + L
+        ctrl + alt+ ↑ / ↓
+        ctrl + shift + u
+        ctrl + shift + l
 
     Pro:
-        Mostrar la paleta de comandos
-        ⇧ ⌘ P, F1
-        Ctrl + Shift + P, F1
+        mostrar la paleta de comandos
+        ⇧ ⌘ p, f1
+        ctrl + shift + p, F1
 */
 
 function capitalizados() {
 
-    const hulk       = 'brouce banner';
+    const Hulk       = 'brouce banner';
     const Hawkeye    = 'cinton francis';
-    const ironman    = 'tony stark';
-    const spiderman  = 'peter parker';
-    const viudaNegra = 'natalia romanova';
+    const Ironman    = 'tony stark';
+    const Spiderman  = 'peter parker';
+    const Viudanegra = 'natalia romanova';
 
 }
 
 function minusculas() {
 
-    const HULK       = 'brouce banner';
-    const HAWKEYE    = 'cinton francis';
-    const IRONMAN    = 'tony stark';
-    const SPIDERMAN  = 'peter parker';
-    const VIUDANEGRA = 'natalia romanova';
+    const hulk       = 'Brouce Banner';
+    const hawkeye    = 'Cinton Francis';
+    const ironman    = 'Tony Stark';
+    const spiderman  = 'Peter Parker';
+    const viudanegra = 'Natalia Romanova';
 
 }
 
