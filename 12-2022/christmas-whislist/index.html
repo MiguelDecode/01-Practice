@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rochester&display=swap"
       rel="stylesheet"
     />
 
@@ -20,12 +20,24 @@
   <body>
     <div class="book" id="book">
       <div class="back"></div>
-      <div class="page6"></div>
-      <div class="page1"></div>
+      <div class="page6">
+        <h2 class="whislist__title">Santa Claus this year I have been very good and I would like you to bring me:</h2>
+        <ul class="whislist__list" id="whislist"></ul>
+      </div>
+      <div class="page1">
+        <article class="whishes">
+          <h2 class="whishes__title">Insert your wish</h2>
+          <input class="whishes__input" type="text" name="whish" id="whish" />
+        </article>
+      </div>
       <div class="front">
         <h1 class="front__title">Christmas Whislist</h1>
+        <audio
+          class="audio"
+          id="song"
+          src="./assets/christmas-song.mp3"
+        ></audio>
       </div>
     </div>
-    <audio id="song" src="./assets/christmas-song.mp3"></audio>
   </body>
 </html>

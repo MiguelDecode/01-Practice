@@ -15,6 +15,8 @@ import draw from "./lottery.js";
 import slider from "./slider.js";
 import scrollSpy from "./scrollspy.js";
 import smartVideo from "./smart_video.js";
+import formValidator from "./form_validator.js";
+import speechReader from "./storyteller.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Hamburger menu
@@ -76,6 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Smart Video
   smartVideo();
+
+  // Form Validator
+  formValidator();
 });
 
 // Dark Theme
@@ -89,3 +94,6 @@ document.addEventListener("keydown", () => {
 
 // Network Status
 networkStatus();
+
+// Speech Reader
+speechReader();

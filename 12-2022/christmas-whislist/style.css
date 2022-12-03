@@ -1,3 +1,8 @@
+:root {
+  --red: hsl(355, 67%, 46%);
+  --green: hsl(154, 21%, 22%);
+}
+
 *,
 *::before,
 *::after {
@@ -7,14 +12,14 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-image: url(./assets/background.jpg);
+  background-image: url(./assets/snow-bg.jpg);
   background-size: cover;
   background-position: center;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Mountains of Christmas', cursive;
+  font-family: "Rochester", cursive;
 
   perspective: 2000px;
 }
@@ -25,7 +30,7 @@ body {
   justify-content: center;
   padding: 1rem;
   text-align: center;
-  background-image: url(./assets/card-tree.jpg);
+  background-image: url(./assets/card-inner.jpg);
   background-size: cover;
   background-position: center;
 
@@ -33,7 +38,7 @@ body {
 }
 
 .front__title {
-  color: white;
+  color: var(--red);
   font-size: 6rem;
 }
 
@@ -45,53 +50,103 @@ body {
   backface-visibility: hidden;
 }
 
-.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+.front,
+.back,
+.page1,
+.page6 {
   transform-style: preserve-3d;
   position: absolute;
   width: 400px;
   height: 100%;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   transform-origin: left center;
-  transition: transform 1s ease-in-out, box-shadow .7s ease-in-out;
+  transition: transform 1s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 
-.back {
-  background: navy;
+.front,
+.page1 {
+  border-bottom-right-radius: 0.2em;
+  border-top-right-radius: 0.2em;
 }
 
-.front, .page1, .page3, .page5 {
-  border-bottom-right-radius: .2em;
-  border-top-right-radius: .2em;
+.back,
+.page6 {
+  border-bottom-right-radius: 0.2em;
+  border-top-right-radius: 0.2em;
 }
 
-.back, .page2, .page4, .page6 {
-  border-bottom-right-radius: .2em;
-  border-top-right-radius: .2em;
+.page1 {
+  background-color: hsl(23, 44%, 96%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Comic Neue', cursive;
 }
 
-.page1 { 
-  background-color: hsl(154, 21%, 22%);
+.whishes {
+  transform: rotateY(-180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.whishes__title {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.whishes__input {
+  width: 90%;
+
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .page6 {
-  background-color: hsl(355, 49%, 40%);
+  background-color: hsl(23, 44%, 96%);
+  background-image: url(./assets/circle.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  font-family: 'Comic Neue', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .book:hover .front {
   transform: rotateY(-160deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
 }
 
 .book:hover .page1 {
   transform: rotateY(-159deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
 }
 
 .book:hover .page6 {
   transform: rotateY(-20deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
 }
 
 .book:hover .back {
   transform: rotateY(-20deg) scale(1.1);
+}
+
+.whislist__title {
+  position: absolute;
+  top: 1rem;
+  margin: 1rem;
+  color: var(--red);
+}
+
+.audio {
+  position: absolute;
+  bottom: 0;
 }
