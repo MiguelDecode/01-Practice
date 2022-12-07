@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+ol, ul {
+  list-style: none;
+}
