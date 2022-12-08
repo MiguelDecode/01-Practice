@@ -17,23 +17,43 @@
 
 /* Reset Styles */
 
+a {
+  color: var(--link-color);
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  color: var(--first-color);
+}
+
 body {
   font-family: "Raleway", sans-serif;
 }
 
 /* Bootstrap Style */
 
+.bg-dark {
+  background-color: var(--second-color) !important;
+}
+
+.dropdown-item {
+  color: var(--first-alpha-color);
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown-item:hover {
+  color: var(--third-alpha-color);
+  background-color: transparent;
+  font-weight: bold;
+}
+
 .navbar-brand img {
   width: auto;
   height: 3rem;
 }
 
-.bg-dark {
-  background-color: var(--second-color) !important;
-}
-
 .nav-item {
-  padding-left: 0.5rem;
   transition: all 0.3s ease-out;
 }
 
@@ -41,6 +61,7 @@ body {
   color: var(--first-color);
   font-size: 1.15rem;
   font-weight: bold;
+  margin-left: 0.5rem;
 }
 
 .nav-link:hover {
@@ -63,6 +84,20 @@ body {
 
 /* My styles */
 
+.bg-gradient-blue-green {
+  background-color: rgba(83, 184, 152, 1);
+  background-image: linear-gradient(
+    135deg,
+    rgba(47, 145, 224, 0.91),
+    rgba(7, 31, 51, 0.97) 97%
+  );
+  background-image: linear-gradient(
+    131deg,
+    rgba(28, 118, 173, 0.92),
+    rgba(83, 184, 152, 1)
+  );
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
 
@@ -76,6 +111,9 @@ body {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .nav-item:hover {
+    background-color: transparent;
+  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
