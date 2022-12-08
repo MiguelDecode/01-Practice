@@ -11,6 +11,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <h1>Bootstrap</h1>
@@ -222,6 +226,257 @@
         </article>
       </section>
     </div>
+    <h2>Offsetting Columns</h2>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-3 border">Column</div>
+        <div class="col-6 border offset-3">Column</div>
+        <div class="col-3 border">Column</div>
+        <div class="col border">Column</div>
+        <div class="col border">Column</div>
+      </div>
+    </div>
+    <h2>Forms</h2>
+    <section class="container-sm">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+    <h2>Acordeones</h2>
+    <div class="container">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              first item's accordion body.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              second item's accordion body. Let's imagine this being filled with
+              some actual content.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree"
+              aria-expanded="false"
+              aria-controls="flush-collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              Placeholder content for this accordion, which is intended to
+              demonstrate the <code>.accordion-flush</code> class. This is the
+              third item's accordion body. Nothing more exciting happening here
+              in terms of content, but just filling up the space to make it
+              look, at least at first glance, a bit more representative of how
+              this would look in a real-world application.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Spinner</h2>
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <h2>Colores</h2>
+    <p class="text-success bg-danger">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt modi
+      corrupti, fuga nulla magni, sunt molestiae provident voluptatibus optio,
+      rem cum magnam sit laudantium! Officia repudiandae sapiente placeat
+      consequatur atque!
+    </p>
+    <a
+      href="#"
+      class="link-warning display-1"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Enlace de prueba</a
+    >
+    <h2>Position</h2>
+    <nav class="sticky-bottom sticky-lg-top display-2 text-danger">
+      Sticky Responsive Nav
+    </nav>
+    <h2>Ration</h2>
+    <div class="ratio ratio-16x9">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ng8ur8KNrpU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <h2>Truncate Text</h2>
+    <!-- Block level -->
+    <div class="row">
+      <div class="col-6 text-truncate">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
+        adipisci! Nemo, incidunt maxime nesciunt exercitationem numquam soluta
+        qui aliquam totam commodi similique quibusdam quas modi minus ipsum
+        doloremque facere odit?
+      </div>
+    </div>
+
+    <!-- Inline level -->
+    <span class="d-inline-block text-truncate" style="max-width: 500px">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+      beatae quis eos, esse, accusamus illo quia iure est soluta, natus cumque
+      id! Modi officiis quidem ipsa neque, adipisci repellat dignissimos?
+    </span>
+    <h2>Utilities</h2>
+    <h3>Backgrounds</h3>
+    <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+    <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+    <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+    <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+    <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+    <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+    <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+    <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+    <div class="p-3 mb-2 bg-body text-dark">.bg-body</div>
+    <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+    <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
+    <h3>Display</h3>
+    <p class="text-danger bg-dark d-none d-md-block d-lg-inline">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur eos
+      nemo quos esse ipsa facere! Itaque quod ea illum animi corrupti debitis
+      neque, provident voluptatibus? Consequuntur, praesentium consectetur!
+      Ullam, harum?
+    </p>
+    <h3>Flexbox</h3>
+    <section
+      class="d-flex flex-sm-row-reverse flex-md-column flex-lg-column-reverse"
+    >
+      <article>flex 1</article>
+      <article>flex 2</article>
+      <article>flex 3</article>
+      <article>flex 4</article>
+      <article>flex 5</article>
+    </section>
+    <div
+      class="bg-dark w-100 min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <h2 class="display-1 text-white">Bootstrap is Awesome</h2>
+    </div>
+    <h2>Spacing</h2>
+    <p
+      class="bg-warning text-white m-3 p-5 m-sm-0 p-sm-0 mt-md-5 pb-md-4 w-50 mx-lg-auto py-lg-5 ps-xl-5 pe-xxl-5"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quidem facere,
+      sit, rem sint suscipit nam consequuntur voluptatem magni officiis
+      molestias. Mollitia dolorem sint animi illo aliquam beatae officia
+      delectus.
+    </p>
+    <h3>Text</h3>
+    <p class="text-center text-sm-start text-md-end bg-info">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, illum
+      saepe accusantium illo neque laudantium laboriosam, minus ullam dolor
+      deserunt corporis mollitia rerum dolorem autem, dolores odit earum
+      cupiditate porro.
+    </p>
+    <h3>Icons</h3>
+    <i class="bi bi-youtube"></i>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-twitch"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"
+      />
+      <path
+        d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"
+      />
+    </svg>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

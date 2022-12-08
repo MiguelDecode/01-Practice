@@ -1,3 +1,68 @@
+/* CUSTOM PROPERTIES */
+
+:root {
+  --first-color: hsl(333, 100%, 43%);
+  --first-alpha-color: hsla(333, 100%, 43%, 0.75);
+  --second-color: hsl(228, 38%, 13%);
+  --second-alpha-color: hsla(228, 38%, 13%, 0.75);
+  --third-color: hsl(285, 67%, 24%);
+  --third-alpha-color: hsla(285, 67%, 24%, 0.75);
+
+  --link-color: hsl(208, 72%, 60%);
+  --link-alpha-color: hsl(208, 72%, 60%, 0.75);
+
+  --bg-color: hsl(0, 0%, 96%);
+  --bg-alpha-color: hsla(0, 0%, 96%, 0.75);
+}
+
+/* Reset Styles */
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* Bootstrap Style */
+
+.navbar-brand img {
+  width: auto;
+  height: 3rem;
+}
+
+.bg-dark {
+  background-color: var(--second-color) !important;
+}
+
+.nav-item {
+  padding-left: 0.5rem;
+  transition: all 0.3s ease-out;
+}
+
+.nav-link {
+  color: var(--first-color);
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: var(--bs-white);
+}
+
+.nav-item:hover {
+  background-color: var(--first-alpha-color);
+}
+
+.navbar-dark .navbar-toggler {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: all 0.3s ease-out;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28217, 0, 98, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  opacity: 0.75;
+}
+
+/* My styles */
+
 /* // X-Small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
 
