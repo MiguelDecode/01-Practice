@@ -48,6 +48,10 @@ body {
   font-weight: bold;
 }
 
+.carousel-caption {
+  z-index: 1;
+}
+
 .navbar-brand img {
   width: auto;
   height: 3rem;
@@ -113,6 +117,10 @@ body {
   background-position: center;
 }
 
+.bg-second-alpha-color {
+  background-color: var(--second-alpha-color);
+}
+
 .bg-third-color {
   background-color: var(--third-color);
 }
@@ -129,7 +137,9 @@ body {
   color: var(--third-color);
 }
 
-
+.text-first-color {
+  color: var(--first-color);
+}
 
 /* // X-Small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */

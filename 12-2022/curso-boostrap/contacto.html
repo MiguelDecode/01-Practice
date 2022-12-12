@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Studio BAD DOG</title>
+    <title>Interesados? | Studio BAD DOG</title>
 
     <!-- Bootstrap links -->
     <link
@@ -95,111 +95,115 @@
       </div>
     </nav>
 
-    <main class="pt-5 bg-gradient-blue-green">
-      <div class="container">
-        <section class="row text-white align-items-lg-center mb-5">
-          <article class="col-12 col-lg-5">
-            <h2>Necesitas un increíble sitio web?</h2>
+    <main class="pt-5 bg-color">
+      <div class="container mb-5">
+        <section class="row align-items-center">
+          <article class="col-12 text-center">
+            <h1>Interesados?</h1>
+            <p class="fs-5">Enviame tus comentarios!</p>
             <p class="fs-5">
-              Un sitio hermoso, moderno, responsivo y personalizado para tu
-              compañia, negocio, marca, servicio, o producto.
+              Para más información, puedes contactarme en
+              <a href="mailto:info@sudiobaddog.com">info@studiobaddog.com</a>.
             </p>
-            <a class="btn btn-success btn-lg fw-bold" href="#servicios"
-              >Sí, empecemos!</a
-            >
-          </article>
-          <article class="col-12 col-lg-7">
-            <img class="img-fluid" src="img/header-image.png" alt="Computer" />
           </article>
           <article class="col-12 col-lg-5 order-lg-1">
-            <h2>Sitios web responsivos</h2>
-            <p class="fs-5">
-              Es importante proporcionar a tus visitantes una experencia web
-              óptima en dispositivos móviles. El diseño web responsivo significa
-              que tu sitio se adapta instantáneamente al dispasitivo que el
-              visitante utiliza. Mi trabajo es hacer, que la visita de tus
-              usuarios sea lo más agradable e intuitiva para ellos!
-            </p>
-          </article>
-          <article class="col-12 col-lg-7">
-            <img
-              class="img-fluid"
-              src="./img/header-image-2.png"
-              alt="Computer"
-            />
-          </article>
-        </section>
-
-        <section class="row align-items-lg-center min-vh-100" id="servicios">
-          <article class="col-12 col-md-6 col-lg-3 d-flex">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-              <img
-                src="img/icon-sites.png"
-                class="card-img-top bg-third-color"
-                alt="sitios"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nuevo sitio web</h5>
-                <p class="card-text">
-                  Necesitas un (nuevo) sitio web 100% responsivo?
-                </p>
-                <a href="sitios.html" class="text-third"
-                  >Más detalles<i class="bi bi-chevron-right"></i
-                ></a>
+            <form action="https://formsubmit.co//jockerwolf@gmail.com" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre:</label>
+                <input
+                class="form-control"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                  name="name"
+                  id="name"
+                />
               </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-3 d-flex">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-              <img
-                src="img/icon-clients.png"
-                class="card-img-top bg-third-color"
-                alt="clentes"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Clientes</h5>
-                <p class="card-text">Clientes felices y proyectos hermosos.</p>
-                <a href="clientes.html" class="text-third"
-                  >Más detalles<i class="bi bi-chevron-right"></i
-                ></a>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input class="form-control" type="email" name="email" id="email" />
               </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-3 d-flex">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-              <img
-                src="img/icon-workflow.png"
-                class="card-img-top bg-third-color"
-                alt="Flujo de trabajo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Flujo de Trabajo</h5>
-                <p class="card-text">
-                  Escucho tus necesidades. Discutamos tu proyecto.
-                </p>
-                <a href="comencemos.html" class="text-third"
-                  >Más detalles<i class="bi bi-chevron-right"></i
-                ></a>
+              <div class="mb-3">
+                <label for="comments" class="form-label">Comentarios:</label>
+                <textarea class="form-control" name="comments" id="comments" placeholder="Déjanos tus comentarios" rows="5"></textarea>
               </div>
-            </div>
+            <input class="btn btn-lg btn-success mb-3" type="submit" value="Enviar">
+            <input type="hidden" name="_next" value="https://127.0.0.1:5500/thanks.html">
+            <input type="hidden" name="_subject" value="Respuesta del form creado en el curso de Bootstrap.">
+            </form>
           </article>
-          <article class="col-12 col-md-6 col-lg-3 d-flex">
-            <div class="card mx-auto mb-3" style="width: 18rem">
-              <img
-                src="img/icon-about.png"
-                class="card-img-top bg-third-color"
-                alt="Interesados"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Interesados?</h5>
-                <p class="card-text">Comencemos con tu nuevo proyecto.</p>
-                <a href="contactos.html" class="text-third"
-                  >Más detalles<i class="bi bi-chevron-right"></i
-                ></a>
-              </div>
+          <article class="col-12 col-lg-5">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d370888.0211991586!2d-8.695045726562546!3d43.42796330000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e0e4a4e3d6787%3A0x6a125bd7caf7b6b4!2sParque%20Natural%20de%20las%20Fragas%20del%20Eume!5e0!3m2!1ses!2ses!4v1670756673579!5m2!1ses!2ses"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </article>
         </section>
+      </div>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-caption bg-second-alpha-color">
+            <article>
+              <h4 class="fw-bold">Miguel Decode</h4>
+              <h5 class="d-none d-sm-block">Desarollador Web</h5>
+              <aside class="d-none d-md-block">
+                <p>
+                  Comencé a crear sitios web y aplicaciones web en este año que
+                  esta por acabarse.
+                </p>
+                <p>
+                  Valor mucho el concepto de
+                  <span class="fst-italic">"menos es mas"</span>
+                </p>
+                <p>
+                  Todavía no me he propuesto encontrar un trabajo y estudio de
+                  manera autodidacta.
+                </p>
+              </aside>
+            </article>
+          </div>
+          <div class="carousel-item active">
+            <img src="img/about-1.jpg" class="d-block w-100" alt="About 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/about-2.jpg" class="d-block w-100" alt="About 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/about-3.jpg" class="d-block w-100" alt="About 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/about-4.jpg" class="d-block w-100" alt="About 4" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </main>
 
