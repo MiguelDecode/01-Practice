@@ -1,12 +1,17 @@
 :root {
   --red: hsl(355, 67%, 46%);
   --green: hsl(154, 21%, 22%);
+  --bgcolor: hsl(23, 44%, 96%);
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
@@ -22,6 +27,17 @@ body {
   font-family: "Rochester", cursive;
 
   perspective: 2000px;
+  overflow: hidden;
+}
+
+/* PAGES */
+
+.book {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 600px;
+  cursor: pointer;
+  backface-visibility: hidden;
 }
 
 .front {
@@ -40,14 +56,6 @@ body {
 .front__title {
   color: var(--red);
   font-size: 6rem;
-}
-
-.book {
-  transform-style: preserve-3d;
-  position: relative;
-  height: 600px;
-  cursor: pointer;
-  backface-visibility: hidden;
 }
 
 .front,
@@ -77,43 +85,19 @@ body {
 }
 
 .page1 {
-  background-color: hsl(23, 44%, 96%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--bgcolor);
   padding: 1rem;
-  font-family: 'Comic Neue', cursive;
-}
-
-.whishes {
-  transform: rotateY(-180deg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.whishes__title {
-  font-size: 2rem;
-  letter-spacing: 4px;
-}
-
-.whishes__input {
-  width: 90%;
-
-  padding: 1rem;
-  border-radius: 1rem;
+  font-family: "Homemade Apple", cursive;
 }
 
 .page6 {
-  background-color: hsl(23, 44%, 96%);
-  background-image: url(./assets/circle.jpg);
+  background-color: var(--bgcolor);
+  background-image: url(./assets/santa-card.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
-  font-family: 'Comic Neue', cursive;
+  font-family: "Homemade Apple", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,6 +123,8 @@ body {
   transform: rotateY(-20deg) scale(1.1);
 }
 
+/* TEXT */
+
 .whislist__title {
   position: absolute;
   top: 1rem;
@@ -146,7 +132,69 @@ body {
   color: var(--red);
 }
 
+.whislist__item {
+  font-weight: bold;
+}
+
 .audio {
   position: absolute;
   bottom: 0;
+}
+
+.whishes {
+  transform: rotateY(-180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.whishes__title {
+  font-size: 3rem;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+  color: var(--red);
+}
+
+.whishes__text {
+  margin-top: 0;
+  text-align: justify;
+}
+
+input {
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: var(--bgcolor);
+  padding-left: 1em;
+}
+
+input[type="number"] {
+width: 3rem;
+}
+
+input:active,
+input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--red);
+}
+
+/* SNOW */
+
+.snow {
+  border-radius: 50%;
+  background-color: #d5d5d5;
+  position: absolute;
+  top: -100px;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+  }
+
+  100% {
+    top: 100vh;
+  }
 }

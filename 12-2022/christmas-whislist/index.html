@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Rochester&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Rochester&display=swap"
       rel="stylesheet"
     />
 
@@ -17,17 +17,32 @@
 
     <script src="./js/index.js" defer></script>
   </head>
-  <body>
+  <body class="body">
     <div class="book" id="book">
       <div class="back"></div>
       <div class="page6">
-        <h2 class="whislist__title">Santa Claus this year I have been very good and I would like you to bring me:</h2>
         <ul class="whislist__list" id="whislist"></ul>
       </div>
       <div class="page1">
         <article class="whishes">
-          <h2 class="whishes__title">Insert your wish</h2>
-          <input class="whishes__input" type="text" name="whish" id="whish" />
+          <h2 class="whishes__title">Dear Santa,</h2>
+          <p class="whishes__text">
+            My name is <input type="text" name="name" id="name" />and I am
+            <input type="number" name="age" id="age" />years old. This year I
+            have been <input type="checkbox" name="very" id="very" />very nice
+            <input type="checkbox" name="mostly" id="mostly" />mostly nice
+            <input type="checkbox" name="little" id="little" />a little bit
+            naughty but I can explain
+            <input type="checkbox" name="other-check" id="other-check" /><input
+              type="text"
+              name="other"
+              id="other"
+            />.This year for Christmas I would really like
+            <input type="text" name="whish" id="whish" />. It is what I want
+            more than anything else. Of course, I do have a few more things on
+            my list:
+          </p>
+          <input type="text" name="whishes" id="whishes" />
         </article>
       </div>
       <div class="front">
