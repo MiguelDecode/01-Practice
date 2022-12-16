@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #2F4F30;
+  color: white; 
+}
+
+.header {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1em;
+font-weight: bold;
+}
+
+.card {
+  width: 150px;
+border-radius: 0.7em;
+}
+
+.card + .card {
+  margin-left: -75px;
+}
+
+.card-container {
+  height: 240px;
+}
