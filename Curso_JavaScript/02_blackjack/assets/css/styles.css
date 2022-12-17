@@ -7,8 +7,8 @@
 body {
   min-height: 100vh;
   margin: 0;
-  background-color: #2F4F30;
-  color: white; 
+  background-color: #2f4f30;
+  color: white;
 }
 
 .header {
@@ -16,12 +16,12 @@ body {
   background-color: black;
   color: white;
   padding: 1em;
-font-weight: bold;
+  font-weight: bold;
 }
 
 .card {
   width: 150px;
-border-radius: 0.7em;
+  border-radius: 0.7em;
 }
 
 .card + .card {
