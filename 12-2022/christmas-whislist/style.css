@@ -158,8 +158,16 @@ body {
 }
 
 .whishes__text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
   margin-top: 0;
   text-align: justify;
+  padding-inline: 1rem;
+  line-height: 2.5rem;
+}
+
+.whishes__text--small {
+  font-size: 0.8rem;
 }
 
 input {
