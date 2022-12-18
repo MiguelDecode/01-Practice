@@ -1,4 +1,4 @@
-(() => {
+const blackJack = (() => {
   "use strict";
 
   // VARIABLES
@@ -13,7 +13,6 @@
   const displaysCards = document.querySelectorAll(".card-container");
 
   let deck = [];
-
   let playersPoints = [];
 
   // This function init a game of BlackJack
@@ -25,6 +24,13 @@
     for (let i = 0; i < amountPlayers; i++) {
       playersPoints.push(0);
     }
+
+    displaysPoints.forEach((display) => (display.textContent = 0));
+
+    displaysCards.forEach((display) => (display.innerHTML = ""));
+
+    btnNewCard.disabled = false;
+    btnStop.disabled = false;
   };
 
   // This function create and shuffle a new Deck
@@ -65,7 +71,6 @@
   // Who win the match
   const calcWinner = () => {
     const [playerPoints, computerPoints] = playersPoints;
-    console.log(playersPoints);
 
     setTimeout(() => {
       if (computerPoints === playerPoints) {
@@ -132,13 +137,6 @@
   });
 
   btnNewGame.addEventListener("click", () => {
-    displaysPoints.forEach((display) => (display.textContent = 0));
-
-    displaysCards.forEach((display) => (display.innerHTML = ""));
-
-    btnNewCard.disabled = false;
-    btnStop.disabled = false;
-
     initGame();
   });
 
@@ -148,4 +146,8 @@
 
     computerPlay(playersPoints[0]);
   });
+
+  return {
+    newGame: initGame,
+  };
 })();
