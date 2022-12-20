@@ -44,33 +44,26 @@ class Person {
   }
 }
 
-const spiderman = new Person(
+class Hero extends Person {
+  clan = "null";
+
+  constructor(name, alias, sentence) {
+    super(name, alias, sentence);
+
+    this.clan = "The avengers";
+  }
+
+  whoami() {
+    console.log(`I'm ${this.name}, ${this.clan}`);
+    super.whoami();
+  }
+}
+
+const spiderman = new Hero(
   "Peter Parker",
   "SpiderMan",
   "I'm your friendly neighbourd Spiderman"
 );
+
 console.log(spiderman);
-
-const ironman = new Person("Tony Stark", "Ironman", "I'm Ironman");
-
 spiderman.whoami();
-ironman.whoami();
-
-spiderman.mySentence();
-ironman.mySentence();
-
-spiderman.setFavouriteFood = "Cupcakes";
-// spiderman.nemesis = 'Green Goblin'
-console.log(spiderman);
-console.log(spiderman.getFavouriteFood);
-
-// Person._count = 2;
-
-console.log("Static Count", Person._count);
-
-console.log(Person.count);
-
-Person.message()
-
-Person.outsideProperty = 'Hello World'
-console.log(Person.outsideProperty)
