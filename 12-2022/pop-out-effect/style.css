@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  outline: 1px solid red;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  padding: 20rem 0;
+  background-color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Start the project */
+
+.person {
+  --transform-speed: 450ms;
+  position: relative;
+  max-width: 20rem;
+  margin-inline: auto;
+}
+
+.person__container {
+  aspect-ratio: 1 / 1.35;
+  display: grid;
+  align-items: end;
+  border-radius: 0 0 100vw 100vw;
+  overflow: hidden;
+
+  transition: transform var(--transform-speed) ease-in-out;
+}
+
+.person__container:hover {
+  transform: scale(1.1);
+}
+
+.person__circle {
+  position: absolute;
+  inset: auto 0 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-inline: auto;
+}
+
+.person__img {
+  position: relative;
+  z-index: 2;
+  transition: transform var(--transform-speed) ease-in-out;
+}
+
+.person__container:hover .person__img {
+  transform: scale(1.2) translateY(-1.5rem);
+}
