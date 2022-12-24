@@ -246,6 +246,9 @@ img {
 }
 
 /* Active link */
+.active-link {
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 .home {
@@ -416,18 +419,402 @@ img {
 }
 
 /*=============== CELEBRATE ===============*/
+.celebrate__container {
+  position: relative;
+  row-gap: 3.5rem;
+}
+
+.celebrate__data {
+  text-align: center;
+}
+
+.celebrate__description {
+  margin-bottom: 2rem;
+}
+
+.celebrate__img {
+  width: 20rem;
+  justify-self: center;
+}
+
+.celebrate__snow-1,
+.celebrate__snow-2 {
+  width: 3.125rem;
+  position: absolute;
+}
+
+.celebrate__snow-1 {
+  top: 1.5rem;
+  left: 1.5rem;
+  animation: var(--animate-snow-1);
+}
+
+.celebrate__snow-2 {
+  top: 18rem;
+  right: 0;
+  animation: var(--animate-snow-2);
+}
 
 /*=============== FOOTER ===============*/
+.footer {
+  overflow: hidden;
+}
+
+.footer__container {
+  position: relative;
+  padding-block: 4.5rem 2rem;
+  text-align: center;
+}
+
+.footer__logo,
+.footer__social-link,
+.footer__copy {
+  color: var(--white-color);
+}
+
+.footer__logo {
+  display: inline-block;
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 1rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.footer__social-link {
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: var(--first-color);
+}
+
+.footer__copy {
+  display: block;
+  margin-top: 2rem;
+  font-size: var(--smaller-font-size);
+}
+
+.footer__snow-1,
+.footer__snow-2 {
+  position: absolute;
+}
+
+.footer__snow-1 {
+  width: 3.125rem;
+  top: 4.5rem;
+  left: 0;
+  animation: var(--animate-snow-1);
+}
+
+.footer__snow-2 {
+  width: 4.375rem;
+  top: 6.5rem;
+  right: -3rem;
+  animation: var(--animate-snow-2);
+}
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(210, 8%, 15%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(210, 8%, 25%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(210, 8%, 35%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--white-color);
+  display: inline-flex;
+  padding: 0.45rem;
+  border-radius: 0.45rem;
+  font-size: 1rem;
+  color: var(--body-color);
+  z-index: var(--z-tooltip);
+  transition: bottom 0.3s, transform 0.3s;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
 
 /* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
+@media screen and (min-width: 36rem) {
+  .home__village {
+    width: 22.5rem;
+  }
+
+  .home__pine {
+    width: 20.625rem;
+  }
+
+  .about__container,
+  .celebrate__container {
+    grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 47.9375rem) {
+  .nav__toggle,
+  .nav__close,
+  .nav__img-1,
+  .nav__img-2 {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 4rem;
+  }
+
+  .home {
+    height: 50rem;
+  }
+
+  .home__village {
+    width: 28.75rem;
+  }
+
+  .home__pine {
+    width: 25rem;
+    bottom: 7rem;
+  }
+
+  .home__moon {
+    width: 28.125rem;
+    bottom: 12rem;
+  }
+
+  .home__trineo {
+    width: 21.875rem;
+    bottom: 20rem;
+  }
+
+  .send__container {
+    grid-template-columns: repeat(2, 12.5rem);
+    column-gap: 5rem;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    row-gap: 2rem;
+  }
+
+  .nav__link {
+    color: var(--white-color);
+    font-weight: var(--font-medium);
+    transition: color 0.4s;
+  }
+
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  .active-link {
+    color: var(--first-color);
+  }
+}
 
 /* For large devices */
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-block: 7rem 3rem;
+  }
 
+  .home__title {
+    font-size: 4rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .about__container {
+    grid-template-columns: 31.25rem 20.9375rem;
+    align-items: center;
+    column-gap: 6rem;
+  }
+
+  .about__data,
+  .about__data .section__title {
+    text-align: initial;
+  }
+
+  .about__img {
+    width: 31.25rem;
+    order: -1;
+  }
+
+  .about__snow-1 {
+    top: 0;
+    left: 0;
+  }
+
+  .about__snow-2 {
+    right: 10rem;
+    bottom: 3.5rem;
+  }
+
+  .send__container {
+    grid-template-columns: repeat(3, 13.75rem);
+    column-gap: 7.5rem;
+    padding-top: 3rem;
+  }
+
+  .send__img {
+    margin-bottom: 1rem;
+  }
+
+  .send__description {
+    font-size: var(--normal-font-size);
+  }
+
+  .send__snow-1 {
+    top: -1rem;
+    left: -1rem;
+  }
+
+  .send__snow-2 {
+    top: 3rem;
+  }
+
+  .send__snow-3 {
+    left: 22rem;
+    bottom: 0;
+  }
+
+  .celebrate__container {
+    grid-template-columns: 25rem 31.25rem;
+    align-items: center;
+    column-gap: 6rem;
+  }
+
+  .celebrate__data,
+  .celebarte__data .section__title {
+    text-align: initial;
+  }
+
+  .celebrate__img {
+    width: 31.25rem;
+  }
+
+  .celebrate__snow-1 {
+    top: 4.5rem;
+    left: 14rem;
+  }
+
+  .celebrate__snow-2 {
+    right: 2rem;
+  }
+
+  .footer__container {
+    padding-block: 5.5rem 3rem;
+  }
+
+  .footer__social {
+    column-gap: 2rem;
+  }
+
+  .footer__social-link {
+    font-size: 1.5rem;
+  }
+
+  .footer__snow-1 {
+    top: 8.5rem;
+    left: 10rem;
+  }
+
+  .footer__snow-2 {
+    top: 8.5rem;
+    right: 4rem;
+  }
+
+  .footer__copy {
+    margin-top: 4rem;
+  }
+
+  .scrollup {
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 66.5rem) {
+  .container {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .home {
+    height: 61.25rem;
+  }
+
+  .home__title {
+    font-size: var(--biggest-font-size);
+  }
+
+  .home__mountain-1,
+  .home__mountain-2,
+  .home__mountain-3,
+  .home__snow {
+    width: 100%;
+  }
+
+  .home__village {
+    width: 46.875rem;
+    bottom: 4rem;
+  }
+
+  .home__pine {
+    width: 45rem;
+    bottom: 12.5rem;
+  }
+
+  .home__mountain-1,
+  .home__mountain-2 {
+    bottom: -0.5rem;
+  }
+
+  .home__moon {
+    width: 37.5rem;
+    bottom: 14rem;
+  }
+
+  .home__trineo {
+    width: 31.25rem;
+    bottom: 28rem;
+  }
+}
 /* For 2K+ resolutions */
+@media screen and (min-width: 106.25rem) {
+  .home {
+    max-width: 130rem;
+    height: 61.875rem;
+    margin-inline: auto;
+  }
+}
