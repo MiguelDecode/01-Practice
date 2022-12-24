@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #333;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper{
+  display: grid;
+  place-content: center;
+  width: 80%;
+  max-width: 70rem;
+  min-height: 100vh;
+
+  
+  background-image: url('https://www.adhesivosnatos.com/wp-content/uploads/2021/08/vinilo-my-hero-academia-evolution-mural-adhesivo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.deku {
+  width: 20rem;
+  height: 35rem;
+  position: relative;
+  
+  border-radius: 0 0 100vw 100vw;
+  overflow: hidden;
+}
+
+.deku__circle {
+  position: absolute;
+  bottom: 0;
+  background-color: #156569;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+.deku__img {
+  position: absolute;
+  bottom: 0;
+  transition: transform .5s ease-in-out;
+}
+
+.deku__img:hover{
+  transform: scale(1.2)
+}
+
