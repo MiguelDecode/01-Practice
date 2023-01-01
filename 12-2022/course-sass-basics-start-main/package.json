@@ -1,0 +1,16 @@
+{
+  "name": "course-sass-basics-start-main",
+  "version": "1.0.0",
+  "description": "## Overview These are the starter files for the project of our Learn SASS Basics course.",
+  "source": "./src/index.html",
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "parcel": "^2.8.2"
+  }
+}

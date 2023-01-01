@@ -1,0 +1,16 @@
+@mixin button($value) {
+  background-color: $value;
+  color: white !important;
+  border: 0;
+  text-decoration: none;
+  color: #838ea4;
+  font-weight: 500;
+  font-size: 0.975rem;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  transition: all ease-in 0.2s;
+
+  &:hover {
+    opacity: 0.2;
+  }
+}

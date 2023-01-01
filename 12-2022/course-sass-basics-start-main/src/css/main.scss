@@ -1,0 +1,15 @@
+// Base imports
+@use "./base/reset";
+@use "./base/typography";
+
+// Components imports
+@use "./components/buttons";
+@use "./components/navbar";
+@use "./components/hero";
+@use "./components/reasons";
+
+// Layout imports
+@use "./layout/footer";
+@use "./layout/layout.scss";
+
+
